@@ -1,0 +1,26 @@
+name: Live URL smoke
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check key URLs return HTTP 200
+        run: |
+          set -euo pipefail
+          for url in \
+            "https://zxzx.app/" \
+            "https://zxzx.app/compress" \
+            "https://zxzx.app/blog" \
+            "https://zxzx.app/sitemap.xml"
+          do
+            code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 30 "$url")
+            echo "$url -> $code"
+            test "$code" = "200"
+          done
