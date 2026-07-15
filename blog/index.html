@@ -32,6 +32,7 @@
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
         <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/crop" data-i18n="nav_crop">크롭</a></li>
         <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
         <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
@@ -52,9 +53,51 @@
         <p data-i18n="blog_intro_p1" style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7; max-width: 40rem;">포맷 비교, WASM 코덱, Core Web Vitals, EXIF 프라이버시. 실무에 바로 쓰는 짧은 노트.</p>
       </div>
       <article class="blog-card">
-        <h2><a href="/blog/squoosh-wasm-compression" data-i18n="blog_card_title_3">Squoosh WASM 코덱으로 타 서비스 대비 월등한 이미지 압축</a></h2>
+        <h2><a href="/blog/image-crop-aspect-ratios" data-i18n="blog_card_title_n1">이미지 크롭 비율 가이드 — 1:1·16:9·4:5</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n1">2026-07-16 · 크롭 · 6분 읽기</p>
+        <p data-i18n="blog_card_desc_n1">SNS·웹용 크롭 비율을 언제 쓰는지 정리합니다. ZXZX 크롭 도구와 함께.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/exif-gps-privacy-test" data-i18n="blog_card_title_n2">EXIF GPS 실측 — 사진에 위치가 남는 이유</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n2">2026-07-16 · 프라이버시 · 5분 읽기</p>
+        <p data-i18n="blog_card_desc_n2">스마트폰 사진의 GPS 태그를 확인하고 제거하는 워크플로.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/browser-bg-removal-vs-photoshop" data-i18n="blog_card_title_n3">브라우저 배경 제거 vs 포토샵</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n3">2026-07-16 · AI · 7분 읽기</p>
+        <p data-i18n="blog_card_desc_n3">로컬 ONNX 배경 제거와 데스크톱 워크플로를 비교합니다.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/ai-upscale-limits" data-i18n="blog_card_title_n4">AI 업스케일의 한계 — 2x가 안전한 이유</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n4">2026-07-16 · AI · 6분 읽기</p>
+        <p data-i18n="blog_card_desc_n4">ESRGAN 업스케일 메모리·아티팩트 한계와 hqx 폴백.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/jsquash-vs-canvas-toblob" data-i18n="blog_card_title_n5">jSquash WASM vs Canvas toBlob</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n5">2026-07-16 · 기술 · 5분 읽기</p>
+        <p data-i18n="blog_card_desc_n5">Squoosh 계열 코덱이 브라우저 기본 인코딩보다 나은 지점.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/batch-zip-workflow" data-i18n="blog_card_title_n6">배치 처리 + ZIP 다운로드 워크플로</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n6">2026-07-16 · 생산성 · 5분 읽기</p>
+        <p data-i18n="blog_card_desc_n6">최대 30장 압축·변환 후 ZIP으로 받는 실전 팁.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/browser-local-image-tools" data-i18n="blog_card_title_n7">브라우저 로컬 이미지 도구란?</a></h2>
+        <p class="meta" data-i18n="blog_card_meta_n7">2026-07-16 · 프라이버시 · 6분 읽기</p>
+        <p data-i18n="blog_card_desc_n7">업로드 없는 이미지 도구의 프라이버시·SEO·수익화 관점.</p>
+      </article>
+
+      <article class="blog-card">
+        <h2><a href="/blog/squoosh-wasm-compression" data-i18n="blog_card_title_3">jSquash(Squoosh WASM)로 Canvas보다 예측 가능한 이미지 압축</a></h2>
         <p class="meta" data-i18n="blog_card_meta_4">2026-07-15 · 기술 · 5분 읽기</p>
-        <p data-i18n="blog_card_desc_5">ZXZX는 Google Squoosh의 WASM 코덱(MozJPEG, libwebp, libavif)과 Lanczos3 필터를 사용하여 타 이미지 압축 서비스 대비 월등한 압축률과 화질을 제공합니다. 100% 브라우저 내 처리로 프라이버시도 보장합니다.</p>
+        <p data-i18n="blog_card_desc_5">ZXZX는 jSquash(Squoosh WASM) 코덱(MozJPEG, libwebp, libavif)과 Lanczos3 리사이즈로 브라우저에서 예측 가능한 압축을 제공합니다. 파일은 기기를 떠나지 않습니다.</p>
       </article>
 
       <article class="blog-card">
@@ -128,6 +171,7 @@
         <p class="meta" data-i18n="blog_card_meta_40">2025-10-25 · 기술 · 7분 읽기</p>
         <p data-i18n="blog_card_desc_41">Canvas API와 WebAssembly가 어떻게 브라우저 내 이미지 처리를 가능하게 하는지 설명합니다. 서버 기반 도구 대비 속도, 보안, 프라이버시 측면의 장점을 분석합니다.</p>
       </article>
+    </section>
     <section class="faq container">
       <h2 data-i18n="blog_faq_title">블로그에 대한 자주 묻는 질문</h2>
       <details>
@@ -147,17 +191,7 @@
         <p data-i18n="blog_card_desc_45">저희 기사는 저작권으로 보호되는 콘텐츠입니다. 다만 적절한 출처 표시와 ZXZX 원본 기사로의 링크를 포함하면 짧은 인용은 환영합니다. 전체 재게시 요청은 <a href="/contact">문의 페이지</a>를 통해 연락해 주세요.</p>
       </details>
     </section>
-  
-    <section class="content-section"><h2>새 글</h2><ul>
-      <li><a href="/blog/image-crop-aspect-ratios"><strong>이미지 크롭 비율 가이드 — 1:1·16:9·4:5</strong></a><p>SNS·웹용 크롭 비율을 언제 쓰는지 정리합니다. ZXZX 크롭 도구와 함께.</p></li>
-      <li><a href="/blog/exif-gps-privacy-test"><strong>EXIF GPS 실측 — 사진에 위치가 남는 이유</strong></a><p>스마트폰 사진의 GPS 태그를 확인하고 제거하는 워크플로.</p></li>
-      <li><a href="/blog/browser-bg-removal-vs-photoshop"><strong>브라우저 배경 제거 vs 포토샵</strong></a><p>로컬 ONNX 배경 제거와 데스크톱 워크플로를 비교합니다.</p></li>
-      <li><a href="/blog/ai-upscale-limits"><strong>AI 업스케일의 한계 — 2x가 안전한 이유</strong></a><p>ESRGAN 업스케일 메모리·아티팩트 한계와 hqx 폴백.</p></li>
-      <li><a href="/blog/jsquash-vs-canvas-toblob"><strong>jSquash WASM vs Canvas toBlob</strong></a><p>Squoosh 계열 코덱이 브라우저 기본 인코딩보다 나은 지점.</p></li>
-      <li><a href="/blog/batch-zip-workflow"><strong>배치 처리 + ZIP 다운로드 워크플로</strong></a><p>최대 30장 압축·변환 후 ZIP으로 받는 실전 팁.</p></li>
-      <li><a href="/blog/browser-local-image-tools"><strong>브라우저 로컬 이미지 도구란?</strong></a><p>업로드 없는 이미지 도구의 프라이버시·SEO·수익화 관점.</p></li>
-    </ul></section>
-</main>
+  </main>
 
   <footer>
     <div class="container">

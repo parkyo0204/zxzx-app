@@ -17,6 +17,7 @@
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
         <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/crop" data-i18n="nav_crop">크롭</a></li>
         <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
         <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
@@ -68,11 +69,11 @@
       <p data-i18n="browser-based-tools-advantage_p_25">ZXZX는 Google Squoosh 프로젝트의 WASM 코덱을 사용합니다. MozJPEG, libwebp, libavif 같은 C/C++ 기반 인코더가 WebAssembly로 컴파일되어 브라우저에서 네이티브 속도로 실행됩니다. 이는 서버에서 처리하는 것과 거의 동일한 품질과 속도를 의미합니다.</p>
 
       <h2 data-i18n="browser-based-tools-advantage_h2_26">ZXZX가 특별한 이유</h2>
-      <p data-i18n="browser-based-tools-advantage_p_27">ZXZX는 단순히 "업로드 없는 이미지 도구"가 아닙니다. Squoosh WASM 코덱과 Lanczos3 리사이즈 필터를 결합하여 타 서비스 대비 월등한 압축률과 화질을 제공하면서도, 100% 브라우저 내 처리로 프라이버시를 보장합니다.</p>
+      <p data-i18n="browser-based-tools-advantage_p_27">ZXZX는 업로드 없는 이미지 도구입니다. jSquash WASM 코덱과 Lanczos3 리사이즈, 그리고 로컬 AI(배경 제거·업스케일)를 브라우저에서 돌립니다.</p>
       <ul>
-        <li data-i18n="browser-based-tools-advantage_li_28"><strong>Compressor.js</strong> — Canvas 기반 빠른 압축</li>
-        <li data-i18n="browser-based-tools-advantage_li_29"><strong>jSquash (Squoosh WASM)</strong> — MozJPEG, libwebp, libavif 코덱</li>
-        <li data-i18n="browser-based-tools-advantage_li_30"><strong>pica</strong> — Lanczos3 필터 기반 고품질 리사이즈</li>
+        <li data-i18n="browser-based-tools-advantage_li_28"><strong>@jsquash/*</strong> — MozJPEG, libwebp, libavif, oxipng 코덱</li>
+        <li data-i18n="browser-based-tools-advantage_li_29"><strong>@jsquash/resize</strong> — Lanczos3 고품질 리사이즈</li>
+        <li data-i18n="browser-based-tools-advantage_li_30"><strong>imgly ONNX · UpscalerJS ESRGAN</strong> — 로컬 AI 배경 제거·업스케일</li>
       </ul>
       <p data-i18n="browser-based-tools-advantage_p_31">이 기술 조합은 GitHub에서 수만 개의 스타를 받은 검증된 오픈소스 프로젝트입니다.</p>
 

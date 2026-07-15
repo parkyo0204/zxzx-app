@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="page_title_index">zxzx — 브라우저에서 끝나는 이미지 도구</title>
-  <meta name="description" content="압축·변환·리사이즈. 파일이 기기를 떠나지 않습니다. JPG, PNG, WebP, AVIF. 서버 업로드 없음." data-i18n-content="index_meta_desc">
-  <meta name="keywords" content="이미지 압축, 이미지 변환, WebP, AVIF, 브라우저 이미지 도구, 프라이빗 이미지 처리" data-i18n-content="index_meta_keywords">
+  <meta name="description" content="압축·변환·리사이즈·크롭·EXIF·배경제거·업스케일. jSquash WASM + 로컬 AI. 서버 업로드 없음." data-i18n-content="index_meta_desc">
+  <meta name="keywords" content="이미지 압축, 이미지 변환, WebP, AVIF, EXIF 제거, 배경 제거, 업스케일, 브라우저 이미지 도구" data-i18n-content="index_meta_keywords">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://zxzx.app/">
   <link rel="alternate" hreflang="ko" href="https://zxzx.app/">
@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="zh" href="https://zxzx.app/?lang=zh">
   <link rel="alternate" hreflang="x-default" href="https://zxzx.app/">
   <meta property="og:title" content="zxzx — 브라우저에서 끝나는 이미지 도구">
-  <meta property="og:description" content="압축·변환·리사이즈. 파일이 기기를 떠나지 않습니다.">
+  <meta property="og:description" content="8가지 로컬 이미지 도구. jSquash WASM · ONNX 배경제거 · ESRGAN 업스케일.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zxzx.app/">
   <meta property="og:locale" content="ko_KR">
@@ -26,7 +26,7 @@
     "@type": "WebApplication",
     "name": "zxzx",
     "url": "https://zxzx.app/",
-    "description": "Browser-local image compress, convert, and resize. Files never leave your device.",
+    "description": "Browser-local image tools: compress, convert, resize, crop, rotate, strip EXIF, remove background, upscale. jSquash WASM and on-device AI.",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "Any",
     "inLanguage": ["ko", "en", "ja", "zh"],
@@ -56,10 +56,10 @@
       <div class="container">
         <p class="hero-brand">zxzx<span class="dot">.</span>app</p>
         <h1 data-i18n="hero_title">이미지는 기기 안에서만 처리됩니다.</h1>
-        <p class="subtitle" data-i18n="hero_subtitle">압축·변환·리사이즈. 서버 업로드 없음. WASM 코덱이 브라우저에서 끝냅니다.</p>
+        <p class="subtitle" data-i18n="hero_subtitle">압축·변환·리사이즈·크롭·EXIF·배경제거·업스케일. 서버 업로드 없음. jSquash WASM이 브라우저에서 끝냅니다.</p>
         <div class="hero-cta">
           <a href="/compress" class="btn btn-primary" data-i18n="hero_cta_compress">압축 시작</a>
-          <a href="/convert" class="btn btn-secondary" data-i18n="hero_cta_convert">포맷 변환</a>
+          <a href="/remove-background" class="btn btn-secondary" data-i18n="hero_cta_bg">배경 제거</a>
         </div>
       </div>
     </section>
@@ -118,7 +118,7 @@
         <div class="feature">
           <div class="feature-label">02</div>
           <h3 data-i18n="index_performance_title">WASM 코덱</h3>
-          <p data-i18n="index_performance_desc">Squoosh WASM + Lanczos3. 압축률과 화질을 동시에.</p>
+          <p data-i18n="index_performance_desc">jSquash WASM + Lanczos3. 압축률과 화질을 동시에.</p>
         </div>
         <div class="feature">
           <div class="feature-label">03</div>
@@ -133,17 +133,18 @@
       </div>
 
       <div class="highlight-box">
-        <h3 data-i18n="highlight_title">Squoosh WASM — 브라우저가 코덱이 됩니다</h3>
-        <p data-i18n="highlight_desc">MozJPEG, libwebp, libavif를 기기 안에서 실행합니다. 업로드 없이 압축률을 끌어올립니다.</p>
-        <a href="/blog/squoosh-wasm-compression" class="highlight-link"><span data-i18n="highlight_link">기술 노트 →</span></a>
+        <h3 data-i18n="highlight_title">jSquash WASM — Squoosh 코덱이 기기에서 돕니다</h3>
+        <p data-i18n="highlight_desc">MozJPEG · libwebp · libavif · oxipng · Lanczos3. 배경 제거(ONNX)와 업스케일(ESRGAN)도 로컬에서.</p>
+        <a href="/blog/jsquash-vs-canvas-toblob" class="highlight-link"><span data-i18n="highlight_link">기술 노트 →</span></a>
       </div>
 
       <div class="tech-badges">
-        <span class="badge-tech">Squoosh WASM</span>
+        <span class="badge-tech">jSquash</span>
         <span class="badge-tech">MozJPEG</span>
         <span class="badge-tech">Lanczos3</span>
+        <span class="badge-tech">ONNX</span>
+        <span class="badge-tech">ESRGAN</span>
         <span class="badge-tech">AVIF</span>
-        <span class="badge-tech">WebP</span>
       </div>
     </section>
 
@@ -155,7 +156,7 @@
       </details>
       <details>
         <summary data-i18n="faq_formats_q">어떤 포맷을 지원하나요?</summary>
-        <p data-i18n="faq_formats_a">JPG, PNG, WebP, AVIF, BMP, GIF, TIFF, SVG.</p>
+        <p data-i18n="faq_formats_a">핵심: JPG, PNG, WebP, AVIF. 입력으로 BMP·GIF 등도 열 수 있습니다.</p>
       </details>
       <details>
         <summary data-i18n="faq_size_q">파일 크기 제한이 있나요?</summary>

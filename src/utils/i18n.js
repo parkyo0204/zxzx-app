@@ -5,6 +5,14 @@ var SUPPORTED = ['ko', 'en', 'ja', 'zh'];
 var DEFAULT = 'ko';
 
 function getLang() {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get('lang');
+    if (q && SUPPORTED.indexOf(q) !== -1) {
+      localStorage.setItem('zxzx_lang', q);
+      return q;
+    }
+  } catch (e) {}
   var saved = localStorage.getItem('zxzx_lang');
   if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
   var browser = (navigator.language || DEFAULT).slice(0, 2);
