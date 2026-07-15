@@ -33,14 +33,19 @@ function applyTranslations() {
     if (text) {
       if (el.tagName === 'INPUT' && el.type !== 'submit') {
         el.placeholder = text;
-      } else if (el.tagName === 'OPTION') {
-        el.textContent = text;
       } else {
         el.textContent = text;
       }
     }
   });
   document.documentElement.lang = currentLang;
+  // Sync any existing select
+  syncLangSelect();
+}
+
+function syncLangSelect() {
+  var sel = document.getElementById('lang-select');
+  if (sel) sel.value = currentLang;
 }
 
 function switchLang(lang) {
@@ -54,42 +59,28 @@ function switchLang(lang) {
 function updateLangButton() {
   var btn = document.getElementById('lang-btn');
   if (btn) btn.textContent = currentLang.toUpperCase();
+  syncLangSelect();
 }
 
 function createLangSwitcher() {
   var nav = document.querySelector('header nav ul');
-  if (!nav) return;
+  if (!nav || document.getElementById('lang-btn')) return;
 
   var li = document.createElement('li');
-  li.style.position = 'relative';
-  li.innerHTML = '<button id="lang-btn" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.6rem;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--color-muted);">' + currentLang.toUpperCase() + '</button>' +
-    '<div id="lang-menu" style="display:none;position:absolute;right:0;top:100%;background:white;border:1px solid var(--color-border);border-radius:8px;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);overflow:hidden;z-index:200;min-width:80px;">' +
+  li.innerHTML = '<select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;">' +
     SUPPORTED.map(function(l) {
-      return '<button data-lang="' + l + '" style="display:block;width:100%;padding:0.5rem 1rem;border:none;background:none;cursor:pointer;text-align:left;font-size:0.85rem;' + 
-        (l === currentLang ? 'color:#2563eb;font-weight:600;' : 'color:#64748b;') + '">' + l.toUpperCase() + '</button>';
-    }).join('') + '</div>';
+      return '<option value="' + l + '"' + (l === currentLang ? ' selected' : '') + '>' + l.toUpperCase() + '</option>';
+    }).join('') + '</select>';
   nav.appendChild(li);
-
-  var btn = document.getElementById('lang-btn');
-  var menu = document.getElementById('lang-menu');
-
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-  });
-
-  menu.querySelectorAll('[data-lang]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      switchLang(el.dataset.lang);
-      menu.style.display = 'none';
-    });
-  });
-
-  document.addEventListener('click', function() { menu.style.display = 'none'; });
 }
+
+// Also sync on DOMContentLoaded for static selects
+document.addEventListener('DOMContentLoaded', function() {
+  syncLangSelect();
+});
 
 // Auto-init
 loadTranslations().then(function() {
   applyTranslations();
-  // createLangSwitcher(); // disabled — using static HTML select
+  createLangSwitcher();
 });
