@@ -58,9 +58,9 @@
         <option value="avif">AVIF</option>
       </select></label>
       <label><span data-i18n="quality">품질</span>: <select id="quality">
-        <option value="0.95">최고 (95%)</option>
+        <option value="0.95" data-i18n="quality_best">최고 (95%)</option>
         <option value="0.85" selected>고품질 (85%)</option>
-        <option value="0.7">중간 (70%)</option>
+        <option value="0.7" data-i18n="quality_medium">중간 (70%)</option>
       </select></label>
       <button class="btn btn-primary" id="convertBtn" data-i18n="convert_all">모두 변환</button>
       <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
@@ -139,8 +139,7 @@
       <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
-  <script type="module" src="/src/utils/file-dropzone.js"></script>
-  <script type="module" src="/src/utils/convert.js"></script>
-  <script type="module" src="/src/utils/i18n.js"></script>
+  <script type="module" src="/src/utils/convert.ts"></script>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

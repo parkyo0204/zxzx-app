@@ -52,8 +52,8 @@
 
     <div class="controls" id="controls" style="display:none">
       <label>모드: <select id="resizeMode">
-        <option value="pixels">픽셀</option>
-        <option value="percent">퍼센트</option>
+        <option value="pixels" data-i18n="resize_pixels">픽셀</option>
+        <option value="percent" data-i18n="resize_percent">퍼센트</option>
       </select></label>
       <div id="pixel-controls" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
         <label>너비: <input type="number" id="width" placeholder="px" min="1" max="10000"></label>
@@ -141,9 +141,7 @@
       <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/pica@9.0.1/dist/pica.min.js"></script>
-  <script type="module" src="/src/utils/file-dropzone.js"></script>
-  <script type="module" src="/src/utils/resize.js"></script>
-  <script type="module" src="/src/utils/i18n.js"></script>
+  <script type="module" src="/src/utils/resize.ts"></script>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

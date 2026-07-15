@@ -61,42 +61,42 @@
       <a href="/compress" class="tool-card">
         <div class="tool-icon">📦</div>
         <h2 data-i18n="nav_compress">이미지 압축</h2>
-        <p>파일 크기를 최대 80% 줄이세요. JPG, PNG, WebP 지원.</p>
+        <p data-i18n="card_compress_desc">파일 크기를 최대 80% 줄이세요. JPG, PNG, WebP 지원.</p>
       </a>
       <a href="/convert" class="tool-card">
         <div class="tool-icon">🔄</div>
         <h2 data-i18n="nav_convert">포맷 변환</h2>
-        <p>JPG, PNG, WebP, AVIF 간 변환. 배치 변환 지원.</p>
+        <p data-i18n="card_convert_desc">JPG, PNG, WebP, AVIF 간 변환. 배치 변환 지원.</p>
       </a>
       <a href="/resize" class="tool-card">
         <div class="tool-icon">📐</div>
         <h2 data-i18n="nav_resize">이미지 리사이즈</h2>
-        <p>픽셀 또는 퍼센트로 크기 조정. 비율 유지.</p>
+        <p data-i18n="card_resize_desc">픽셀 또는 퍼센트로 크기 조정. 비율 유지.</p>
       </a>
       <a href="/crop" class="tool-card">
         <div class="tool-icon">✂️</div>
-        <h2>이미지 크롭</h2>
-        <p>비주얼 크롭 에디터. 프리셋 비율 지원.</p>
+        <h2 data-i18n="card_crop_title">이미지 크롭</h2>
+        <p data-i18n="card_crop_desc">비주얼 크롭 에디터. 프리셋 비율 지원.</p>
       </a>
       <a href="/remove-exif" class="tool-card">
         <div class="tool-icon">🔒</div>
-        <h2>EXIF 제거</h2>
-        <p>프라이버시를 위해 메타데이터, GPS, 카메라 정보 제거.</p>
+        <h2 data-i18n="card_exif_title">EXIF 제거</h2>
+        <p data-i18n="card_exif_desc">프라이버시를 위해 메타데이터, GPS, 카메라 정보 제거.</p>
       </a>
       <a href="/remove-background" class="tool-card">
         <div class="tool-icon">🎨</div>
-        <h2>배경 제거</h2>
-        <p>AI 기반 배경 제거. 브라우저에서 로컬 처리.</p>
+        <h2 data-i18n="card_bg_title">배경 제거</h2>
+        <p data-i18n="card_bg_desc">AI 기반 배경 제거. 브라우저에서 로컬 처리.</p>
       </a>
       <a href="/upscale" class="tool-card">
         <div class="tool-icon">🔍</div>
-        <h2>이미지 업스케일</h2>
-        <p>AI로 최대 4배 확대. 품질 유지.</p>
+        <h2 data-i18n="card_upscale_title">이미지 업스케일</h2>
+        <p data-i18n="card_upscale_desc">AI로 최대 4배 확대. 품질 유지.</p>
       </a>
       <a href="/rotate" class="tool-card">
         <div class="tool-icon">🔃</div>
-        <h2>이미지 회전</h2>
-        <p>여러 이미지 일괄 회전. 90°, 180°, 270°.</p>
+        <h2 data-i18n="card_rotate_title">이미지 회전</h2>
+        <p data-i18n="card_rotate_desc">여러 이미지 일괄 회전. 90°, 180°, 270°.</p>
       </a>
     </section>
 
@@ -108,16 +108,16 @@
           <p data-i18n="feature_private_desc">모든 처리가 브라우저에서 이루어집니다. 파일이 서버에 업로드되지 않습니다.</p>
         </div>
         <div class="feature">
-          <h3>최고 성능</h3>
-          <p>Squoosh(Google)의 WASM 코덱과 Lanczos3 필터를 사용하여 타 서비스 대비 월등한 압축률과 화질을 제공합니다.</p>
+          <h3 data-i18n="feature_performance">최고 성능</h3>
+          <p data-i18n="feature_performance_desc">Squoosh(Google)의 WASM 코덱과 Lanczos3 필터를 사용하여 타 서비스 대비 월등한 압축률과 화질을 제공합니다.</p>
         </div>
         <div class="feature">
           <h3 data-i18n="feature_batch">배치 처리</h3>
           <p data-i18n="feature_batch_desc">최대 30개 이미지를 한 번에 처리. ZIP으로 다운로드.</p>
         </div>
         <div class="feature">
-          <h3>완전 무료</h3>
-          <p>숨겨진 비용, 워터마크, 파일 크기 제한 없음. 회원가입 불필요. 영원히 무료.</p>
+          <h3 data-i18n="feature_free2">완전 무료</h3>
+          <p data-i18n="feature_free2_desc">숨겨진 비용, 워터마크, 파일 크기 제한 없음. 회원가입 불필요. 영원히 무료.</p>
         </div>
       </div>
 
@@ -169,6 +169,6 @@
     </div>
   </footer>
 
-  <script type="module" src="/src/utils/i18n.js"></script>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

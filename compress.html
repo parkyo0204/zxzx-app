@@ -34,13 +34,13 @@
 
     <div class="controls" id="controls" style="display:none">
       <label>품질: <select id="quality">
-        <option value="0.9">고품질 (90%)</option>
-        <option value="0.8" selected>중간 (80%)</option>
-        <option value="0.6">저품질 (60%)</option>
-        <option value="0.4">극한 압축 (40%)</option>
+        <option value="0.9" data-i18n="quality_high">고품질 (90%)</option>
+        <option value="0.8" selected data-i18n="quality_medium">중간 (80%)</option>
+        <option value="0.6" data-i18n="quality_low">저품질 (60%)</option>
+        <option value="0.4" data-i18n="quality_aggressive">극한 압축 (40%)</option>
       </select></label>
       <label>출력: <select id="format">
-        <option value="same">입력과 동일</option>
+        <option value="same" data-i18n="same_as_input">입력과 동일</option>
         <option value="jpeg">JPG</option>
         <option value="png">PNG</option>
         <option value="webp">WebP</option>
@@ -114,10 +114,7 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/compressorjs@1.3.0/dist/compressor.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pica@9.0.1/dist/pica.min.js"></script>
-  <script type="module" src="/src/utils/file-dropzone.js"></script>
-  <script type="module" src="/src/utils/compress.js"></script>
-  <script type="module" src="/src/utils/i18n.js"></script>
+  <script type="module" src="/src/utils/compress.ts"></script>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>
