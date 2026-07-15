@@ -20,137 +20,137 @@
   <text x="116" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#64748b">image tools</text>
 </svg></a>
       <ul>
-        <li><a href="/compress">압축</a></li>
-        <li><a href="/convert">변환</a></li>
-        <li><a href="/resize">리사이즈</a></li>
-        <li><a href="/blog">블로그</a></li>
-        <li><a href="/about">소개</a></li>
+        <li data-i18n="exif-metadata-guide_li_1"><a href="/compress">압축</a></li>
+        <li data-i18n="exif-metadata-guide_li_2"><a href="/convert">변환</a></li>
+        <li data-i18n="exif-metadata-guide_li_3"><a href="/resize">리사이즈</a></li>
+        <li data-i18n="exif-metadata-guide_li_4"><a href="/blog">블로그</a></li>
+        <li data-i18n="exif-metadata-guide_li_5"><a href="/about">소개</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="page-content">
     <article>
-      <h1>EXIF 메타데이터란? 왜 제거해야 할까?</h1>
-      <p class="meta">2026년 7월 15일 · 8분 읽기</p>
+      <h1 data-i18n="exif-metadata-guide_h1">EXIF 메타데이터란? 왜 제거해야 할까?</h1>
+      <p class="meta" data-i18n="exif-metadata-guide_meta">2026년 7월 15일 · 8분 읽기</p>
 
-      <p>디지털 카메라나 스마트폰으로 사진을 찍으면 이미지 파일 안에 보이지 않는 정보가大量으로 저장됩니다. 이것이 바로 <strong>EXIF 메타데이터</strong>입니다. 이 정보는 사진 관리에 유용하지만, 온라인에 공유할 때 심각한 프라이버시 위험이 될 수 있습니다. 이 글에서는 EXIF가 무엇인지, 왜 위험한지, 어떻게 제거하는지를详细介绍합니다.</p>
+      <p data-i18n="exif-metadata-guide_p_8">디지털 카메라나 스마트폰으로 사진을 찍으면 이미지 파일 안에 보이지 않는 정보가大量으로 저장됩니다. 이것이 바로 <strong>EXIF 메타데이터</strong>입니다. 이 정보는 사진 관리에 유용하지만, 온라인에 공유할 때 심각한 프라이버시 위험이 될 수 있습니다. 이 글에서는 EXIF가 무엇인지, 왜 위험한지, 어떻게 제거하는지를详细介绍합니다.</p>
 
-      <h2>EXIF란 무엇인가?</h2>
-      <p>EXIF는 <strong>Exchangeable Image File Format</strong>의 약자로, 디지털 이미지 파일에 다양한 메타데이터를 저장하는 표준입니다. 1995년에 처음制定되어 현재几乎所有的 디지털 카메라와 스마트폰에서 사용됩니다.</p>
-      <p>EXIF 데이터는 이미지 픽셀 데이터とは 별도로 저장되며, JPEG, TIFF, HEIC 등 여러 이미지 포맷에서 지원됩니다.</p>
+      <h2 data-i18n="exif-metadata-guide_h2_9">EXIF란 무엇인가?</h2>
+      <p data-i18n="exif-metadata-guide_p_10">EXIF는 <strong>Exchangeable Image File Format</strong>의 약자로, 디지털 이미지 파일에 다양한 메타데이터를 저장하는 표준입니다. 1995년에 처음制定되어 현재几乎所有的 디지털 카메라와 스마트폰에서 사용됩니다.</p>
+      <p data-i18n="exif-metadata-guide_p_11">EXIF 데이터는 이미지 픽셀 데이터とは 별도로 저장되며, JPEG, TIFF, HEIC 등 여러 이미지 포맷에서 지원됩니다.</p>
 
-      <h2>EXIF에 포함되는 정보</h2>
-      <p>EXIF 메타데이터에는想象以上으로 많은 정보가 포함됩니다:</p>
+      <h2 data-i18n="exif-metadata-guide_h2_12">EXIF에 포함되는 정보</h2>
+      <p data-i18n="exif-metadata-guide_p_13">EXIF 메타데이터에는想象以上으로 많은 정보가 포함됩니다:</p>
 
-      <h3>카메라 정보</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_14">카메라 정보</h3>
       <ul>
-        <li><strong>카메라 모델:</strong> "iPhone 15 Pro", "Canon EOS R5" 등</li>
-        <li><strong>렌즈 정보:</strong> 초점거리, 조리개, 렌즈 모델명</li>
-        <li><strong>시리얼 번호:</strong> 카메라의 고유 식별 번호</li>
+        <li data-i18n="exif-metadata-guide_li_15"><strong>카메라 모델:</strong> "iPhone 15 Pro", "Canon EOS R5" 등</li>
+        <li data-i18n="exif-metadata-guide_li_16"><strong>렌즈 정보:</strong> 초점거리, 조리개, 렌즈 모델명</li>
+        <li data-i18n="exif-metadata-guide_li_17"><strong>시리얼 번호:</strong> 카메라의 고유 식별 번호</li>
       </ul>
 
-      <h3>촬영 설정</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_18">촬영 설정</h3>
       <ul>
-        <li><strong>셔터 속도:</strong> 1/1000초, 1/60초 등</li>
-        <li><strong>조리개 값:</strong> f/1.8, f/8 등</li>
-        <li><strong>ISO:</strong> 100, 800, 3200 등</li>
-        <li><strong>화이트 밸런스:</strong> 자동, 텅스텐, 형광등 등</li>
-        <li><strong>플래시:</strong> 발광 여부</li>
+        <li data-i18n="exif-metadata-guide_li_19"><strong>셔터 속도:</strong> 1/1000초, 1/60초 등</li>
+        <li data-i18n="exif-metadata-guide_li_20"><strong>조리개 값:</strong> f/1.8, f/8 등</li>
+        <li data-i18n="exif-metadata-guide_li_21"><strong>ISO:</strong> 100, 800, 3200 등</li>
+        <li data-i18n="exif-metadata-guide_li_22"><strong>화이트 밸런스:</strong> 자동, 텅스텐, 형광등 등</li>
+        <li data-i18n="exif-metadata-guide_li_23"><strong>플래시:</strong> 발광 여부</li>
       </ul>
 
-      <h3>시간 정보</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_24">시간 정보</h3>
       <ul>
-        <li><strong>촬영 일시:</strong> 정확한 날짜와 시간 (초 단위)</li>
-        <li><strong>수정 일시:</strong> 이미지 편집 시간</li>
-        <li><strong>디지털화 일시:</strong> 스캔 등 디지털 변환 시간</li>
+        <li data-i18n="exif-metadata-guide_li_25"><strong>촬영 일시:</strong> 정확한 날짜와 시간 (초 단위)</li>
+        <li data-i18n="exif-metadata-guide_li_26"><strong>수정 일시:</strong> 이미지 편집 시간</li>
+        <li data-i18n="exif-metadata-guide_li_27"><strong>디지털화 일시:</strong> 스캔 등 디지털 변환 시간</li>
       </ul>
 
-      <h3>위치 정보 (GPS)</h3>
-      <p>가장 민감한 정보입니다. 스마트폰의 GPS가 활성화된 상태로 사진을 찍으면, 정확한 위도와 경도가 이미지에 저장됩니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_28">위치 정보 (GPS)</h3>
+      <p data-i18n="exif-metadata-guide_p_29">가장 민감한 정보입니다. 스마트폰의 GPS가 활성화된 상태로 사진을 찍으면, 정확한 위도와 경도가 이미지에 저장됩니다.</p>
       <ul>
-        <li><strong>위도/경도:</strong> 소수점 6자리까지의 정확한 위치 (약 10cm 오차)</li>
-        <li><strong>고도:</strong> 해발 고도</li>
-        <li><strong>방향:</strong> 촬영 방위각</li>
+        <li data-i18n="exif-metadata-guide_li_30"><strong>위도/경도:</strong> 소수점 6자리까지의 정확한 위치 (약 10cm 오차)</li>
+        <li data-i18n="exif-metadata-guide_li_31"><strong>고도:</strong> 해발 고도</li>
+        <li data-i18n="exif-metadata-guide_li_32"><strong>방향:</strong> 촬영 방위각</li>
       </ul>
 
-      <h2>EXIF의 프라이버시 위험</h2>
+      <h2 data-i18n="exif-metadata-guide_h2_33">EXIF의 프라이버시 위험</h2>
 
-      <h3>위치 추적</h3>
-      <p>집에서 찍은 사진을 온라인에 공유하면, 정확한居住지가暴露됩니다. 여행지에서 찍은 사진은行踪을 추적할 수 있게 합니다. 여러 사진의 GPS 데이터를 분석하면日常生活 패턴까지 파악할 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_34">위치 추적</h3>
+      <p data-i18n="exif-metadata-guide_p_35">집에서 찍은 사진을 온라인에 공유하면, 정확한居住지가暴露됩니다. 여행지에서 찍은 사진은行踪을 추적할 수 있게 합니다. 여러 사진의 GPS 데이터를 분석하면日常生活 패턴까지 파악할 수 있습니다.</p>
 
-      <h3>신원 식별</h3>
-      <p>카메라 시리얼 번호로同一 소유자의 사진을关联할 수 있습니다. 익명으로 게시한 사진에서도 작성자를特定할 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_36">신원 식별</h3>
+      <p data-i18n="exif-metadata-guide_p_37">카메라 시리얼 번호로同一 소유자의 사진을关联할 수 있습니다. 익명으로 게시한 사진에서도 작성자를特定할 수 있습니다.</p>
 
-      <h3>시간 정보利用</h3>
-      <p>촬영 시간과 위치를 결합하면 특정 시간에某人이 어디에 있었는지를 알 수 있습니다. 이는 스토킹이나 범죄에 악용될 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_38">시간 정보利用</h3>
+      <p data-i18n="exif-metadata-guide_p_39">촬영 시간과 위치를 결합하면 특정 시간에某人이 어디에 있었는지를 알 수 있습니다. 이는 스토킹이나 범죄에 악용될 수 있습니다.</p>
 
-      <h3>실제 사례</h3>
-      <p>2012년, 사진 공유 플랫폼 Flickr에서 사용자들이 올린 사진의 GPS 데이터를 분석하여 거주지를 파악한 연구가 있었습니다. 2023년에는 소셜 미디어에 올린 사진의 EXIF 데이터로 연예인의居住地가暴露된 사건도 발생했습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_40">실제 사례</h3>
+      <p data-i18n="exif-metadata-guide_p_41">2012년, 사진 공유 플랫폼 Flickr에서 사용자들이 올린 사진의 GPS 데이터를 분석하여 거주지를 파악한 연구가 있었습니다. 2023년에는 소셜 미디어에 올린 사진의 EXIF 데이터로 연예인의居住地가暴露된 사건도 발생했습니다.</p>
 
-      <h2>어디에서 EXIF를 확인할 수 있는가?</h2>
-      <p>EXIF 데이터는 다양한 방법으로 확인할 수 있습니다:</p>
+      <h2 data-i18n="exif-metadata-guide_h2_42">어디에서 EXIF를 확인할 수 있는가?</h2>
+      <p data-i18n="exif-metadata-guide_p_43">EXIF 데이터는 다양한 방법으로 확인할 수 있습니다:</p>
 
-      <h3>Windows</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_44">Windows</h3>
       <ol>
-        <li>이미지 파일을右클릭합니다</li>
-        <li>"속성"을 선택합니다</li>
-        <li>"자세히" 탭을 클릭합니다</li>
+        <li data-i18n="exif-metadata-guide_li_45">이미지 파일을右클릭합니다</li>
+        <li data-i18n="exif-metadata-guide_li_46">"속성"을 선택합니다</li>
+        <li data-i18n="exif-metadata-guide_li_47">"자세히" 탭을 클릭합니다</li>
       </ol>
 
-      <h3>macOS</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_48">macOS</h3>
       <ol>
-        <li>Preview에서 이미지를 엽니다</li>
-        <li>"도구" → "인스펙터"를 선택합니다</li>
-        <li>"Exif" 탭을 클릭합니다</li>
+        <li data-i18n="exif-metadata-guide_li_49">Preview에서 이미지를 엽니다</li>
+        <li data-i18n="exif-metadata-guide_li_50">"도구" → "인스펙터"를 선택합니다</li>
+        <li data-i18n="exif-metadata-guide_li_51">"Exif" 탭을 클릭합니다</li>
       </ol>
 
-      <h3>온라인 도구</h3>
-      <p>ZXZX의 이미지 압축 도구는 압축 과정에서 EXIF 데이터를 제거하는 옵션을 제공합니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_52">온라인 도구</h3>
+      <p data-i18n="exif-metadata-guide_p_53">ZXZX의 이미지 압축 도구는 압축 과정에서 EXIF 데이터를 제거하는 옵션을 제공합니다.</p>
 
-      <h2>EXIF 제거 방법</h2>
+      <h2 data-i18n="exif-metadata-guide_h2_54">EXIF 제거 방법</h2>
 
-      <h3>방법 1: ZXZX 압축 도구</h3>
-      <p>ZXZX의 <a href="/compress">이미지 압축 도구</a>를 사용하면 압축과 동시에 EXIF를 제거할 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_55">방법 1: ZXZX 압축 도구</h3>
+      <p data-i18n="exif-metadata-guide_p_56">ZXZX의 <a href="/compress">이미지 압축 도구</a>를 사용하면 압축과 동시에 EXIF를 제거할 수 있습니다.</p>
       <ol>
-        <li><a href="/compress">ZXZX 압축 도구</a>에 이미지를 업로드합니다</li>
-        <li>압축 설정에서 "메타데이터 제거" 옵션을 활성화합니다</li>
-        <li>"압축"을 클릭합니다</li>
-        <li>EXIF가 제거된 이미지를 다운로드합니다</li>
+        <li data-i18n="exif-metadata-guide_li_57"><a href="/compress">ZXZX 압축 도구</a>에 이미지를 업로드합니다</li>
+        <li data-i18n="exif-metadata-guide_li_58">압축 설정에서 "메타데이터 제거" 옵션을 활성화합니다</li>
+        <li data-i18n="exif-metadata-guide_li_59">"압축"을 클릭합니다</li>
+        <li data-i18n="exif-metadata-guide_li_60">EXIF가 제거된 이미지를 다운로드합니다</li>
       </ol>
 
-      <h3>방법 2: Windows</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_61">방법 2: Windows</h3>
       <ol>
-        <li>이미지 파일을右클릭 → "속성"</li>
-        <li>"자세히" 탭</li>
-        <li>"속성 및 개인 정보 제거" 클릭</li>
-        <li>"이 파일에서 모든 속성 제거" 선택</li>
+        <li data-i18n="exif-metadata-guide_li_62">이미지 파일을右클릭 → "속성"</li>
+        <li data-i18n="exif-metadata-guide_li_63">"자세히" 탭</li>
+        <li data-i18n="exif-metadata-guide_li_64">"속성 및 개인 정보 제거" 클릭</li>
+        <li data-i18n="exif-metadata-guide_li_65">"이 파일에서 모든 속성 제거" 선택</li>
       </ol>
 
-      <h3>방법 3: macOS</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_66">방법 3: macOS</h3>
       <ol>
-        <li>Terminal을 엽니다</li>
-        <li>다음 명령어를 실행합니다: <code>sips -d exif image.jpg --out image-clean.jpg</code></li>
+        <li data-i18n="exif-metadata-guide_li_67">Terminal을 엽니다</li>
+        <li data-i18n="exif-metadata-guide_li_68">다음 명령어를 실행합니다: <code>sips -d exif image.jpg --out image-clean.jpg</code></li>
       </ol>
 
-      <h3>방법 4: Command Line (exiftool)</h3>
+      <h3 data-i18n="exif-metadata-guide_h3_69">방법 4: Command Line (exiftool)</h3>
       <pre><code>exiftool -all= image.jpg</code></pre>
-      <p>여러 파일을 일괄 처리하려면:</p>
+      <p data-i18n="exif-metadata-guide_p_70">여러 파일을 일괄 처리하려면:</p>
       <pre><code>exiftool -all= *.jpg</code></pre>
 
-      <h2>EXIF를保留해야 하는 경우</h2>
-      <p>모든 상황에서 EXIF를 제거해야 하는 것은 아닙니다.</p>
+      <h2 data-i18n="exif-metadata-guide_h2_71">EXIF를保留해야 하는 경우</h2>
+      <p data-i18n="exif-metadata-guide_p_72">모든 상황에서 EXIF를 제거해야 하는 것은 아닙니다.</p>
 
-      <h3>포트폴리오/작품 사진</h3>
-      <p>촬영 설정 정보는作品을 설명하는 데 유용합니다. 조리개, 셔터 속도, ISO 등의 정보는 다른 사진가에게参考가 됩니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_73">포트폴리오/작품 사진</h3>
+      <p data-i18n="exif-metadata-guide_p_74">촬영 설정 정보는作品을 설명하는 데 유용합니다. 조리개, 셔터 속도, ISO 등의 정보는 다른 사진가에게参考가 됩니다.</p>
 
-      <h3>사진 관리</h3>
-      <p>촬영 시간과 위치 정보는 사진을整理하고 검색하는 데 도움이 됩니다. 클라우드 사진첩 서비스는这些 정보를 사용하여照片을 자동 분류합니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_75">사진 관리</h3>
+      <p data-i18n="exif-metadata-guide_p_76">촬영 시간과 위치 정보는 사진을整理하고 검색하는 데 도움이 됩니다. 클라우드 사진첩 서비스는这些 정보를 사용하여照片을 자동 분류합니다.</p>
 
-      <h3>법적 증거</h3>
-      <p>특정 상황에서는 촬영 시간과 위치가 법적 증거로 사용될 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_77">법적 증거</h3>
+      <p data-i18n="exif-metadata-guide_p_78">특정 상황에서는 촬영 시간과 위치가 법적 증거로 사용될 수 있습니다.</p>
 
-      <h2>플랫폼별 EXIF 처리 현황</h2>
+      <h2 data-i18n="exif-metadata-guide_h2_79">플랫폼별 EXIF 처리 현황</h2>
       <table>
         <thead>
           <tr><th>플랫폼</th><th>EXIF保留 여부</th><th>비고</th></tr>
@@ -165,22 +165,22 @@
         </tbody>
       </table>
 
-      <h2>EXIF 관련常见 오해</h2>
+      <h2 data-i18n="exif-metadata-guide_h2_80">EXIF 관련常见 오해</h2>
 
-      <h3>오해 1: "소셜 미디어는 자동으로 제거해준다"</h3>
-      <p>大部分의 주요 소셜 미디어는 이미지를 재압축하면서 EXIF를 제거하지만,所有 플랫폼이如此한 것은 아닙니다. 또한 일부 플랫폼은位置 정보만 제거하고 다른 메타데이터는保留할 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_81">오해 1: "소셜 미디어는 자동으로 제거해준다"</h3>
+      <p data-i18n="exif-metadata-guide_p_82">大部分의 주요 소셜 미디어는 이미지를 재압축하면서 EXIF를 제거하지만,所有 플랫폼이如此한 것은 아닙니다. 또한 일부 플랫폼은位置 정보만 제거하고 다른 메타데이터는保留할 수 있습니다.</p>
 
-      <h3>오해 2: "스크린샷은 EXIF가 없다"</h3>
-      <p>스크린샷 자체에는 원본 EXIF가 없지만, 스크린샷 파일에는 촬영 시간, 디바이스 정보等이 새롭게 저장될 수 있습니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_83">오해 2: "스크린샷은 EXIF가 없다"</h3>
+      <p data-i18n="exif-metadata-guide_p_84">스크린샷 자체에는 원본 EXIF가 없지만, 스크린샷 파일에는 촬영 시간, 디바이스 정보等이 새롭게 저장될 수 있습니다.</p>
 
-      <h3>오해 3: "EXIF를 제거하면 화질이 저하된다"</h3>
-      <p>EXIF 제거는 이미지 픽셀 데이터에 전혀 영향을 주지 않습니다. 메타데이터 블록만 제거될 뿐입니다.</p>
+      <h3 data-i18n="exif-metadata-guide_h3_85">오해 3: "EXIF를 제거하면 화질이 저하된다"</h3>
+      <p data-i18n="exif-metadata-guide_p_86">EXIF 제거는 이미지 픽셀 데이터에 전혀 영향을 주지 않습니다. 메타데이터 블록만 제거될 뿐입니다.</p>
 
-      <h2>ZXZX로 EXIF 제거하기</h2>
-      <p>ZXZX의 <a href="/compress">이미지 압축 도구</a>는 이미지를 압축하면서 동시에 EXIF 메타데이터를 제거할 수 있습니다. 서버에 파일을 업로드할必要없이 100% 로컬에서 처리되어 프라이버시가 보장됩니다.</p>
+      <h2 data-i18n="exif-metadata-guide_h2_87">ZXZX로 EXIF 제거하기</h2>
+      <p data-i18n="exif-metadata-guide_p_88">ZXZX의 <a href="/compress">이미지 압축 도구</a>는 이미지를 압축하면서 동시에 EXIF 메타데이터를 제거할 수 있습니다. 서버에 파일을 업로드할必要없이 100% 로컬에서 처리되어 프라이버시가 보장됩니다.</p>
 
-      <h2>결론</h2>
-      <p>EXIF 메타데이터는 사진 관리에는 유용하지만, 온라인 공유 시에는 심각한 프라이버시 위험이 될 수 있습니다. 특히 GPS 위치 정보는非常 민감한 정보입니다. 이미지를 온라인에 공유하기 전에 EXIF를 제거하는 것은重要的 보안 습관입니다. ZXZX를 사용하면 압축과 EXIF 제거를 한 번에 처리할 수 있습니다.</p>
+      <h2 data-i18n="exif-metadata-guide_h2_89">결론</h2>
+      <p data-i18n="exif-metadata-guide_p_90">EXIF 메타데이터는 사진 관리에는 유용하지만, 온라인 공유 시에는 심각한 프라이버시 위험이 될 수 있습니다. 특히 GPS 위치 정보는非常 민감한 정보입니다. 이미지를 온라인에 공유하기 전에 EXIF를 제거하는 것은重要的 보안 습관입니다. ZXZX를 사용하면 압축과 EXIF 제거를 한 번에 처리할 수 있습니다.</p>
     </article>
   </main>
 
@@ -193,7 +193,7 @@
         <a href="/terms">이용약관</a>
         <a href="/blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="exif-metadata-guide_p_91">&copy; 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
   <script src="/src/utils/i18n.js"></script>

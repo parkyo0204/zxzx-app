@@ -20,37 +20,37 @@
   <text x="116" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#64748b">image tools</text>
 </svg></a>
       <ul>
-        <li><a href="/compress">압축</a></li>
-        <li><a href="/convert">변환</a></li>
-        <li><a href="/resize">리사이즈</a></li>
-        <li><a href="/blog">블로그</a></li>
-        <li><a href="/about">소개</a></li>
+        <li data-i18n="resize-for-mobile_li_1"><a href="/compress">압축</a></li>
+        <li data-i18n="resize-for-mobile_li_2"><a href="/convert">변환</a></li>
+        <li data-i18n="resize-for-mobile_li_3"><a href="/resize">리사이즈</a></li>
+        <li data-i18n="resize-for-mobile_li_4"><a href="/blog">블로그</a></li>
+        <li data-i18n="resize-for-mobile_li_5"><a href="/about">소개</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="page-content">
     <article>
-      <h1>이미지 리사이즈로 모바일 최적화하기</h1>
-      <p class="meta">2026년 7월 15일 · 7분 읽기</p>
+      <h1 data-i18n="resize-for-mobile_h1">이미지 리사이즈로 모바일 최적화하기</h1>
+      <p class="meta" data-i18n="resize-for-mobile_meta">2026년 7월 15일 · 7분 읽기</p>
 
-      <p>2026년 현재 전 세계 웹 트래픽의 60% 이상이 모바일 디바이스에서 발생합니다. 하지만很多 웹사이트는 여전히 데스크톱용 고해상도 이미지를 모바일에서도同样的 크기로 제공하고 있습니다. 이는 불필요한 데이터 낭비와 느린 로딩 속도의 주요 원인입니다. 이 글에서는 이미지 리사이즈를 통해 모바일 성능을 최적화하는 방법을详细介绍합니다.</p>
+      <p data-i18n="resize-for-mobile_p_8">2026년 현재 전 세계 웹 트래픽의 60% 이상이 모바일 디바이스에서 발생합니다. 하지만很多 웹사이트는 여전히 데스크톱용 고해상도 이미지를 모바일에서도同样的 크기로 제공하고 있습니다. 이는 불필요한 데이터 낭비와 느린 로딩 속도의 주요 원인입니다. 이 글에서는 이미지 리사이즈를 통해 모바일 성능을 최적화하는 방법을详细介绍합니다.</p>
 
-      <h2>왜 모바일 이미지 리사이즈가 중요한가?</h2>
-      <p>모바일 디바이스와 데스크톱의 이미지需求는 크게 다릅니다:</p>
+      <h2 data-i18n="resize-for-mobile_h2_9">왜 모바일 이미지 리사이즈가 중요한가?</h2>
+      <p data-i18n="resize-for-mobile_p_10">모바일 디바이스와 데스크톱의 이미지需求는 크게 다릅니다:</p>
       <ul>
-        <li><strong>화면 크기:</strong> 모바일은 360~428px, 데스크톱은 1920px 이상</li>
-        <li><strong>네트워크:</strong> 모바일은 불안정한 셀룰러, 데스크톱은 안정적인 Wi-Fi</li>
-        <li><strong>처리 능력:</strong> 모바일은 제한된 CPU/GPU, 데스크톱은 강력한 하드웨어</li>
-        <li><strong>배터리:</strong> 모바일은 배터리 소모가 중요, 데스크톱은 관계없음</li>
+        <li data-i18n="resize-for-mobile_li_11"><strong>화면 크기:</strong> 모바일은 360~428px, 데스크톱은 1920px 이상</li>
+        <li data-i18n="resize-for-mobile_li_12"><strong>네트워크:</strong> 모바일은 불안정한 셀룰러, 데스크톱은 안정적인 Wi-Fi</li>
+        <li data-i18n="resize-for-mobile_li_13"><strong>처리 능력:</strong> 모바일은 제한된 CPU/GPU, 데스크톱은 강력한 하드웨어</li>
+        <li data-i18n="resize-for-mobile_li_14"><strong>배터리:</strong> 모바일은 배터리 소모가 중요, 데스크톱은 관계없음</li>
       </ul>
-      <p>360px 화면에 1920px 이미지를 로드하는 것은 불필요한 4.3MB의 데이터를 다운로드하는 것과 같습니다. 적절한 크기로 리사이즈하면 파일 크기를 70~90%까지 줄일 수 있습니다.</p>
+      <p data-i18n="resize-for-mobile_p_15">360px 화면에 1920px 이미지를 로드하는 것은 불필요한 4.3MB의 데이터를 다운로드하는 것과 같습니다. 적절한 크기로 리사이즈하면 파일 크기를 70~90%까지 줄일 수 있습니다.</p>
 
-      <h2>반응형 이미지의 기본 원칙</h2>
-      <p>반응형 이미지는 디바이스의 화면 크기와 해상도에 따라不同 크기의 이미지를 제공하는 기법입니다. 핵심은 <strong>"화면에 표시되는 크기와 가장接近한 이미지를 제공하는 것"</strong>입니다.</p>
+      <h2 data-i18n="resize-for-mobile_h2_16">반응형 이미지의 기본 원칙</h2>
+      <p data-i18n="resize-for-mobile_p_17">반응형 이미지는 디바이스의 화면 크기와 해상도에 따라不同 크기의 이미지를 제공하는 기법입니다. 핵심은 <strong>"화면에 표시되는 크기와 가장接近한 이미지를 제공하는 것"</strong>입니다.</p>
 
-      <h3>srcset 속성</h3>
-      <p>HTML의 <code>srcset</code> 속성을 사용하면 브라우저가 디바이스에 맞는 이미지를 자동으로 선택합니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_18">srcset 속성</h3>
+      <p data-i18n="resize-for-mobile_p_19">HTML의 <code>srcset</code> 속성을 사용하면 브라우저가 디바이스에 맞는 이미지를 자동으로 선택합니다.</p>
       <pre><code>&lt;img 
   src="image-800.webp"
   srcset="image-400.webp 400w,
@@ -62,12 +62,12 @@
          33vw"
   alt="설명"
 &gt;</code></pre>
-      <p>이 코드는 브라우저에게不同 크기의 이미지 후보를提供하고, 화면 크기에 따라最適な 것을 선택하도록 지시합니다.</p>
+      <p data-i18n="resize-for-mobile_p_20">이 코드는 브라우저에게不同 크기의 이미지 후보를提供하고, 화면 크기에 따라最適な 것을 선택하도록 지시합니다.</p>
 
-      <h3>sizes 속성</h3>
-      <p><code>sizes</code> 속성은 이미지가 화면에서 차지하는 크기를 브라우저에게 알려줍니다. 이를 통해 브라우저는 필요한 이미지 크기를 정확히 계산할 수 있습니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_21">sizes 속성</h3>
+      <p data-i18n="resize-for-mobile_p_22"><code>sizes</code> 속성은 이미지가 화면에서 차지하는 크기를 브라우저에게 알려줍니다. 이를 통해 브라우저는 필요한 이미지 크기를 정확히 계산할 수 있습니다.</p>
 
-      <h2>모바일 이미지 크기 가이드</h2>
+      <h2 data-i18n="resize-for-mobile_h2_23">모바일 이미지 크기 가이드</h2>
       <table>
         <thead>
           <tr><th>용도</th><th>권장 크기 (px)</th><th>파일 크기 목표</th></tr>
@@ -81,49 +81,49 @@
         </tbody>
       </table>
 
-      <h2>이미지 리사이즈 실전 가이드</h2>
+      <h2 data-i18n="resize-for-mobile_h2_24">이미지 리사이즈 실전 가이드</h2>
 
-      <h3>1단계: 현재 이미지 분석</h3>
-      <p>먼저 웹사이트의 이미지가 어떻게使用되고 있는지 파악해야 합니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_25">1단계: 현재 이미지 분석</h3>
+      <p data-i18n="resize-for-mobile_p_26">먼저 웹사이트의 이미지가 어떻게使用되고 있는지 파악해야 합니다.</p>
       <ul>
-        <li>Chrome DevTools의 Network 탭에서 이미지 파일 크기를 확인합니다</li>
-        <li>Lighthouse의 "Properly size images" 항목을 확인합니다</li>
-        <li>각 이미지의 실제 표시 크기와 원본 크기를 비교합니다</li>
+        <li data-i18n="resize-for-mobile_li_27">Chrome DevTools의 Network 탭에서 이미지 파일 크기를 확인합니다</li>
+        <li data-i18n="resize-for-mobile_li_28">Lighthouse의 "Properly size images" 항목을 확인합니다</li>
+        <li data-i18n="resize-for-mobile_li_29">각 이미지의 실제 표시 크기와 원본 크기를 비교합니다</li>
       </ul>
 
-      <h3>2단계: 필요한 크기 결정</h3>
-      <p>디자인에서 이미지가 표시되는最大 크기를 확인하고, 2x 디스플레이를 고려하여 2배 크기의 이미지를準備합니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_30">2단계: 필요한 크기 결정</h3>
+      <p data-i18n="resize-for-mobile_p_31">디자인에서 이미지가 표시되는最大 크기를 확인하고, 2x 디스플레이를 고려하여 2배 크기의 이미지를準備합니다.</p>
       <ul>
-        <li>표시 크기 400px → 800px 이미지 준비</li>
-        <li>표시 크기 600px → 1200px 이미지 준비</li>
-        <li>표시 크기 800px → 1600px 이미지 준비</li>
+        <li data-i18n="resize-for-mobile_li_32">표시 크기 400px → 800px 이미지 준비</li>
+        <li data-i18n="resize-for-mobile_li_33">표시 크기 600px → 1200px 이미지 준비</li>
+        <li data-i18n="resize-for-mobile_li_34">표시 크기 800px → 1600px 이미지 준비</li>
       </ul>
 
-      <h3>3단계: 리사이즈 수행</h3>
-      <p>ZXZX의 <a href="/resize">리사이즈 도구</a>를 사용하면 여러 크기의 이미지를 한 번에 생성할 수 있습니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_35">3단계: 리사이즈 수행</h3>
+      <p data-i18n="resize-for-mobile_p_36">ZXZX의 <a href="/resize">리사이즈 도구</a>를 사용하면 여러 크기의 이미지를 한 번에 생성할 수 있습니다.</p>
       <ol>
-        <li><a href="/resize">ZXZX 리사이즈 도구</a>에 이미지를 업로드합니다</li>
-        <li>목표 너비를 입력합니다 (예: 400, 800, 1200)</li>
-        <li>비율 유지 옵션을 활성화합니다</li>
-        <li>"리사이즈"를 클릭합니다</li>
-        <li>결과를 다운로드합니다</li>
+        <li data-i18n="resize-for-mobile_li_37"><a href="/resize">ZXZX 리사이즈 도구</a>에 이미지를 업로드합니다</li>
+        <li data-i18n="resize-for-mobile_li_38">목표 너비를 입력합니다 (예: 400, 800, 1200)</li>
+        <li data-i18n="resize-for-mobile_li_39">비율 유지 옵션을 활성화합니다</li>
+        <li data-i18n="resize-for-mobile_li_40">"리사이즈"를 클릭합니다</li>
+        <li data-i18n="resize-for-mobile_li_41">결과를 다운로드합니다</li>
       </ol>
 
-      <h3>4단계: HTML 적용</h3>
-      <p>생성된 이미지를 srcset과 sizes 속성으로 적용합니다. 위의 코드 예시를参考하세요.</p>
+      <h3 data-i18n="resize-for-mobile_h3_42">4단계: HTML 적용</h3>
+      <p data-i18n="resize-for-mobile_p_43">생성된 이미지를 srcset과 sizes 속성으로 적용합니다. 위의 코드 예시를参考하세요.</p>
 
-      <h2>고급 리사이즈 기법</h2>
+      <h2 data-i18n="resize-for-mobile_h2_44">고급 리사이즈 기법</h2>
 
-      <h3>아트 디렉션 (Art Direction)</h3>
-      <p>화면 크기에 따라 이미지의 크롭 영역이나 구성을 변경하는 기법입니다. 예를 들어, 데스크톱에서는 넓은 풍경 사진을 사용하고, 모바일에서는中央部分만 크롭하여 사용합니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_45">아트 디렉션 (Art Direction)</h3>
+      <p data-i18n="resize-for-mobile_p_46">화면 크기에 따라 이미지의 크롭 영역이나 구성을 변경하는 기법입니다. 예를 들어, 데스크톱에서는 넓은 풍경 사진을 사용하고, 모바일에서는中央部分만 크롭하여 사용합니다.</p>
       <pre><code>&lt;picture&gt;
   &lt;source media="(max-width: 600px)" srcset="image-mobile.webp"&gt;
   &lt;source media="(max-width: 1200px)" srcset="image-tablet.webp"&gt;
   &lt;img src="image-desktop.webp" alt="설명"&gt;
 &lt;/picture&gt;</code></pre>
 
-      <h3>픽셀 밀도 처리</h3>
-      <p>Retina 디스플레이와 같은 고해상도 디스플레이를 지원하려면 2x 또는 3x 크기의 이미지를提供해야 합니다.</p>
+      <h3 data-i18n="resize-for-mobile_h3_47">픽셀 밀도 처리</h3>
+      <p data-i18n="resize-for-mobile_p_48">Retina 디스플레이와 같은 고해상도 디스플레이를 지원하려면 2x 또는 3x 크기의 이미지를提供해야 합니다.</p>
       <pre><code>&lt;img 
   srcset="image-400.webp 1x,
           image-800.webp 2x"
@@ -131,25 +131,25 @@
   alt="설명"
 &gt;</code></pre>
 
-      <h2>모바일 이미지 최적화 체크리스트</h2>
+      <h2 data-i18n="resize-for-mobile_h2_49">모바일 이미지 최적화 체크리스트</h2>
       <ul>
-        <li>☐ 모든 이미지가 적절한 크기로 리사이즈됨</li>
-        <li>☐ srcset과 sizes 속성이 적용됨</li>
-        <li>☐ loading="lazy"가 폴딩 아래 이미지에 적용됨</li>
-        <li>☐ width, height 속성이 지정됨 (CLS 방지)</li>
-        <li>☐ WebP 포맷으로 변환됨</li>
-        <li>☐ 품질 75~85%로 압축됨</li>
+        <li data-i18n="resize-for-mobile_li_50">☐ 모든 이미지가 적절한 크기로 리사이즈됨</li>
+        <li data-i18n="resize-for-mobile_li_51">☐ srcset과 sizes 속성이 적용됨</li>
+        <li data-i18n="resize-for-mobile_li_52">☐ loading="lazy"가 폴딩 아래 이미지에 적용됨</li>
+        <li data-i18n="resize-for-mobile_li_53">☐ width, height 속성이 지정됨 (CLS 방지)</li>
+        <li data-i18n="resize-for-mobile_li_54">☐ WebP 포맷으로 변환됨</li>
+        <li data-i18n="resize-for-mobile_li_55">☐ 품질 75~85%로 압축됨</li>
       </ul>
 
-      <h2>성능 측정 도구</h2>
+      <h2 data-i18n="resize-for-mobile_h2_56">성능 측정 도구</h2>
       <ul>
-        <li><strong>Google PageSpeed Insights:</strong> 모바일 성능 점수와 이미지 관련 제안을 확인합니다</li>
-        <li><strong>Chrome DevTools:</strong> 모바일 에뮬레이션으로 실제 모바일 환경을 시뮬레이션합니다</li>
-        <li><strong>WebPageTest:</strong> 실제 모바일 디바이스에서의 성능을 측정합니다</li>
+        <li data-i18n="resize-for-mobile_li_57"><strong>Google PageSpeed Insights:</strong> 모바일 성능 점수와 이미지 관련 제안을 확인합니다</li>
+        <li data-i18n="resize-for-mobile_li_58"><strong>Chrome DevTools:</strong> 모바일 에뮬레이션으로 실제 모바일 환경을 시뮬레이션합니다</li>
+        <li data-i18n="resize-for-mobile_li_59"><strong>WebPageTest:</strong> 실제 모바일 디바이스에서의 성능을 측정합니다</li>
       </ul>
 
-      <h2>실제 사례: 모바일 이미지 최적화</h2>
-      <p>한 블로그 사이트에서 모바일 이미지를 최적화한 결과입니다.</p>
+      <h2 data-i18n="resize-for-mobile_h2_60">실제 사례: 모바일 이미지 최적화</h2>
+      <p data-i18n="resize-for-mobile_p_61">한 블로그 사이트에서 모바일 이미지를 최적화한 결과입니다.</p>
       <table>
         <thead>
           <tr><th>항목</th><th>최적화 전</th><th>최적화 후</th><th>改善</th></tr>
@@ -162,8 +162,8 @@
         </tbody>
       </table>
 
-      <h2>결론</h2>
-      <p>모바일 이미지 리사이즈는 성능 개선 중 가장 효과적인 조치입니다. 복잡한 설정 없이 ZXZX의 리사이즈 도구로 시작할 수 있습니다. 적절한 크기의 이미지를 제공하면 사용자 경험과 검색 순위 모두 개선됩니다.</p>
+      <h2 data-i18n="resize-for-mobile_h2_62">결론</h2>
+      <p data-i18n="resize-for-mobile_p_63">모바일 이미지 리사이즈는 성능 개선 중 가장 효과적인 조치입니다. 복잡한 설정 없이 ZXZX의 리사이즈 도구로 시작할 수 있습니다. 적절한 크기의 이미지를 제공하면 사용자 경험과 검색 순위 모두 개선됩니다.</p>
     </article>
   </main>
 
@@ -176,7 +176,7 @@
         <a href="/terms">이용약관</a>
         <a href="/blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="resize-for-mobile_p_64">&copy; 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
   <script src="/src/utils/i18n.js"></script>
