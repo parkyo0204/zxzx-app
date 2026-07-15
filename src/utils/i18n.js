@@ -1,6 +1,8 @@
 // i18n module — supports ko, en, ja, zh
 // Load from /i18n.json (copied from public/ by Vite). Never fetch /src/...
 // Missing keys leave existing DOM text intact (do not paint raw key names).
+// Language SSOT: ?lang= > localStorage > navigator > ko
+// Language select syncs ?lang= into the URL (other query keys preserved).
 var SUPPORTED = ['ko', 'en', 'ja', 'zh'];
 var DEFAULT = 'ko';
 
@@ -17,6 +19,22 @@ function getLang() {
   if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
   var browser = (navigator.language || DEFAULT).slice(0, 2);
   return SUPPORTED.indexOf(browser) !== -1 ? browser : DEFAULT;
+}
+
+function syncLangToUrl(lang) {
+  try {
+    var url = new URL(window.location.href);
+    if (lang === DEFAULT) {
+      url.searchParams.delete('lang');
+    } else {
+      url.searchParams.set('lang', lang);
+    }
+    var next = url.pathname + url.search + url.hash;
+    var cur = window.location.pathname + window.location.search + window.location.hash;
+    if (next !== cur) {
+      history.replaceState(null, '', next);
+    }
+  } catch (e) {}
 }
 
 var currentLang = getLang();
@@ -48,11 +66,17 @@ function applyTranslations() {
     if (text == null) return;
     if (el.tagName === 'INPUT' && el.type !== 'submit') {
       el.placeholder = text;
+    } else if (el.tagName === 'OPTION') {
+      el.textContent = text;
     } else if (el.tagName === 'TITLE') {
       document.title = text;
     } else {
       el.innerHTML = text;
     }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+    var text = t(el.getAttribute('data-i18n-placeholder'));
+    if (text != null) el.setAttribute('placeholder', text);
   });
   document.querySelectorAll('[data-i18n-title]').forEach(function (el) {
     var text = t(el.getAttribute('data-i18n-title'));
@@ -75,6 +99,7 @@ function switchLang(lang) {
   if (SUPPORTED.indexOf(lang) === -1) return;
   currentLang = lang;
   localStorage.setItem('zxzx_lang', lang);
+  syncLangToUrl(lang);
   applyTranslations();
   updateLangButton();
 }
@@ -88,7 +113,7 @@ function updateLangButton() {
 
 function createLangSwitcher() {
   var nav = document.querySelector('header nav ul');
-  if (!nav || document.getElementById('lang-btn')) return;
+  if (!nav || document.getElementById('lang-select')) return;
 
   var li = document.createElement('li');
   li.innerHTML =
@@ -111,4 +136,5 @@ function createLangSwitcher() {
 loadTranslations().then(function () {
   applyTranslations();
   createLangSwitcher();
+  syncLangToUrl(currentLang);
 });
