@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG vs PNG vs WebP: 어떤 포맷을 써야 할까? — ZXZX</title>
+  <meta name="description" content="JPG, PNG, WebP 이미지 포맷의 차이점과 장단점을 비교합니다. 용도에 맞는 최적의 이미지 포맷 선택 가이드.">
+  <link rel="canonical" href="https://zxzx.app/blog/jpg-vs-png-vs-webp">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">ZXZX</a>
+      <ul>
+        <li><a href="/compress">압축</a></li>
+        <li><a href="/convert">변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/blog">블로그</a></li>
+        <li><a href="/about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <article>
+      <h1>JPG vs PNG vs WebP: 어떤 포맷을 써야 할까?</h1>
+      <p class="meta">2026년 7월 15일 · 7분 읽기</p>
+
+      <p>웹사이트를 만들거나 이미지를 관리할 때 가장 먼저 마주하는 결정은 <strong>어떤 이미지 포맷을 사용할 것인가</strong>입니다. JPG, PNG, WebP는 현재 웹에서 가장 널리 사용되는 세 가지 포맷이지만, 각각의 장단점과 최적 사용 시나리오가完全不同합니다. 이 글에서는 세 포맷을 깊이 비교하고, 상황에 따른 최적 선택 방법을 안내합니다.</p>
+
+      <h2>JPG (JPEG): 웹 이미지의 표준</h2>
+      <p>JPG는 Joint Photographic Experts Group의 약자로, 1992년에 표준화된 이미지 포맷입니다. 거의 30년간 웹 이미지의 사실상 표준으로 자리잡아 왔습니다.</p>
+
+      <h3>JPG의 장점</h3>
+      <ul>
+        <li><strong>높은 호환성:</strong> 모든 브라우저, 모든 디바이스에서 지원됩니다. 호환성 문제를 걱정할 필요가 없습니다.</li>
+        <li><strong>뛰어난 사진 압축:</strong> 그라데이션이 풍부한 사진에서 10:1~20:1의 높은 압축률을 달성합니다. 인간의 눈이 색상 변화보다 밝기 변화에 더 민감한 특성을利用하여 시각적 손실을 최소화합니다.</li>
+        <li><strong>작은 파일 크기:</strong> 웹 로딩 속도에 직접 영향을 주는 파일 크기가 다른 무손실 포맷보다 훨씬 작습니다.</li>
+        <li><strong>EXIF 메타데이터 지원:</strong> 카메라 정보, GPS 위치, 촬영 설정 등을 포함할 수 있어 사진 관리에 유용합니다.</li>
+      </ul>
+
+      <h3>JPG의 단점</h3>
+      <ul>
+        <li><strong>손실 압축:</strong> 압축할 때마다 화질이 저됩니다. 반복 편집 시 화질 손실이 누적됩니다.</li>
+        <li><strong>투명도 미지원:</strong> 알파 채널(투명 배경)을 지원하지 않습니다. 투명 배경이 필요한 로고나 아이콘에는 적합하지 않습니다.</li>
+        <li><strong>텍스트와 선명한 에지에서 아티팩트:</strong> 압축 시 블록 노이즈(모스키팅)가 발생하여 텍스트나 날카로운 경계선이 번져 보일 수 있습니다.</li>
+        <li><strong>24비트 컬러만 지원:</strong> 팔레트 기반 이미지나 8비트 이하 이미지에는 비효율적입니다.</li>
+      </ul>
+
+      <h3>JPG가 적합한 경우</h3>
+      <p>사진, 그라데이션 배경, 복잡한 색상의 이미지에서 JPG는 여전히 훌륭한 선택입니다. 블로그 포스트의 본문 이미지, 제품 사진, 갤러리 이미지 등에 특히 효과적입니다.</p>
+
+      <h2>PNG: 무손실 압축의 대명사</h2>
+      <p>PNG는 Portable Network Graphics의 약자로, GIF 포맷의 특허 문제를 해결하기 위해 1996년에 개발되었습니다. 무손실 압축을 기본으로 하며, 알파 채널을 완벽하게 지원합니다.</p>
+
+      <h3>PNG의 장점</h3>
+      <ul>
+        <li><strong>무손실 압축:</strong> 압축과 해제 과정에서 픽셀 데이터가 전혀 손실되지 않습니다. 원본 품질을 100% 보존합니다.</li>
+        <li><strong>알파 채널 지원:</strong> 256단계의 투명도를 지원하여 부드러운 그림자, 반투명 효과 등을 표현할 수 있습니다.</li>
+        <li><strong>텍스트와 선명한 에지에 최적:</strong> 스크린샷, 로고, 아이콘, 다이어그램 같은 날카로운 경계가 많은 이미지에서 완벽한 화질을 유지합니다.</li>
+        <li><strong>팔레트 모드:</strong> 256색 이하의 이미지는 팔레트 모드(PNG-8)로 저장하면 파일 크기를 크게 줄일 수 있습니다.</li>
+      </ul>
+
+      <h3>PNG의 단점</h3>
+      <ul>
+        <li><strong>큰 파일 크기:</strong> 사진과 같은 복잡한 이미지에서 JPG보다 5~10배 큰 파일이 생성됩니다.</li>
+        <li><strong>느린 로딩:</strong> 큰 파일 크기는 웹사이트 로딩 속도에 직접적인负面影响을 줍니다.</li>
+        <li><strong>사진 압축 비효율:</strong> 무손실 특성상 사진의 미세한 노이즈까지 모두 보존하여 불필요하게 큰 파일이 됩니다.</li>
+        <li><strong>애니메이션 제한:</strong> APNG라는 확장이 있지만, GIF처럼 널리 지원되지는 않습니다.</li>
+      </ul>
+
+      <h3>PNG가 적합한 경우</h3>
+      <p>로고, 아이콘, 스크린샷, 투명 배경이 필요한 이미지, 텍스트가 포함된 그래픽 등에서 PNG가 최선의 선택입니다. 특히 웹 디자인 요소로 사용되는 소형 그래픽에는 PNG-8 팔레트 모드가 효과적입니다.</p>
+
+      <h2>WebP: 차세대 웹 이미지 포맷</h2>
+      <p>WebP는 2010년 Google이 개발한 이미지 포맷으로, JPG의 손실 압축과 PNG의 무손실 압축을 모두 지원하면서 더 나은 압축률을 제공합니다. 2026년 현재 모든 주요 브라우저에서 지원되어 실용적인 표준으로 자리잡았습니다.</p>
+
+      <h3>WebP의 장점</h3>
+      <ul>
+        <li><strong>향상된 압축률:</strong> 손실 압축 시 JPG 대비 25~34% 작은 파일 크기, 무손실 압축 시 PNG 대비 26% 작은 파일 크기를 달성합니다.</li>
+        <li><strong>알파 채널 + 손실 압축 동시 지원:</strong> JPG에서는 불가능했던 투명도를 손실 압축과 함께 사용할 수 있습니다.</li>
+        <li><strong>애니메이션 지원:</strong> GIF를 대체할 수 있는 애니메이션 기능을 포함합니다.</li>
+        <li><strong>메타데이터 지원:</strong> EXIF, XMP 메타데이터를 저장할 수 있습니다.</li>
+        <li><strong>전체 브라우저 지원:</strong> 2026년 현재 Chrome, Firefox, Safari, Edge 모두 WebP를 지원합니다.</li>
+      </ul>
+
+      <h3>WebP의 단점</h3>
+      <ul>
+        <li><strong>레거시 소프트웨어 호환성:</strong> 일부 오래된 이미지 편집 소프트웨어에서는 열거나 편집할 수 없습니다.</li>
+        <li><strong>소셜 미디어 제한:</strong> 일부 플랫폼은 업로드 시 WebP를 지원하지 않을 수 있습니다.</li>
+        <li><strong>인코딩 속도:</strong> JPG보다 인코딩이 다소 느릴 수 있습니다 (WASM 코덱 사용 시 큰 차이는 없습니다).</li>
+        <li><strong>손실 압축 반복 편집:</strong> JPG와 마찬가지로 반복 저장 시 화질이 저됩니다.</li>
+      </ul>
+
+      <h2>포맷 비교 표</h2>
+      <table>
+        <thead>
+          <tr><th>비교 항목</th><th>JPG</th><th>PNG</th><th>WebP</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>압축 방식</td><td>손실</td><td>무손실</td><td>손실 + 무손실</td></tr>
+          <tr><td>투명도</td><td>X</td><td>O</td><td>O</td></tr>
+          <tr><td>애니메이션</td><td>X</td><td>제한적</td><td>O</td></tr>
+          <tr><td>사진 파일 크기</td><td>중간</td><td>큼</td><td>작음</td></tr>
+          <tr><td>그래픽 파일 크기</td><td>큼</td><td>중간</td><td>작음</td></tr>
+          <tr><td>브라우저 지원</td><td>100%</td><td>100%</td><td>99%+</td></tr>
+          <tr><td>편집 소프트웨어</td><td>전부</td><td>대부분</td><td>점점 확대</td></tr>
+        </tbody>
+      </table>
+
+      <h2>상황별 최적 포맷 선택 가이드</h2>
+
+      <h3>블로그 포스트의 본문 이미지</h3>
+      <p><strong>추천: WebP (폴백: JPG)</strong>. 브라우저가 WebP를 지원하면 WebP를, 지원하지 않으면 JPG를 제공하는 방식이 이상적입니다. ZXZX의 압축 도구를 사용하면 손쉽게 변환할 수 있습니다.</p>
+
+      <h3>로고와 아이콘</h3>
+      <p><strong>추천: SVG &gt; PNG &gt; WebP</strong>. 벡터 이미지가 가능하면 SVG를 사용하세요. 복잡한 그래픽이라면 PNG의 무손실 특성이 유리합니다.</p>
+
+      <h3>투명 배경이 필요한 이미지</h3>
+      <p><strong>추천: WebP</strong>. 손실 압축과 알파 채널을 동시에 지원하므로 PNG보다 작은 파일 크기로 같은 효과를 낼 수 있습니다.</p>
+
+      <h3>사진 갤러리</h3>
+      <p><strong>추천: WebP (손실)</strong>. 25~34%의 파일 크기 절감은 갤러리가 많은 페이지에서 체감 가능한 속도 향상을带来합니다.</p>
+
+      <h3>소셜 미디어 업로드</h3>
+      <p><strong>추천: JPG</strong>. 대부분의 소셜 플랫폼이 JPG를 기본으로 지원하며, 업로드 후 플랫폼이 자체적으로 재압축하기 때문에 원본 포맷의优势가 상쇄됩니다.</p>
+
+      <h2>ZXZX로 쉽게 변환하기</h2>
+      <p>ZXZX의 <a href="/convert">이미지 변환 도구</a>를 사용하면 JPG, PNG, WebP 간의 변환을 브라우저에서 바로 처리할 수 있습니다. 서버에 파일을 업로드할 필요 없이 100% 로컬에서 변환이 이루어지므로 프라이버시도 보호됩니다.</p>
+
+      <ol>
+        <li><a href="/convert">변환 도구</a>에 이미지를 업로드합니다</li>
+        <li>변환할 포맷을 선택합니다 (JPG, PNG, WebP, AVIF)</li>
+        <li>품질 설정을 조정합니다</li>
+        <li>"변환"을 클릭하고 결과를 다운로드합니다</li>
+      </ol>
+
+      <h2>결론</h2>
+      <p>세 포맷 모두各自의 강점이 있습니다. 호환성이 최우선이라면 JPG, 무손실 품질과 투명도가 필요하다면 PNG, 최적의 파일 크기와 현대적인 기능을 원한다면 WebP를 선택하세요. ZXZX를 사용하면 어떤 포맷이든 몇 초 만에 변환할 수 있습니다.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">소개</a>
+        <a href="/contact">문의</a>
+        <a href="/privacy">개인정보 처리방침</a>
+        <a href="/terms">이용약관</a>
+        <a href="/blog">블로그</a>
+      </div>
+      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+  <script type="module" src="/src/utils/i18n.ts"></script>
+</body>
+</html>

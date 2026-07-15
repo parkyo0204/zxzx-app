@@ -152,7 +152,15 @@
     "terms_s10_title": "10. 본 약관의 변경",
     "terms_s11_title": "11. 준거법",
     "terms_s12_title": "12. 분리 가능성",
-    "terms_s13_title": "13. 문의"
+    "terms_s13_title": "13. 문의",
+    "compress_how_title": "온라인 이미지 압축 방법",
+    "compress_why_title": "이미지를 압축해야 하는 이유",
+    "compress_works_title": "ZXZX 압축 방식",
+    "compress_faq_upload_q": "이미지가 서버에 업로드되나요?",
+    "compress_faq_free_q": "이미지 압축이 정말 무료인가요?",
+    "compress_faq_quality_q": "압축이 이미지 품질을 떨어뜨리나요?",
+    "compress_faq_mobile_q": "모바일에서도 사용할 수 있나요?",
+    "compress_faq_diff_q": "JPG, PNG, WebP 압축 차이가 뭔가요?"
   },
   "en": {
     "site_name": "ZXZX Image Tools",
@@ -307,7 +315,15 @@
     "terms_s10_title": "10. Changes to These Terms",
     "terms_s11_title": "11. Governing Law",
     "terms_s12_title": "12. Severability",
-    "terms_s13_title": "13. Contact"
+    "terms_s13_title": "13. Contact",
+    "compress_how_title": "How to Compress Images Online",
+    "compress_why_title": "Why Compress Images?",
+    "compress_works_title": "How ZXZX Compression Works",
+    "compress_faq_upload_q": "Are images uploaded to the server?",
+    "compress_faq_free_q": "Is image compression really free?",
+    "compress_faq_quality_q": "Does compression reduce image quality?",
+    "compress_faq_mobile_q": "Can I use it on mobile?",
+    "compress_faq_diff_q": "What's the difference between JPG, PNG, WebP compression?"
   },
   "ja": {
     "site_name": "ZXZX 画像ツール",
@@ -462,7 +478,15 @@
     "terms_s10_title": "10. 本規約の変更",
     "terms_s11_title": "11. 準拠法",
     "terms_s12_title": "12. 分離可能性",
-    "terms_s13_title": "13. お問い合わせ"
+    "terms_s13_title": "13. お問い合わせ",
+    "compress_how_title": "オンライン画像圧縮方法",
+    "compress_why_title": "画像を圧縮すべき理由",
+    "compress_works_title": "ZXZXの圧縮方式",
+    "compress_faq_upload_q": "画像はサーバーにアップロードされますか？",
+    "compress_faq_free_q": "画像圧縮は本当に無料ですか？",
+    "compress_faq_quality_q": "圧縮は画質を落としますか？",
+    "compress_faq_mobile_q": "モバイルでも使えますか？",
+    "compress_faq_diff_q": "JPG、PNG、WebP圧縮の違いは？"
   },
   "zh": {
     "site_name": "ZXZX 图片工具",
@@ -617,6 +641,14 @@
     "terms_s10_title": "10. 本条款的变更",
     "terms_s11_title": "11. 适用法律",
     "terms_s12_title": "12. 可分割性",
-    "terms_s13_title": "13. 联系方式"
+    "terms_s13_title": "13. 联系方式",
+    "compress_how_title": "如何在线压缩图片",
+    "compress_why_title": "为什么要压缩图片？",
+    "compress_works_title": "ZXZX压缩原理",
+    "compress_faq_upload_q": "图片会上传到服务器吗？",
+    "compress_faq_free_q": "图片压缩真的免费吗？",
+    "compress_faq_quality_q": "压缩会降低图片质量吗？",
+    "compress_faq_mobile_q": "手机上可以用吗？",
+    "compress_faq_diff_q": "JPG、PNG、WebP压缩有什么区别？"
   }
 }
