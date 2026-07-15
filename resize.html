@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Image Resizer — 이미지 크기 조절 | ZXZX</title>
+  <meta name="description" content="Resize images online for free. Change dimensions by pixels or percentage. Maintain aspect ratio. Batch resize up to 30 images. No upload required.">
+  <meta name="keywords" content="image resizer, resize image online, image resize, 사진 크기 조절, 이미지 리사이즈, batch image resizer, pixel resize, percentage resize">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zxzx.app/resize">
+  <meta property="og:title" content="Free Online Image Resizer — Resize by Pixels or Percentage">
+  <meta property="og:description" content="Resize images in your browser. No upload. Batch support. 100% free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zxzx.app/resize">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ZXZX Image Resizer",
+    "url": "https://zxzx.app/resize",
+    "description": "Free online image resizer. Resize images by pixels or percentage directly in your browser.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">ZXZX</a>
+      <ul>
+        <li><a href="/compress">Compress</a></li>
+        <li><a href="/convert">Convert</a></li>
+        <li><a href="/resize">Resize</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>Free Online Image Resizer</h1>
+    <p class="lead">Resize your images by pixels or percentage directly in your browser. Maintain aspect ratio, batch process up to 30 files, and download as ZIP. No upload, no registration, 100% free.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3>Drop images here</h3>
+      <p>or click to choose files • JPG, PNG, WebP • up to 20MB each, 30 files max</p>
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <label>Mode: <select id="resizeMode">
+        <option value="pixels">By Pixels</option>
+        <option value="percent">By Percentage</option>
+      </select></label>
+      <label>Width: <input type="number" id="width" placeholder="px" min="1" max="10000"></label>
+      <label>Height: <input type="number" id="height" placeholder="px" min="1" max="10000"></label>
+      <label><input type="checkbox" id="lockAspect" checked> Lock aspect ratio</label>
+      <button class="btn btn-primary" id="resizeBtn">Resize All</button>
+      <button class="btn btn-secondary" id="downloadZip">Download ZIP</button>
+    </div>
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2>How to Resize Images Online</h2>
+      <p>ZXZX Image Resizer makes it easy to resize your images to the exact dimensions you need. Here's how to get started in three simple steps.</p>
+      <ol>
+        <li><strong>Upload your images</strong> — Drag and drop your JPG, PNG, or WebP files onto the dropzone, or click to browse your device. You can upload up to 30 images at once for batch resizing. Each file can be up to 20MB.</li>
+        <li><strong>Set your target dimensions</strong> — Enter the desired width and/or height in pixels. With the aspect ratio lock enabled, the height automatically adjusts when you change the width, and vice versa. You can also switch to percentage mode to scale images proportionally — for example, setting 50% will reduce both dimensions by half.</li>
+        <li><strong>Resize and download</strong> — Click "Resize All" to process your images. The resizing happens instantly in your browser using the Canvas API. Preview the results, then download individual files or save everything as a ZIP archive.</li>
+      </ol>
+
+      <h2>Common Use Cases for Image Resizing</h2>
+      <p>Image resizing is one of the most common image editing operations. Here are the most popular reasons people resize their images online.</p>
+
+      <h3>Social Media Profile Pictures and Covers</h3>
+      <p>Every social media platform requires specific image dimensions. Instagram profile pictures need 320x320 pixels, Facebook cover photos need 820x312, and Twitter headers need 1500x500. Resizing your images to these exact dimensions ensures they display correctly without cropping or distortion. ZXZX lets you enter precise pixel values so your images fit perfectly on any platform.</p>
+
+      <h3>Website and Blog Optimization</h3>
+      <p>Uploading oversized images to your website wastes bandwidth and slows page loading. A 4000x3000 pixel photo from a modern camera is far larger than needed for web display. Resizing images to their display dimensions — typically 1200-2000 pixels wide for blog posts — dramatically reduces file size while maintaining visual quality. Combined with our <a href="/compress">compression tool</a>, you can achieve optimal web performance.</p>
+
+      <h3>Email Attachments</h3>
+      <p>Many email providers limit attachment sizes to 10-25MB. High-resolution photos from smartphones often exceed these limits. Resizing images to 1024-1920 pixels wide reduces file size by 70-90% while still looking great on screens. This makes sharing photos via email fast and reliable.</p>
+
+      <h3>E-commerce Product Images</h3>
+      <p>Online marketplaces like Amazon, eBay, Shopify, and Etsy have specific image size requirements. Most require images of at least 1000x1000 pixels for zoom functionality, but uploading unnecessarily large images increases page load times. Resize your product images to the recommended dimensions for each platform to balance quality and performance.</p>
+
+      <h3>Thumbnail Generation</h3>
+      <p>Creating thumbnails for video previews, gallery grids, or image catalogs requires consistent small dimensions. Batch resizing allows you to generate hundreds of thumbnails at once, saving significant time compared to resizing images one by one.</p>
+
+      <h3>Print Preparation</h3>
+      <p>Preparing images for print requires specific dimensions at 300 DPI. A standard 4x6 inch print needs 1200x1800 pixels. Using ZXZX's pixel-based resizing, you can prepare images for any print format from standard photo sizes to large posters.</p>
+
+      <h2>How ZXZX Preserves Image Quality</h2>
+      <p>ZXZX uses high-quality resampling algorithms to ensure resized images look sharp and clear. When reducing image dimensions, our tool properly downsamples to avoid aliasing artifacts. When increasing dimensions, it uses bilinear interpolation to produce smooth results. For best quality, we recommend reducing images rather than enlarging them, as upscaling cannot add detail that wasn't in the original.</p>
+      <p>All processing happens in your browser using the Canvas API. Your images are never uploaded to any server, ensuring complete privacy. The resized images maintain the same format as the originals unless you use our <a href="/convert">converter tool</a> to change formats.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is there a limit to how much I can resize?</h3>
+      <p>There's no strict limit, but we recommend keeping dimensions between 1 and 10,000 pixels on each side. Extremely large dimensions may cause your browser to run out of memory. For typical use cases like web images and social media, this range covers all needs.</p>
+
+      <h3>What does "lock aspect ratio" mean?</h3>
+      <p>When aspect ratio is locked, changing the width automatically adjusts the height proportionally, and vice versa. This prevents images from appearing stretched or distorted. We recommend keeping this option enabled unless you specifically need non-proportional resizing.</p>
+
+      <h3>Will resizing reduce image quality?</h3>
+      <p>Reducing image dimensions generally maintains excellent quality. Enlarging images (upscaling) may result in some softness or pixelation, as the tool cannot create detail that wasn't in the original image. For best results, resize images to smaller dimensions rather than larger ones.</p>
+
+      <h3>Can I resize images on my phone?</h3>
+      <p>Yes, ZXZX works on all modern mobile browsers including Chrome and Safari on iOS and Android. The interface is fully responsive and touch-friendly, making it easy to resize images from your phone or tablet.</p>
+
+      <h3>What's the difference between pixels and percentage mode?</h3>
+      <p>Pixel mode lets you enter exact width and height values in pixels. Percentage mode scales the image by a factor — for example, 50% halves both dimensions. Percentage mode is useful when you want to proportionally reduce all images in a batch regardless of their original sizes.</p>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/compress">Image Compressor</a> — Reduce file size by up to 80% without visible quality loss</li>
+        <li><a href="/convert">Image Converter</a> — Convert between JPG, PNG, WebP, AVIF formats</li>
+        <li><a href="/remove-exif">EXIF Remover</a> — Strip metadata from photos for privacy protection</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

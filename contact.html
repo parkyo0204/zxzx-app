@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact ZXZX — 문의하기 | 연락처</title>
+  <meta name="description" content="Get in touch with the ZXZX team. Send us your questions, feedback, bug reports, or partnership inquiries. We respond within 1-2 business days.">
+  <meta name="keywords" content="contact ZXZX, ZXZX 문의, support, feedback, 연락처, contact us">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zxzx.app/contact">
+  <meta property="og:title" content="Contact ZXZX — Send Us Your Questions">
+  <meta property="og:description" content="We'd love to hear from you. Questions, feedback, or partnership inquiries welcome.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zxzx.app/contact">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <style>
+    .contact-form { max-width: 600px; }
+    .contact-form label { display: block; margin-bottom: 0.25rem; font-weight: 600; font-size: 0.95rem; }
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--color-border); border-radius: 8px;
+      font-size: 0.95rem; font-family: var(--font); margin-bottom: 1rem; background: var(--color-bg);
+    }
+    .contact-form textarea { min-height: 160px; resize: vertical; }
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+      outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .contact-info { margin: 2rem 0; }
+    .contact-info h3 { margin-bottom: 0.5rem; }
+    .contact-info p { color: var(--color-muted); margin-bottom: 0.25rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">ZXZX</a>
+      <ul>
+        <li><a href="/compress">Compress</a></li>
+        <li><a href="/convert">Convert</a></li>
+        <li><a href="/resize">Resize</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>Contact Us</h1>
+    <p class="lead">Have a question, feedback, or partnership inquiry? We'd love to hear from you. Our team reads every message and typically responds within 1-2 business days.</p>
+
+    <section class="content-section">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>The best way to reach us is through the contact form below. We welcome all types of inquiries including bug reports, feature requests, partnership proposals, and general questions about ZXZX.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+          <option value="">Select a topic...</option>
+          <option value="general">General Question</option>
+          <option value="bug">Bug Report</option>
+          <option value="feature">Feature Request</option>
+          <option value="partnership">Partnership / Business Inquiry</option>
+          <option value="privacy">Privacy Concern</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+
+      <h2>What to Expect When You Contact Us</h2>
+      <p>We value every message we receive from our users. When you reach out to the ZXZX team, here is what you can expect from our communication process. We believe in transparency and timely responses, and we work hard to address every inquiry thoroughly.</p>
+      <p>Upon submitting the contact form, you will receive an automatic confirmation email acknowledging that we have received your message. Our team reviews incoming messages daily during business days. General questions and feedback are typically answered within 24 hours. Technical issues and bug reports may require additional investigation time, but we will always acknowledge receipt and provide an estimated timeline for resolution.</p>
+      <p>For partnership and business inquiries, our team evaluates each proposal carefully. We are open to collaborations that align with our mission of providing free, privacy-focused image tools. Please include as much detail as possible about your organization and the nature of the proposed partnership so we can route your inquiry to the right team member.</p>
+
+      <h2>Common Topics We Can Help With</h2>
+      <p>Our support team is equipped to handle a wide range of questions and issues. Here are some of the most common topics users contact us about, along with guidance on what information to include in your message.</p>
+      <ul>
+        <li><strong>Tool Not Working</strong> — If a ZXZX tool is not functioning as expected, please include your browser name and version, operating system, the specific tool you were using, and the file type and size of the image you were processing. This information helps us reproduce and fix the issue quickly.</li>
+        <li><strong>Feature Suggestions</strong> — We actively prioritize new features based on user feedback. If there is a tool or capability you would like to see on ZXZX, describe the use case and explain how it would benefit your workflow. The more detail you provide, the better we can evaluate the suggestion.</li>
+        <li><strong>Content Errors</strong> — If you find an error in our blog articles, tool descriptions, or documentation, please let us know the page URL and describe the inaccuracy. We strive to provide accurate, up-to-date information and correct errors promptly.</li>
+        <li><strong>Advertising Concerns</strong> — If you encounter advertisements on ZXZX that are inappropriate, misleading, or disruptive to your experience, please report them with as much detail as possible. We work with our advertising partners to maintain a positive user experience and take ad quality seriously.</li>
+        <li><strong>Accessibility Issues</strong> — We are committed to making ZXZX accessible to all users. If you encounter accessibility barriers while using our tools or navigating our website, please describe the issue and the assistive technology you are using so we can work to resolve it.</li>
+      </ul>
+
+      <div class="contact-info" style="margin-top: 3rem;">
+        <h2>Other Ways to Reach Us</h2>
+        <h3>Email</h3>
+        <p>For direct correspondence, you can email us at: <a href="mailto:hello@zxzx.app">hello@zxzx.app</a></p>
+        <p>We respond to all emails within 1-2 business days. Please include a clear subject line so we can route your message to the appropriate team member. For urgent matters, please mark your subject line with [URGENT] and we will prioritize your inquiry.</p>
+
+        <h3>Social Media</h3>
+        <p>Follow us for updates, tips, and news about ZXZX tools and features. We regularly share image optimization tips, web performance insights, and announcements about new tools on our social channels. Social media is also a great way to stay informed about platform updates and maintenance schedules.</p>
+
+        <h3>Community and Feedback</h3>
+        <p>ZXZX is built for the community, and your feedback directly shapes our product roadmap. We have implemented dozens of user-requested features since our launch, including batch processing, ZIP download, and AVIF support. Every piece of feedback we receive is reviewed by our product team and considered for future development.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How quickly will I get a response?</h3>
+      <p>We aim to respond to all inquiries within 1-2 business days. Complex technical issues or partnership proposals may take a bit longer as we consult with the relevant team members.</p>
+
+      <h3>I found a bug. What should I include in my report?</h3>
+      <p>When reporting a bug, please include: (1) the browser and device you're using, (2) the specific tool and file type involved, (3) what you expected to happen, and (4) what actually happened. Screenshots are very helpful if applicable.</p>
+
+      <h3>Can I request a new feature?</h3>
+      <p>Absolutely! We love hearing from our users about what features would be most useful. Use the contact form and select "Feature Request" as the subject. While we can't implement every suggestion, we prioritize features based on user demand and technical feasibility.</p>
+
+      <h3>Do you offer API access or enterprise solutions?</h3>
+      <p>Currently, ZXZX is a browser-based tool without a public API. If you're interested in API access or enterprise solutions, please reach out through the contact form with details about your use case.</p>
+
+      <h3>How do I report a privacy concern?</h3>
+      <p>Take privacy concerns seriously. Select "Privacy Concern" in the contact form subject dropdown, and our privacy team will investigate and respond promptly. You can also review our <a href="/privacy">Privacy Policy</a> for details on how ZXZX handles data.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

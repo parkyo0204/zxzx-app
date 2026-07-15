@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Image Converter — JPG, PNG, WebP, AVIF 변환 | ZXZX</title>
+  <meta name="description" content="Convert images between JPG, PNG, WebP, AVIF formats instantly in your browser. No upload, no registration. 100% free online image format converter.">
+  <meta name="keywords" content="image converter, PNG to JPG, WebP converter, AVIF converter, online image converter, 이미지 변환, 포맷 변환, JPG PNG WebP 변환">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zxzx.app/convert">
+  <meta property="og:title" content="Free Online Image Converter — JPG, PNG, WebP, AVIF">
+  <meta property="og:description" content="Convert images between formats directly in your browser. No upload required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zxzx.app/convert">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ZXZX Image Converter",
+    "url": "https://zxzx.app/convert",
+    "description": "Free online image converter. Convert between JPG, PNG, WebP, AVIF formats directly in your browser.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">ZXZX</a>
+      <ul>
+        <li><a href="/compress">Compress</a></li>
+        <li><a href="/convert">Convert</a></li>
+        <li><a href="/resize">Resize</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>Free Online Image Format Converter</h1>
+    <p class="lead">Convert images between JPG, PNG, WebP, and AVIF formats instantly in your browser. No upload, no registration, no file size limits. Your files stay on your device.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3>Drop images here</h3>
+      <p>or click to choose files • JPG, PNG, WebP, AVIF • up to 20MB each, 30 files max</p>
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp,image/avif" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <label>Convert to: <select id="targetFormat">
+        <option value="jpeg">JPG</option>
+        <option value="png">PNG</option>
+        <option value="webp">WebP</option>
+        <option value="avif">AVIF</option>
+      </select></label>
+      <label>Quality: <select id="quality">
+        <option value="0.95">Best (95%)</option>
+        <option value="0.85" selected>High (85%)</option>
+        <option value="0.7">Medium (70%)</option>
+      </select></label>
+      <button class="btn btn-primary" id="convertBtn">Convert All</button>
+      <button class="btn btn-secondary" id="downloadZip">Download ZIP</button>
+    </div>
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2>How to Convert Image Formats Online</h2>
+      <p>Converting image formats with ZXZX takes just a few seconds. Follow these four simple steps to transform your images into any format you need.</p>
+      <ol>
+        <li><strong>Upload your images</strong> — Drag and drop your files onto the dropzone area, or click to browse your device. We support JPG, PNG, WebP, AVIF, BMP, GIF, and TIFF input formats. You can upload up to 30 files at once, each up to 20MB in size.</li>
+        <li><strong>Select the target format</strong> — Choose your desired output format from the dropdown menu. JPG is ideal for photographs, PNG for graphics with transparency, WebP for the best web optimization, and AVIF for next-generation compression with superior quality.</li>
+        <li><strong>Adjust quality settings</strong> — For lossy formats like JPG and WebP, you can set the output quality from 70% to 95%. Higher quality produces larger files, while lower quality reduces file size significantly. PNG conversion is always lossless regardless of this setting.</li>
+        <li><strong>Convert and download</strong> — Click the "Convert All" button to process your images. The conversion happens entirely in your browser using the Canvas API. Once complete, download individual files or save all converted images as a ZIP archive.</li>
+      </ol>
+
+      <h2>Image Format Comparison: Which Format Should You Choose?</h2>
+      <p>Each image format has distinct advantages and ideal use cases. Understanding these differences helps you choose the right format for your needs.</p>
+
+      <h3>JPG (JPEG)</h3>
+      <p>JPG is the most widely supported image format on the web. It uses lossy compression to achieve small file sizes, making it perfect for photographs and complex images with many colors and gradients. JPG does not support transparency, so it's not suitable for logos or graphics that need to blend with different backgrounds. JPG files are universally compatible with every browser, device, and image editor.</p>
+
+      <h3>PNG</h3>
+      <p>PNG uses lossless compression, meaning no image data is lost during compression. This format excels at storing graphics, logos, icons, and screenshots where sharp edges and text clarity matter. PNG supports alpha channel transparency, allowing for semi-transparent pixels. The trade-off is larger file sizes compared to JPG, especially for photographic content. PNG is ideal when image quality cannot be compromised.</p>
+
+      <h3>WebP</h3>
+      <p>WebP is a modern image format developed by Google that offers superior compression for web images. WebP lossy files are typically 25-35% smaller than equivalent JPG files at similar quality. WebP also supports lossless compression, transparency, and animation. All major browsers now support WebP, making it an excellent choice for web development. Converting to WebP is one of the easiest ways to speed up your website.</p>
+
+      <h3>AVIF</h3>
+      <p>AVIF is the newest image format, based on the AV1 video codec. It delivers the best compression efficiency of any current format, producing files 50% smaller than JPG and 20% smaller than WebP at comparable quality. AVIF supports HDR, wide color gamut, and 10-bit color depth. Browser support is growing rapidly, with Chrome, Firefox, and Safari all supporting AVIF. This format is ideal for high-quality web images where every byte counts.</p>
+
+      <h3>When to Convert Between Formats</h3>
+      <p>Converting from PNG to JPG is useful when you have screenshots or graphics saved as PNG but need smaller files for email or web use. Converting from JPG to WebP is recommended when optimizing a website for speed. Converting to AVIF is ideal for next-generation web projects where maximum compression is needed. Converting from WebP to JPG or PNG is useful when you need compatibility with older software that doesn't support WebP.</p>
+
+      <h2>Why Use ZXZX Image Converter?</h2>
+      <p>ZXZX provides a fast, secure, and completely free image conversion experience. Unlike online converters that upload your files to remote servers, ZXZX processes everything locally in your browser. This means your images are never transmitted over the internet, eliminating any risk of data interception or unauthorized access.</p>
+      <p>Our converter supports batch processing, allowing you to convert up to 30 images simultaneously. This is particularly useful for web developers optimizing image assets or photographers preparing images for different platforms. The ZIP download feature lets you save all converted files in a single archive for convenience.</p>
+      <p>ZXZX maintains the original image dimensions during conversion. If you need to resize images as well, use our <a href="/resize">Image Resizer</a> tool after conversion. All ZXZX tools work together seamlessly, so you can compress, convert, resize, and optimize your images in any order.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is the image converter really free?</h3>
+      <p>Yes, ZXZX is completely free with no hidden costs, no watermarks, and no registration required. You can convert unlimited images without any restrictions. There are no premium tiers or paywalls — every feature is available to all users.</p>
+
+      <h3>Will converting formats change image quality?</h3>
+      <p>Converting between lossy formats (JPG, WebP) involves re-encoding, which may cause minor quality loss. Converting to lossless formats (PNG) preserves all quality. For most web uses, converting at 85-95% quality produces visually identical results. We recommend keeping your original files as backups.</p>
+
+      <h3>What is the best format for web images?</h3>
+      <p>WebP is currently the best format for web images due to its excellent compression and universal browser support. For maximum compatibility, use JPG for photographs and PNG for graphics with transparency. If your audience uses modern browsers, AVIF offers the smallest file sizes.</p>
+
+      <h3>Can I convert images on my phone?</h3>
+      <p>Yes, ZXZX works perfectly on mobile browsers including Chrome and Safari on iOS and Android. The responsive interface adapts to smaller screens, and all conversion features are fully functional on mobile devices.</p>
+
+      <h3>Are my uploaded images stored on your servers?</h3>
+      <p>No. All image processing happens directly in your browser using JavaScript and the Canvas API. Your files are never uploaded to any server. When you close the page, all data is automatically cleared. ZXZX is one of the most privacy-focused image tools available.</p>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/compress">Image Compressor</a> — Reduce file size by up to 80% without visible quality loss</li>
+        <li><a href="/resize">Image Resizer</a> — Resize images by pixels or percentage</li>
+        <li><a href="/remove-exif">EXIF Remover</a> — Strip metadata from photos for privacy protection</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

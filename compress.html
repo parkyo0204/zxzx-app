@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Image Compressor — Reduce JPG, PNG, WebP Size Without Upload</title>
+  <meta name="description" content="Compress JPG, PNG, WebP images by up to 80% without losing quality. 100% browser-based, no upload required. Free batch compression.">
+  <link rel="canonical" href="https://zxzx.app/compress">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">ZXZX</a>
+      <ul>
+        <li><a href="/compress">Compress</a></li>
+        <li><a href="/convert">Convert</a></li>
+        <li><a href="/resize">Resize</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>Free Online Image Compressor</h1>
+    <p class="lead">Reduce your JPG, PNG, and WebP file sizes by up to 80% without visible quality loss. All processing happens in your browser — your images never leave your device.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3>Drop images here</h3>
+      <p>or click to choose files • JPG, PNG, WebP • up to 20MB each, 30 files max</p>
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <label>Quality: <select id="quality">
+        <option value="0.9">High (90%)</option>
+        <option value="0.8" selected>Medium (80%)</option>
+        <option value="0.6">Low (60%)</option>
+        <option value="0.4">Aggressive (40%)</option>
+      </select></label>
+      <label>Output: <select id="format">
+        <option value="same">Same as input</option>
+        <option value="jpeg">JPG</option>
+        <option value="png">PNG</option>
+        <option value="webp">WebP</option>
+      </select></label>
+      <button class="btn btn-primary" id="compressBtn">Compress All</button>
+      <button class="btn btn-secondary" id="downloadZip">Download ZIP</button>
+    </div>
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2>How to Compress Images Online</h2>
+      <ol>
+        <li><strong>Upload your images</strong> — Drag and drop or click to select JPG, PNG, or WebP files.</li>
+        <li><strong>Choose quality level</strong> — Select compression quality from 40% to 90%.</li>
+        <li><strong>Click Compress</strong> — Images are compressed instantly in your browser.</li>
+        <li><strong>Download</strong> — Save individual files or download all as a ZIP archive.</li>
+      </ol>
+
+      <h2>Why Compress Images?</h2>
+      <p>Large image files slow down your website, consume bandwidth, and hurt SEO rankings. Google uses page speed as a ranking factor, and images often account for 50-80% of a page's total weight.</p>
+      <p>By compressing your images, you can:</p>
+      <ul>
+        <li>Reduce page load time by 2-5 seconds</li>
+        <li>Improve Google Core Web Vitals scores</li>
+        <li>Save storage space on your device or cloud</li>
+        <li>Reduce bandwidth costs for your hosting</li>
+        <li>Improve user experience on mobile devices</li>
+      </ul>
+
+      <h2>How ZXZX Compression Works</h2>
+      <p>ZXZX uses advanced compression algorithms that analyze each image and selectively reduce data in areas where the human eye won't notice the difference. Unlike simple resize or quality reduction, our approach preserves important details while removing redundant information.</p>
+      <p>The compression happens entirely in your browser using the Canvas API and WebAssembly. Your images are never uploaded to any server, making ZXZX one of the most private image compression tools available.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is image compression really free?</h3>
+      <p>Yes, ZXZX is completely free with no hidden costs. There are no file size limits, no watermarks, and no registration required. You can compress unlimited images.</p>
+
+      <h3>Will compression reduce image quality?</h3>
+      <p>At medium settings (80%), compression is virtually invisible to the human eye. Even at aggressive settings (40%), most images retain acceptable quality for web use. You can compare before and after using our preview tool.</p>
+
+      <h3>What's the difference between JPG, PNG, and WebP compression?</h3>
+      <p>JPG is best for photographs. PNG is best for graphics with transparency. WebP offers the best compression for both types. Converting to WebP typically saves 25-35% compared to JPG.</p>
+
+      <h3>Are my images uploaded to your server?</h3>
+      <p>No. All compression happens in your browser using JavaScript. Your files never leave your device. This is why ZXZX is one of the safest image tools available.</p>
+
+      <h3>Can I compress images on my phone?</h3>
+      <p>Yes. ZXZX works on all modern mobile browsers including Chrome and Safari on iOS and Android. The interface is fully responsive.</p>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/convert">Image Converter</a> — Convert between JPG, PNG, WebP, AVIF formats</li>
+        <li><a href="/resize">Image Resizer</a> — Resize images by pixels or percentage</li>
+        <li><a href="/remove-exif">EXIF Remover</a> — Strip metadata from photos for privacy</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/utils/compress.ts"></script>
+</body>
+</html>
