@@ -25,11 +25,12 @@
   }
   </script>
   <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
   <header>
     <nav class="container">
-      <a href="/" class="logo">ZXZX</a>
+      <a href="/" class="logo"><img src="/logo.svg" alt="ZXZX" height="32"></a>
       <ul>
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
@@ -72,10 +73,10 @@
       <h2 data-i18n="convert_how_title">온라인 이미지 포맷 변환 방법</h2>
       <p data-i18n="convert_intro">ZXZX로 이미지 포맷 변환은 몇 초면 완료됩니다. 아래 네 가지 간단한 단계로 원하는 포맷으로 이미지를 변환하세요.</p>
       <ol>
-        <li><strong data-i18n="convert_step1_title">이미지를 업로드하세요</strong> — 파일을 드롭존 영역에 드래그 앤 드롭하거나 클릭하여 기기에서 파일을 찾아보세요. JPG, PNG, WebP, AVIF, BMP, GIF, TIFF 입력 포맷을 지원합니다. 한 번에 최대 30개 파일을 업로드할 수 있으며, 각 파일은 최대 20MB까지 가능합니다.</li>
-        <li><strong data-i18n="convert_step2_title">대상 포맷을 선택하세요</strong> — 드롭다운 메뉴에서 원하는 출력 포맷을 선택하세요. JPG는 사진에 이상적이고, PNG는 투명도가 있는 그래픽에 적합하며, WebP는 최고의 웹 최적화를 제공하고, AVIF는 뛰어난 품질의 차세대 압축을 지원합니다.</li>
-        <li><strong data-i18n="convert_step3_title">품질 설정을 조정하세요</strong> — JPG, WebP와 같은 손실 포맷의 경우 출력 품질을 70%에서 95% 사이로 설정할 수 있습니다. 품질이 높을수록 파일 크기가 커지고, 낮을수록 파일 크기가 크게 줄어듭니다. PNG 변환은 이 설정과 관계없이 항상 무손실입니다.</li>
-        <li><strong data-i18n="convert_step4_title">변환하고 다운로드하세요</strong> — "모두 변환" 버튼을 클릭하여 이미지를 처리하세요. 변환은 Canvas API를 사용하여 브라우저에서 완전히 이루어집니다. 완료 후 개별 파일을 다운로드하거나 모든 변환 이미지를 ZIP 아카이브로 저장하세요.</li>
+        <li data-i18n="convert_step1_li"><strong data-i18n="convert_step1_title">이미지를 업로드하세요</strong> — 파일을 드롭존 영역에 드래그 앤 드롭하거나 클릭하여 기기에서 파일을 찾아보세요. JPG, PNG, WebP, AVIF, BMP, GIF, TIFF 입력 포맷을 지원합니다. 한 번에 최대 30개 파일을 업로드할 수 있으며, 각 파일은 최대 20MB까지 가능합니다.</li>
+        <li data-i18n="convert_step2_li"><strong data-i18n="convert_step2_title">대상 포맷을 선택하세요</strong> — 드롭다운 메뉴에서 원하는 출력 포맷을 선택하세요. JPG는 사진에 이상적이고, PNG는 투명도가 있는 그래픽에 적합하며, WebP는 최고의 웹 최적화를 제공하고, AVIF는 뛰어난 품질의 차세대 압축을 지원합니다.</li>
+        <li data-i18n="convert_step3_li"><strong data-i18n="convert_step3_title">품질 설정을 조정하세요</strong> — JPG, WebP와 같은 손실 포맷의 경우 출력 품질을 70%에서 95% 사이로 설정할 수 있습니다. 품질이 높을수록 파일 크기가 커지고, 낮을수록 파일 크기가 크게 줄어듭니다. PNG 변환은 이 설정과 관계없이 항상 무손실입니다.</li>
+        <li data-i18n="convert_step4_li"><strong data-i18n="convert_step4_title">변환하고 다운로드하세요</strong> — "모두 변환" 버튼을 클릭하여 이미지를 처리하세요. 변환은 Canvas API를 사용하여 브라우저에서 완전히 이루어집니다. 완료 후 개별 파일을 다운로드하거나 모든 변환 이미지를 ZIP 아카이브로 저장하세요.</li>
       </ol>
 
       <h2 data-i18n="convert_format_title">이미지 포맷 비교: 어떤 포맷을 선택할까요?</h2>
@@ -120,9 +121,9 @@
 
       <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
-        <li><a href="/compress">이미지 압축기</a> — <span data-i18n="convert_related_compress">눈에 보이는 품질 저하 없이 파일 크기를 최대 80% 절감</span></li>
-        <li><a href="/resize">이미지 리사이저</a> — <span data-i18n="convert_related_resize">픽셀 또는 퍼센트로 이미지 크기 조정</span></li>
-        <li><a href="/remove-exif">EXIF 제거기</a> — <span data-i18n="convert_related_exif">프라이버시 보호를 위해 사진에서 메타데이터 제거</span></li>
+        <li data-i18n="convert_related_li_compress"><a href="/compress">이미지 압축기</a> — 눈에 보이는 품질 저하 없이 파일 크기를 최대 80% 절감</li>
+        <li data-i18n="convert_related_li_resize"><a href="/resize">이미지 리사이저</a> — 픽셀 또는 퍼센트로 이미지 크기 조정</li>
+        <li data-i18n="convert_related_li_exif"><a href="/remove-exif">EXIF 제거기</a> — 프라이버시 보호를 위해 사진에서 메타데이터 제거</li>
       </ul>
     </section>
   </main>
@@ -141,6 +142,5 @@
   </footer>
   <script type="module" src="/src/utils/convert.ts"></script>
   <script type="module" src="/src/utils/i18n.ts"></script>
-  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

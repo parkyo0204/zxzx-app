@@ -25,11 +25,12 @@
   }
   </script>
   <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
   <header>
     <nav class="container">
-      <a href="/" class="logo">ZXZX</a>
+      <a href="/" class="logo"><img src="/logo.svg" alt="ZXZX" height="32"></a>
       <ul>
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
@@ -73,9 +74,9 @@
       <h2 data-i18n="resize_how_title">온라인 이미지 리사이즈 방법</h2>
       <p data-i18n="resize_intro">ZXZX 이미지 리사이저로 원하는 크기로 이미지를 쉽게 조정할 수 있습니다. 아래 세 가지 간단한 단계로 시작하세요.</p>
       <ol>
-        <li><strong data-i18n="resize_step1_title">이미지를 업로드하세요</strong> — <span data-i18n="resize_step1_text">JPG, PNG, WebP 파일을 드롭존에 드래그 앤 드롭하거나 클릭하여 기기에서 파일을 찾아보세요. 배치 리사이즈를 위해 한 번에 최대 30개의 이미지를 업로드할 수 있습니다. 각 파일은 최대 20MB까지 가능합니다.</span></li>
-        <li><strong data-i18n="resize_step2_title">대상 크기를 설정하세요</strong> — <span data-i18n="resize_step2_text">원하는 너비와/또는 높이를 픽셀로 입력하세요. 비율 고정이 활성화되어 있으면 너비를 변경할 때 높이가 자동으로 조정되고, 그 반대도 마찬가지입니다. 퍼센트 모드로 전환하여 이미지를 비례적으로 축소할 수도 있습니다 — 예를 들어 50%로 설정하면 양쪽 크기가 절반으로 줄어듭니다.</span></li>
-        <li><strong data-i18n="resize_step3_title">리사이즈하고 다운로드하세요</strong> — <span data-i18n="resize_step3_text"> "모두 리사이즈"를 클릭하여 이미지를 처리하세요. 리사이즈는 Canvas API를 사용하여 브라우저에서 즉시 이루어집니다. 결과를 미리보기한 후 개별 파일을 다운로드하거나 모든 파일을 ZIP 아카이브로 저장하세요.</span></li>
+        <li data-i18n="resize_step1_li"><strong data-i18n="resize_step1_title">이미지를 업로드하세요</strong> — <span data-i18n="resize_step1_text">JPG, PNG, WebP 파일을 드롭존에 드래그 앤 드롭하거나 클릭하여 기기에서 파일을 찾아보세요. 배치 리사이즈를 위해 한 번에 최대 30개의 이미지를 업로드할 수 있습니다. 각 파일은 최대 20MB까지 가능합니다.</span></li>
+        <li data-i18n="resize_step2_li"><strong data-i18n="resize_step2_title">대상 크기를 설정하세요</strong> — <span data-i18n="resize_step2_text">원하는 너비와/또는 높이를 픽셀로 입력하세요. 비율 고정이 활성화되어 있으면 너비를 변경할 때 높이가 자동으로 조정되고, 그 반대도 마찬가지입니다. 퍼센트 모드로 전환하여 이미지를 비례적으로 축소할 수도 있습니다 — 예를 들어 50%로 설정하면 양쪽 크기가 절반으로 줄어듭니다.</span></li>
+        <li data-i18n="resize_step3_li"><strong data-i18n="resize_step3_title">리사이즈하고 다운로드하세요</strong> — <span data-i18n="resize_step3_text"> "모두 리사이즈"를 클릭하여 이미지를 처리하세요. 리사이즈는 Canvas API를 사용하여 브라우저에서 즉시 이루어집니다. 결과를 미리보기한 후 개별 파일을 다운로드하거나 모든 파일을 ZIP 아카이브로 저장하세요.</span></li>
       </ol>
 
       <h2 data-i18n="resize_usecases_title">이미지 리사이즈 활용 사례</h2>
@@ -122,9 +123,9 @@
 
       <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
-        <li><a href="/compress">이미지 압축기</a> — <span data-i18n="resize_related_compress">눈에 보이는 품질 저하 없이 파일 크기를 최대 80% 절감</span></li>
-        <li><a href="/convert">이미지 변환기</a> — <span data-i18n="resize_related_convert">JPG, PNG, WebP, AVIF 포맷 간 변환</span></li>
-        <li><a href="/remove-exif">EXIF 제거기</a> — <span data-i18n="resize_related_exif">프라이버시 보호를 위해 사진에서 메타데이터 제거</span></li>
+        <li data-i18n="resize_related_li_compress"><a href="/compress">이미지 압축기</a> — 눈에 보이는 품질 저하 없이 파일 크기를 최대 80% 절감</li>
+        <li data-i18n="resize_related_li_convert"><a href="/convert">이미지 변환기</a> — JPG, PNG, WebP, AVIF 포맷 간 변환</li>
+        <li data-i18n="resize_related_li_exif"><a href="/remove-exif">EXIF 제거기</a> — 프라이버시 보호를 위해 사진에서 메타데이터 제거</li>
       </ul>
     </section>
   </main>
@@ -143,6 +144,5 @@
   </footer>
   <script type="module" src="/src/utils/resize.ts"></script>
   <script type="module" src="/src/utils/i18n.ts"></script>
-  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

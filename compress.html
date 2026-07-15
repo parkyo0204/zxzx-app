@@ -7,11 +7,12 @@
   <meta name="description" content="JPG, PNG, WebP 이미지를 품질 손실 없이 최대 80% 압축. 100% 브라우저 내 처리, 업로드 불필요.">
   <link rel="canonical" href="https://zxzx.app/compress">
   <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
   <header>
     <nav class="container">
-      <a href="/" class="logo">ZXZX</a>
+      <a href="/" class="logo"><img src="/logo.svg" alt="ZXZX" height="32"></a>
       <ul>
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
@@ -33,13 +34,13 @@
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <label>품질: <select id="quality">
+      <label><span data-i18n="quality">품질</span>: <select id="quality">
         <option value="0.9" data-i18n="compress_quality_high">고품질 (90%)</option>
         <option value="0.8" selected data-i18n="compress_quality_medium">중간 (80%)</option>
         <option value="0.6" data-i18n="compress_quality_low">저품질 (60%)</option>
         <option value="0.4" data-i18n="compress_quality_extreme">극한 압축 (40%)</option>
       </select></label>
-      <label>출력: <select id="format">
+      <label><span data-i18n="output">출력</span>: <select id="format">
         <option value="same" data-i18n="compress_format_same">입력과 동일</option>
         <option value="jpeg">JPG</option>
         <option value="png">PNG</option>
@@ -54,10 +55,10 @@
     <section class="content-section">
       <h2 data-i18n="compress_how_title">온라인에서 이미지를 압축하는 방법</h2>
       <ol>
-        <li><strong data-i18n="compress_step1_title">이미지를 업로드하세요</strong> — <span data-i18n="compress_step1_text">파일을 드래그 앤 드롭하거나 클릭하여 JPG, PNG, WebP 파일을 선택하세요.</span></li>
-        <li><strong data-i18n="compress_step2_title">품질 수준을 선택하세요</strong> — <span data-i18n="compress_step2_text">40%에서 90% 사이의 압축 품질을 선택하세요.</span></li>
-        <li><strong data-i18n="compress_step3_title">압축을 클릭하세요</strong> — <span data-i18n="compress_step3_text">이미지가 브라우저에서 즉시 압축됩니다.</span></li>
-        <li><strong data-i18n="compress_step4_title">다운로드하세요</strong> — <span data-i18n="compress_step4_text">개별 파일을 저장하거나 모든 파일을 ZIP 아카이브로 다운로드하세요.</span></li>
+        <li data-i18n="compress_step1_li"><strong data-i18n="compress_step1_title">이미지를 업로드하세요</strong> — <span data-i18n="compress_step1_text">파일을 드래그 앤 드롭하거나 클릭하여 JPG, PNG, WebP 파일을 선택하세요.</span></li>
+        <li data-i18n="compress_step2_li"><strong data-i18n="compress_step2_title">품질 수준을 선택하세요</strong> — <span data-i18n="compress_step2_text">40%에서 90% 사이의 압축 품질을 선택하세요.</span></li>
+        <li data-i18n="compress_step3_li"><strong data-i18n="compress_step3_title">압축을 클릭하세요</strong> — <span data-i18n="compress_step3_text">이미지가 브라우저에서 즉시 압축됩니다.</span></li>
+        <li data-i18n="compress_step4_li"><strong data-i18n="compress_step4_title">다운로드하세요</strong> — <span data-i18n="compress_step4_text">개별 파일을 저장하거나 모든 파일을 ZIP 아카이브로 다운로드하세요.</span></li>
       </ol>
 
       <h2 data-i18n="compress_why_title">이미지를 압축해야 하는 이유</h2>
@@ -94,9 +95,9 @@
 
       <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
-        <li><a href="/convert">이미지 변환기</a> — <span data-i18n="compress_related_convert">JPG, PNG, WebP, AVIF 포맷 간 변환</span></li>
-        <li><a href="/resize">이미지 리사이저</a> — <span data-i18n="compress_related_resize">픽셀 또는 퍼센트로 이미지 크기 조정</span></li>
-        <li><a href="/remove-exif">EXIF 제거기</a> — <span data-i18n="compress_related_exif">프라이버시를 위해 사진에서 메타데이터 제거</span></li>
+        <li data-i18n="compress_related_li_convert"><a href="/convert">이미지 변환기</a> — JPG, PNG, WebP, AVIF 포맷 간 변환</li>
+        <li data-i18n="compress_related_li_resize"><a href="/resize">이미지 리사이저</a> — 픽셀 또는 퍼센트로 이미지 크기 조정</li>
+        <li data-i18n="compress_related_li_exif"><a href="/remove-exif">EXIF 제거기</a> — 프라이버시를 위해 사진에서 메타데이터 제거</li>
       </ul>
     </section>
   </main>
@@ -116,6 +117,5 @@
 
   <script type="module" src="/src/utils/compress.ts"></script>
   <script type="module" src="/src/utils/i18n.ts"></script>
-  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>
