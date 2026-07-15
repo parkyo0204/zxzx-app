@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40">
+  <rect x="0" y="4" width="32" height="32" rx="6" fill="#0B1220"/>
+  <path d="M8 12h16L8 28h16" stroke="#ECFEFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M11 12l10 16" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="44" y="27" font-family="'Space Grotesk', 'IBM Plex Sans', sans-serif" font-size="22" font-weight="700" fill="#0B1220" letter-spacing="-0.04em">zxzx<tspan font-weight="500" fill="#0E7490">.app</tspan></text>
+</svg>

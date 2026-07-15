@@ -8,6 +8,11 @@
   <meta name="keywords" content="image resizer, resize image online, image resize, 사진 크기 조절, 이미지 리사이즈, batch image resizer, pixel resize, percentage resize" data-i18n-content="resize_meta_keywords">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://zxzx.app/resize">
+  <link rel="alternate" hreflang="ko" href="https://zxzx.app/resize">
+  <link rel="alternate" hreflang="en" href="https://zxzx.app/resize?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://zxzx.app/resize?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://zxzx.app/resize?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://zxzx.app/resize">
   <meta property="og:title" content="Free Online Image Resizer — Resize by Pixels or Percentage">
   <meta property="og:description" content="Resize images in your browser. No upload. Batch support. 100% free.">
   <meta property="og:type" content="website">
@@ -22,6 +27,54 @@
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are there resize limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No hard limit, but keep each side between 1 and 10,000 pixels. Extremely large sizes may exhaust browser memory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does lock aspect ratio mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When locked, changing width updates height proportionally (and vice versa) so the image is not stretched."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does resizing reduce quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Downsizing usually keeps perceived quality. Upscaling cannot invent missing detail and may look softer. Prefer smaller sizes when possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ZXZX works on modern mobile browsers including Chrome and Safari on iOS and Android."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between pixel and percent mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pixel mode sets exact width and height. Percent mode scales by ratio (e.g. 50% halves both sides), useful for batch proportional resize."
+        }
+      }
+    ]
   }
   </script>
   <link rel="stylesheet" href="/src/styles/main.css">

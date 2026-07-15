@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="resize_title">이미지 리사이저</title>
+  <meta name="description" content="Resize images online for free. Change dimensions by pixels or percentage. Maintain aspect ratio. Batch resize up to 30 images. No upload required." data-i18n-content="resize_meta_desc">
+  <meta name="keywords" content="image resizer, resize image online, image resize, 사진 크기 조절, 이미지 리사이즈, batch image resizer, pixel resize, percentage resize" data-i18n-content="resize_meta_keywords">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zxzx.app/resize">
+  <link rel="alternate" hreflang="ko" href="https://zxzx.app/resize">
+  <link rel="alternate" hreflang="en" href="https://zxzx.app/resize?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://zxzx.app/resize?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://zxzx.app/resize?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://zxzx.app/resize">
+  <meta property="og:title" content="Free Online Image Resizer — Resize by Pixels or Percentage">
+  <meta property="og:description" content="Resize images in your browser. No upload. Batch support. 100% free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zxzx.app/resize">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ZXZX Image Resizer",
+    "url": "https://zxzx.app/resize",
+    "description": "Free online image resizer. Resize images by pixels or percentage directly in your browser.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are there resize limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No hard limit, but keep each side between 1 and 10,000 pixels. Extremely large sizes may exhaust browser memory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does lock aspect ratio mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When locked, changing width updates height proportionally (and vice versa) so the image is not stretched."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does resizing reduce quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Downsizing usually keeps perceived quality. Upscaling cannot invent missing detail and may look softer. Prefer smaller sizes when possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ZXZX works on modern mobile browsers including Chrome and Safari on iOS and Android."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between pixel and percent mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pixel mode sets exact width and height. Percent mode scales by ratio (e.g. 50% halves both sides), useful for batch proportional resize."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="module" crossorigin src="/assets/resize-edQACZSj.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/i18n-CD4tat4r.js">
+  <link rel="modulepreload" crossorigin href="/assets/file-dropzone-aN_Q0-xE.js">
+  <link rel="stylesheet" crossorigin href="/assets/i18n-DNywf6Pj.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1 data-i18n="resize_title">이미지 리사이즈</h1>
+    <p class="lead" data-i18n="resize_desc">픽셀 또는 %. Lanczos3로 리샘플. 서버 업로드 없음.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
+      <p data-i18n="drop_sub">JPG · PNG · WebP · 파일당 20MB · 최대 30개</p>
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <label><span data-i18n="resize_mode_label">모드:</span> <select id="resizeMode">
+        <option value="pixels" data-i18n="resize_mode_pixels">픽셀</option>
+        <option value="percent" data-i18n="resize_mode_percent">퍼센트</option>
+      </select></label>
+      <div id="pixel-controls" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+        <label><span data-i18n="resize_width_label">너비:</span> <input type="number" id="width" placeholder="px" min="1" max="10000"></label>
+        <label><span data-i18n="resize_height_label">높이:</span> <input type="number" id="height" placeholder="px" min="1" max="10000"></label>
+        <label><input type="checkbox" id="lockAspect" checked> <span data-i18n="resize_lock_aspect">비율 고정</span></label>
+      </div>
+      <div id="percent-controls" style="display:none;gap:1rem;align-items:center;">
+        <label><span data-i18n="resize_ratio_label">비율:</span> <input type="number" id="percent" placeholder="%" min="1" max="500" value="50"> %</label>
+      </div>
+      <button class="btn btn-primary" id="resizeBtn" data-i18n="resize_all">모두 리사이즈</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
+    </div>
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2 data-i18n="resize_how_title">온라인 이미지 리사이즈 방법</h2>
+      <p data-i18n="resize_intro">ZXZX 이미지 리사이저로 원하는 크기로 이미지를 쉽게 조정할 수 있습니다. 아래 세 가지 간단한 단계로 시작하세요.</p>
+      <ol>
+        <li><strong data-i18n="resize_step1_title">이미지를 업로드하세요</strong> — <span data-i18n="resize_step1_text">JPG, PNG, WebP 파일을 드롭존에 드래그 앤 드롭하거나 클릭하여 기기에서 파일을 찾아보세요. 배치 리사이즈를 위해 한 번에 최대 30개의 이미지를 업로드할 수 있습니다. 각 파일은 최대 20MB까지 가능합니다.</span></li>
+        <li><strong data-i18n="resize_step2_title">대상 크기를 설정하세요</strong> — <span data-i18n="resize_step2_text">원하는 너비와/또는 높이를 픽셀로 입력하세요. 비율 고정이 활성화되어 있으면 너비를 변경할 때 높이가 자동으로 조정되고, 그 반대도 마찬가지입니다. 퍼센트 모드로 전환하여 이미지를 비례적으로 축소할 수도 있습니다 — 예를 들어 50%로 설정하면 양쪽 크기가 절반으로 줄어듭니다.</span></li>
+        <li><strong data-i18n="resize_step3_title">리사이즈하고 다운로드하세요</strong> — <span data-i18n="resize_step3_text"> "모두 리사이즈"를 클릭하여 이미지를 처리하세요. 리사이즈는 Canvas API를 사용하여 브라우저에서 즉시 이루어집니다. 결과를 미리보기한 후 개별 파일을 다운로드하거나 모든 파일을 ZIP 아카이브로 저장하세요.</span></li>
+      </ol>
+
+      <h2 data-i18n="resize_usecases_title">이미지 리사이즈 활용 사례</h2>
+      <p data-i18n="resize_usecases_intro">이미지 리사이즈는 가장 흔한 이미지 편집 작업 중 하나입니다. 온라인에서 이미지 크기를 조정하는 가장 인기 있는 이유를 소개합니다.</p>
+
+      <h3 data-i18n="resize_usecase_social_title">소셜 미디어 프로필 사진 및 커버</h3>
+      <p data-i18n="resize_usecase_social_desc">모든 소셜 미디어 플랫폼은 특정 이미지 크기를 요구합니다. Instagram 프로필 사진은 320x320 픽셀, Facebook 커버 사진은 820x312, Twitter 헤더는 1500x500이 필요합니다. 이미지를 이러한 정확한 크기로 리사이즈하면 잘림이나 왜곡 없이 올바르게 표시됩니다. ZXZX를 사용하면 정밀한 픽셀 값을 입력하여 어떤 플랫폼에서든 이미지가 완벽하게 맞도록 할 수 있습니다.</p>
+
+      <h3 data-i18n="resize_usecase_web_title">웹사이트 및 블로그 최적화</h3>
+      <p data-i18n="resize_usecase_web_desc">웹사이트에 과도하게 큰 이미지를 업로드하면 대역폭을 낭비하고 페이지 로딩이 느려집니다. 최신 카메라의 4000x3000 픽셀 사진은 웹 표시에 필요한 것보다 훨씬 큽니다. 이미지를 표시 크기(블로그 게시물의 경우 보통 1200-2000 픽셀 너비)로 리사이즈하면 시각적 품질을 유지하면서 파일 크기를 대폭 줄일 수 있습니다. <a href="/compress">압축 도구</a>와 함께 사용하면 최적의 웹 성능을 달성할 수 있습니다.</p>
+
+      <h3 data-i18n="resize_usecase_email_title">이메일 첨부파일</h3>
+      <p data-i18n="resize_usecase_email_desc">많은 이메일 제공업체가 첨부파일 크기를 10-25MB로 제한합니다. 스마트폰의 고해상도 사진은 종종 이 제한을 초과합니다. 이미지를 1024-1920 픽셀 너비로 리사이즈하면 화면에서 여전히 좋은 품질을 유지하면서 파일 크기를 70-90% 줄일 수 있습니다. 이를 통해 이메일로 사진을 빠르고 안정적으로 공유할 수 있습니다.</p>
+
+      <h3 data-i18n="resize_usecase_ecommerce_title">전자상거래 상품 이미지</h3>
+      <p data-i18n="resize_usecase_ecommerce_desc">Amazon, eBay, Shopify, Etsy와 같은 온라인 마켓플레이스는 특정 이미지 크기 요구사항이 있습니다. 대부분 확대 기능을 위해 최소 1000x1000 픽셀의 이미지를 요구하지만, 불필요하게 큰 이미지를 업로드하면 페이지 로딩 시간이 늘어납니다. 각 플랫폼의 권장 크기로 상품 이미지를 리사이즈하여 품질과 성능의 균형을 맞추세요.</p>
+
+      <h3 data-i18n="resize_usecase_thumb_title">썸네일 생성</h3>
+      <p data-i18n="resize_usecase_thumb_desc">비디오 미리보기, 갤러리 그리드, 이미지 카탈로그용 썸네일을 만들려면 일관된 작은 크기가 필요합니다. 배치 리사이즈를 사용하면 한 번에 수백 개의 썸네일을 생성할 수 있어 이미지를 하나씩 리사이즈하는 것보다 훨씬 많은 시간을 절약할 수 있습니다.</p>
+
+      <h3 data-i18n="resize_usecase_print_title">인쇄 준비</h3>
+      <p data-i18n="resize_usecase_print_desc">인쇄용 이미지를 준비하려면 300 DPI에서 특정 크기가 필요합니다. 표준 4x6 인치 인쇄물은 1200x1800 픽셀이 필요합니다. ZXZX의 픽셀 기반 리사이즈를 사용하면 표준 사진 크기부터 대형 포스터까지 모든 인쇄 포맷에 맞게 이미지를 준비할 수 있습니다.</p>
+
+      <h2 data-i18n="resize_quality_title">ZXZX가 이미지 품질을 유지하는 방법</h2>
+      <p data-i18n="resize_quality_p1">ZXZX는 리사이즈된 이미지가 선명하고 깨끗하게 보이도록 고품질 리샘플링 알고리즘을 사용합니다. 이미지 크기를 줄일 때는 에일리어싱 아티팩트를 방지하기 위해 적절히 다운샘플링합니다. 크기를 늘릴 때는 부드러운 결과를 위해 바이리니어 보간법을 사용합니다. 최고의 품질을 위해 확대보다는 축소하는 것을 권장합니다. 업스케일링은 원본에 없던 디테일을 추가할 수 없기 때문입니다.</p>
+      <p data-i18n="resize_quality_p2">모든 처리는 Canvas API를 사용하여 브라우저에서 이루어집니다. 이미지는 어떤 서버에도 업로드되지 않아 완전한 프라이버시가 보장됩니다. 리사이즈된 이미지는 <a href="/convert">변환 도구</a>를 사용하여 포맷을 변경하지 않는 한 원본과 동일한 포맷을 유지합니다.</p>
+
+      <h2 data-i18n="faq_title">자주 묻는 질문</h2>
+
+      <h3 data-i18n="resize_faq_limit_q">리사이즈에 제한이 있나요?</h3>
+      <p data-i18n="resize_faq_limit_a">엄격한 제한은 없지만, 각 변의 크기를 1에서 10,000 픽셀 사이로 유지하는 것을 권장합니다. 극단적으로 큰 크기는 브라우저의 메모리 부족을 일으킬 수 있습니다. 웹 이미지와 소셜 미디어와 같은 일반적인 사용 사례에서는 이 범위가 모든 요구를 충족합니다.</p>
+
+      <h3 data-i18n="resize_faq_aspect_q">"비율 잠금"이란 무엇인가요?</h3>
+      <p data-i18n="resize_faq_aspect_a">비율이 고정되어 있으면 너비를 변경할 때 높이가 비례적으로 자동 조정되고, 그 반대도 마찬가지입니다. 이렇게 하면 이미지가 늘어나거나 왜곡되는 것을 방지합니다. 비례적이지 않은 리사이즈가 특별히 필요하지 않은 한 이 옵션을 활성화 상태로 유지하는 것을 권장합니다.</p>
+
+      <h3 data-i18n="resize_faq_quality_q">리사이즈가 이미지 품질을 떨어뜨리나요?</h3>
+      <p data-i18n="resize_faq_quality_a">이미지 크기를 줄이면 일반적으로 우수한 품질이 유지됩니다. 이미지를 확대(업스케일링)하면 도구가 원본 이미지에 없던 디테일을 만들 수 없기 때문에 약간의 흐림이나 픽셀화가 발생할 수 있습니다. 최상의 결과를 위해 이미지를 더 큰 크기보다는 더 작은 크기로 리사이즈하세요.</p>
+
+      <h3 data-i18n="faq_mobile_q">모바일에서도 사용할 수 있나요?</h3>
+      <p data-i18n="resize_faq_mobile_a">네, ZXZX는 iOS와 Android의 Chrome, Safari를 포함한 모든 최신 모바일 브라우저에서 작동합니다. 인터페이스가 완전 반응형이고 터치 친화적이어서 스마트폰이나 태블릿에서 이미지를 쉽게 리사이즈할 수 있습니다.</p>
+
+      <h3 data-i18n="resize_faq_pixels_q">픽셀 모드와 퍼센트 모드의 차이점은?</h3>
+      <p data-i18n="resize_faq_pixels_a">픽셀 모드에서는 정확한 너비와 높이 값을 픽셀로 입력할 수 있습니다. 퍼센트 모드는 이미지를 배율로 조정합니다 — 예를 들어 50%는 양쪽 크기를 절반으로 줄입니다. 퍼센트 모드는 원본 크기에 관계없이 배치의 모든 이미지를 비례적으로 축소할 때 유용합니다.</p>
+
+      <h2 data-i18n="related_title">관련 도구</h2>
+      <ul>
+        <li data-i18n="resize_related_li_compress"><a href="/compress">이미지 압축기</a> — 눈에 보이는 품질 저하 없이 파일 크기를 최대 80% 절감</li>
+        <li data-i18n="resize_related_li_convert"><a href="/convert">이미지 변환기</a> — JPG, PNG, WebP, AVIF 포맷 간 변환</li>
+        <li data-i18n="resize_related_li_exif"><a href="/remove-exif">EXIF 제거기</a> — 프라이버시 보호를 위해 사진에서 메타데이터 제거</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
+      </div>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
