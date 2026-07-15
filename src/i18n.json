@@ -1127,7 +1127,10 @@
     "blog_card_title_30": "배치 이미지 처리로 시간 절약하기",
     "blog_card_title_33": "손실 압축 vs 무손실 압축: 차이점과 선택 가이드",
     "blog_card_title_36": "온라인 이미지 프라이버시 보호 팁 7가지",
-    "blog_card_title_39": "브라우저 기반 이미지 도구의 장점: 왜 업로드가 필요 없을까?"
+    "blog_card_title_39": "브라우저 기반 이미지 도구의 장점: 왜 업로드가 필요 없을까?",
+    "highlight_title": "Squoosh WASM 코덱으로 타 서비스 대비 월등한 성능",
+    "highlight_desc": "ZXZX는 Google Squoosh의 WASM 코덱(MozJPEG, libwebp, libavif)과 Lanczos3 필터를 사용합니다. 타 이미지 압축 서비스 대비 15-35% 더 나은 압축률을 제공하면서 100% 브라우저 내 처리로 프라이버시도 보장합니다.",
+    "highlight_link": "기술 상세 보기 →"
   },
   "en": {
     "site_name": "ZXZX Image Tools",
@@ -2257,7 +2260,10 @@
     "blog_card_title_30": "Save Time with Batch Image Processing",
     "blog_card_title_33": "Lossy vs Lossless Compression: Differences and Selection Guide",
     "blog_card_title_36": "7 Tips to Protect Your Online Image Privacy",
-    "blog_card_title_39": "Advantages of Browser-Based Image Tools: Why No Upload Needed?"
+    "blog_card_title_39": "Advantages of Browser-Based Image Tools: Why No Upload Needed?",
+    "highlight_title": "Superior Performance with Squoosh WASM Codecs",
+    "highlight_desc": "ZXZX uses Google Squoosh's WASM codecs (MozJPEG, libwebp, libavif) and Lanczos3 filter. Delivers 15-35% better compression while ensuring privacy with 100% in-browser processing.",
+    "highlight_link": "View technical details →"
   },
   "ja": {
     "site_name": "ZXZX 画像ツール",
@@ -3387,7 +3393,10 @@
     "blog_card_title_30": "バッチ画像処理で時間を節約",
     "blog_card_title_33": "可逆圧縮 vs 非可逆圧縮：違いと選択ガイド",
     "blog_card_title_36": "オンライン画像プライバシー保護のヒント7選",
-    "blog_card_title_39": "ブラウザベース画像ツールの利点：なぜアップロード不要？"
+    "blog_card_title_39": "ブラウザベース画像ツールの利点：なぜアップロード不要？",
+    "highlight_title": "Squoosh WASMコーデックによる他サービス比優位の性能",
+    "highlight_desc": "ZXZXはGoogle SquooshのWASMコーデック（MozJPEG、libwebp、libavif）とLanczos3フィルターを使用。他の画像圧縮サービスより15-35%優れた圧縮率を提供しつつ、100%ブラウザ内処理でプライバシーも確保します。",
+    "highlight_link": "技術詳細を見る →"
   },
   "zh": {
     "site_name": "ZXZX 图片工具",
@@ -4517,6 +4526,9 @@
     "blog_card_title_30": "通过批量图像处理节省时间",
     "blog_card_title_33": "有损压缩 vs 无损压缩：区别与选择指南",
     "blog_card_title_36": "保护在线图像隐私的7个技巧",
-    "blog_card_title_39": "基于浏览器的图像工具优势：为什么不需要上传？"
+    "blog_card_title_39": "基于浏览器的图像工具优势：为什么不需要上传？",
+    "highlight_title": "使用Squoosh WASM编解码器实现优于其他服务的性能",
+    "highlight_desc": "ZXZX使用Google Squoosh的WASM编解码器（MozJPEG、libwebp、libavif）和Lanczos3滤镜。在提供15-35%更好压缩率的同时，通过100%浏览器内处理保障隐私。",
+    "highlight_link": "查看技术详情 →"
   }
 }
