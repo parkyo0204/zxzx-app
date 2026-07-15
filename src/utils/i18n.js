@@ -91,5 +91,5 @@ function createLangSwitcher() {
 // Auto-init
 loadTranslations().then(function() {
   applyTranslations();
-  createLangSwitcher();
+  // createLangSwitcher(); // disabled — using static HTML select
 });
