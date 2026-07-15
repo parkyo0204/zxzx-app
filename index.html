@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Online Image Converter & Compressor — No Upload Required</title>
-  <meta name="description" content="Convert, compress, resize, and optimize images directly in your browser. JPG, PNG, WebP, AVIF support. 100% private — files never leave your device.">
-  <meta name="keywords" content="image converter, image compressor, PNG to JPG, WebP converter, image resizer, online image tool, free image converter">
+  <title data-i18n="hero_title">무료 온라인 이미지 변환기 & 압축기 — 업로드 불필요</title>
+  <meta name="description" content="이미지를 변환, 압축, 리사이즈하세요. 브라우저에서 직접 처리. JPG, PNG, WebP, AVIF 지원. 100% 프라이빗.">
+  <meta name="keywords" content="이미지 변환기, 이미지 압축기, PNG to JPG, WebP 변환, 이미지 리사이저, 무료 이미지 도구">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://zxzx.app/">
-  <meta property="og:title" content="Free Online Image Converter & Compressor">
-  <meta property="og:description" content="Convert, compress, resize images in your browser. No upload required. 100% private.">
+  <link rel="alternate" hreflang="ko" href="https://zxzx.app/">
+  <link rel="alternate" hreflang="en" href="https://zxzx.app/?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://zxzx.app/?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://zxzx.app/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://zxzx.app/">
+  <meta property="og:title" content="무료 온라인 이미지 변환기 & 압축기">
+  <meta property="og:description" content="브라우저에서 이미지를 변환, 압축, 리사이즈. 업로드 불필요. 100% 프라이빗.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zxzx.app/">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "ZXZX Image Converter",
+    "name": "ZXZX 이미지 변환기",
     "url": "https://zxzx.app/",
-    "description": "Free online image converter and compressor. Convert, compress, resize images directly in your browser without uploading.",
+    "description": "무료 온라인 이미지 변환기 및 압축기. 브라우저에서 직접 변환, 압축, 리사이즈.",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "Any",
+    "inLanguage": ["ko", "en", "ja", "zh"],
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
@@ -31,11 +40,11 @@
     <nav class="container">
       <a href="/" class="logo">ZXZX</a>
       <ul>
-        <li><a href="/compress">Compress</a></li>
-        <li><a href="/convert">Convert</a></li>
-        <li><a href="/resize">Resize</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
     </nav>
   </header>
@@ -43,97 +52,97 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Free Online Image Converter & Compressor</h1>
-        <p class="subtitle">Convert, compress, resize, and optimize your images directly in your browser. Files never leave your device.</p>
+        <h1 data-i18n="hero_title">무료 온라인 이미지 변환기 & 압축기</h1>
+        <p class="subtitle" data-i18n="hero_subtitle">이미지를 변환, 압축, 리사이즈하세요. 파일이 기기를 떠나지 않습니다. 100% 브라우저 내 처리.</p>
       </div>
     </section>
 
     <section class="tools-grid container">
       <a href="/compress" class="tool-card">
         <div class="tool-icon">📦</div>
-        <h2>Compress Image</h2>
-        <p>Reduce file size by up to 80% without visible quality loss. JPG, PNG, WebP support.</p>
+        <h2 data-i18n="nav_compress">이미지 압축</h2>
+        <p>파일 크기를 최대 80% 줄이세요. JPG, PNG, WebP 지원.</p>
       </a>
       <a href="/convert" class="tool-card">
         <div class="tool-icon">🔄</div>
-        <h2>Convert Format</h2>
-        <p>Convert between JPG, PNG, WebP, AVIF, BMP, GIF. Batch conversion supported.</p>
+        <h2 data-i18n="nav_convert">포맷 변환</h2>
+        <p>JPG, PNG, WebP, AVIF 간 변환. 배치 변환 지원.</p>
       </a>
       <a href="/resize" class="tool-card">
         <div class="tool-icon">📐</div>
-        <h2>Resize Image</h2>
-        <p>Resize by pixels or percentage. Maintain aspect ratio. Bulk resize supported.</p>
+        <h2 data-i18n="nav_resize">이미지 리사이즈</h2>
+        <p>픽셀 또는 퍼센트로 크기 조정. 비율 유지.</p>
       </a>
       <a href="/crop" class="tool-card">
         <div class="tool-icon">✂️</div>
-        <h2>Crop Image</h2>
-        <p>Visual crop editor with pixel-perfect precision. Free crop or preset ratios.</p>
+        <h2>이미지 크롭</h2>
+        <p>비주얼 크롭 에디터. 프리셋 비율 지원.</p>
       </a>
-      <a href="/remove-exif" class="tool-icon">
+      <a href="/remove-exif" class="tool-card">
         <div class="tool-icon">🔒</div>
-        <h2>Remove EXIF</h2>
-        <p>Strip metadata, GPS data, and camera info from your photos for privacy.</p>
+        <h2>EXIF 제거</h2>
+        <p>프라이버시를 위해 메타데이터, GPS, 카메라 정보 제거.</p>
       </a>
       <a href="/remove-background" class="tool-card">
         <div class="tool-icon">🎨</div>
-        <h2>Remove Background</h2>
-        <p>AI-powered background removal. Process locally in your browser.</p>
+        <h2>배경 제거</h2>
+        <p>AI 기반 배경 제거. 브라우저에서 로컬 처리.</p>
       </a>
       <a href="/upscale" class="tool-card">
         <div class="tool-icon">🔍</div>
-        <h2>Upscale Image</h2>
-        <p>Enlarge images up to 4x while maintaining quality using AI upscaling.</p>
+        <h2>이미지 업스케일</h2>
+        <p>AI로 최대 4배 확대. 품질 유지.</p>
       </a>
       <a href="/rotate" class="tool-card">
         <div class="tool-icon">🔃</div>
-        <h2>Rotate Image</h2>
-        <p>Rotate multiple images at once. 90°, 180°, 270° or custom angle.</p>
+        <h2>이미지 회전</h2>
+        <p>여러 이미지 일괄 회전. 90°, 180°, 270°.</p>
       </a>
     </section>
 
     <section class="features container">
-      <h2>Why Choose ZXZX?</h2>
+      <h2 data-i18n="why_title">ZXZX를 선택하는 이유</h2>
       <div class="features-grid">
         <div class="feature">
-          <h3>100% Private</h3>
-          <p>All processing happens in your browser. Images never uploaded to any server.</p>
+          <h3 data-i18n="feature_private">100% 프라이빗</h3>
+          <p data-i18n="feature_private_desc">모든 처리가 브라우저에서 이루어집니다. 파일이 서버에 업로드되지 않습니다.</p>
         </div>
         <div class="feature">
-          <h3>Completely Free</h3>
-          <p>No hidden fees, no watermarks, no file size limits. Free forever.</p>
+          <h3 data-i18n="feature_free">완전 무료</h3>
+          <p data-i18n="feature_free_desc">숨겨진 비용, 워터마크, 파일 크기 제한 없음. 영원히 무료.</p>
         </div>
         <div class="feature">
-          <h3>Batch Processing</h3>
-          <p>Process up to 30 images at once. Download as ZIP for convenience.</p>
+          <h3 data-i18n="feature_batch">배치 처리</h3>
+          <p data-i18n="feature_batch_desc">최대 30개 이미지를 한 번에 처리. ZIP으로 다운로드.</p>
         </div>
         <div class="feature">
-          <h3>No Registration</h3>
-          <p>Start using tools immediately. No sign-up or login required.</p>
+          <h3 data-i18n="feature_no_signup">가입 불필요</h3>
+          <p data-i18n="feature_no_signup_desc">즉시 사용 가능. 회원가입이나 로그인 불필요.</p>
         </div>
       </div>
     </section>
 
     <section class="faq container">
-      <h2>Frequently Asked Questions</h2>
+      <h2 data-i18n="faq_title">자주 묻는 질문</h2>
       <details>
-        <summary>Are my images uploaded to your server?</summary>
-        <p>No. All image processing happens directly in your browser using JavaScript. Your files never leave your device. This makes ZXZX one of the most private image tools available.</p>
+        <summary data-i18n="faq_upload_q">이미지가 서버에 업로드되나요?</summary>
+        <p data-i18n="faq_upload_a">아닙니다. 모든 이미지 처리가 브라우저에서 JavaScript로 직접 이루어집니다. 파일이 기기를 떠나지 않습니다.</p>
       </details>
       <details>
-        <summary>What image formats are supported?</summary>
-        <p>ZXZX supports JPG, PNG, WebP, AVIF, BMP, GIF, TIFF, and SVG for various operations. Convert between any supported format.</p>
+        <summary data-i18n="faq_formats_q">어떤 이미지 포맷을 지원하나요?</summary>
+        <p data-i18n="faq_formats_a">JPG, PNG, WebP, AVIF, BMP, GIF, TIFF, SVG를 지원합니다.</p>
       </details>
       <details>
-        <summary>Is there a file size limit?</summary>
-        <p>You can process files up to 20MB each, with up to 30 files per batch. For most use cases, this is more than sufficient.</p>
+        <summary data-i18n="faq_size_q">파일 크기 제한이 있나요?</summary>
+        <p data-i18n="faq_size_a">파일당 최대 20MB, 배치당 최대 30개 파일까지 처리 가능합니다.</p>
       </details>
       <details>
-        <summary>Does compression reduce image quality?</summary>
-        <p>Our smart compression algorithm reduces file size by up to 80% while maintaining visually identical quality. You can compare before/after with our preview tool.</p>
+        <summary data-i18n="faq_quality_q">압축이 이미지 품질을 떨어뜨리나요?</summary>
+        <p data-i18n="faq_quality_a">스마트 압축 알고리즘이 시각적으로 동일한 품질을 유지하면서 파일 크기를 최대 80% 줄입니다.</p>
       </details>
       <details>
-        <summary>Can I use ZXZX on my phone?</summary>
-        <p>Yes. ZXZX is fully responsive and works on all modern mobile browsers including Chrome, Safari, and Firefox on iOS and Android.</p>
+        <summary data-i18n="faq_mobile_q">모바일에서도 사용할 수 있나요?</summary>
+        <p data-i18n="faq_mobile_a">네. 모든 최신 모바일 브라우저에서 작동합니다.</p>
       </details>
     </section>
   </main>
@@ -141,14 +150,16 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
+
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

@@ -93,11 +93,11 @@ select, input[type="number"] { padding: 0.6rem 1rem; border: 1px solid var(--col
 
 /* Content sections */
 .content-section { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
-.content-section h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-.content-section h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
-.content-section p { margin-bottom: 1rem; color: var(--color-muted); }
-.content-section ol, .content-section ul { margin: 0.5rem 0 1rem 1.5rem; color: var(--color-muted); }
-.content-section li { margin-bottom: 0.5rem; }
+.content-section h2 { font-size: 1.75rem; margin-bottom: 1rem; font-weight: 700; }
+.content-section h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+.content-section p { margin-bottom: 1rem; color: var(--color-muted); font-size: 1rem; line-height: 1.8; }
+.content-section ol, .content-section ul { margin: 0.5rem 0 1rem 1.5rem; color: var(--color-muted); font-size: 1rem; }
+.content-section li { margin-bottom: 0.75rem; line-height: 1.7; }
 
 /* Blog */
 .blog-list { padding: 3rem 0; }
@@ -109,6 +109,24 @@ select, input[type="number"] { padding: 0.6rem 1rem; border: 1px solid var(--col
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 { font-size: 1.75rem; }
-  header ul { gap: 1rem; }
+  .hero .subtitle { font-size: 1rem; }
+  header ul { gap: 0.75rem; }
+  header ul a { font-size: 0.8rem; }
   .tools-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .controls { flex-direction: column; align-items: stretch; }
+  .btn { width: 100%; text-align: center; }
+  .tool-page h1 { font-size: 1.5rem; }
+  .content-section h2 { font-size: 1.4rem; }
+  .footer-links { flex-direction: column; gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .hero { padding: 2.5rem 0 2rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .tool-card { padding: 1.25rem; }
+  .dropzone { padding: 2rem 1rem; }
+  header nav { height: 56px; }
+  .logo { font-size: 1.25rem; }
 }
