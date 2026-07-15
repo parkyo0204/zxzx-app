@@ -28,10 +28,10 @@
       <h1 data-i18n="resize-for-mobile_h1">이미지 리사이즈로 모바일 최적화하기</h1>
       <p class="meta" data-i18n="resize-for-mobile_meta">2026년 7월 15일 · 7분 읽기</p>
 
-      <p data-i18n="resize-for-mobile_p_8">2026년 현재 전 세계 웹 트래픽의 60% 이상이 모바일 디바이스에서 발생합니다. 하지만很多 웹사이트는 여전히 데스크톱용 고해상도 이미지를 모바일에서도同样的 크기로 제공하고 있습니다. 이는 불필요한 데이터 낭비와 느린 로딩 속도의 주요 원인입니다. 이 글에서는 이미지 리사이즈를 통해 모바일 성능을 최적화하는 방법을자세히 소개합니다.</p>
+      <p data-i18n="resize-for-mobile_p_8">2026년 현재 전 세계 웹 분할의 60% 분리된 장치에서 발생합니다. 하지만 많은 웹사이트는 여전히 남아있는 만족스러운 이미지를 모바일에서도 크기로 제공하고 있습니다. 방법을 상세히 소개합니다.</p>
 
       <h2 data-i18n="resize-for-mobile_h2_9">왜 모바일 이미지 리사이즈가 중요한가?</h2>
-      <p data-i18n="resize-for-mobile_p_10">모바일 디바이스와 데스크톱의 이미지需求는 크게 다릅니다:</p>
+      <p data-i18n="resize-for-mobile_p_10">모바일 장치와 데스크탑의 이미지 요구 사항을 크게 고려하십시오:</p>
       <ul>
         <li data-i18n="resize-for-mobile_li_11"><strong>화면 크기:</strong> 모바일은 360~428px, 데스크톱은 1920px 이상</li>
         <li data-i18n="resize-for-mobile_li_12"><strong>네트워크:</strong> 모바일은 불안정한 셀룰러, 데스크톱은 안정적인 Wi-Fi</li>
@@ -41,7 +41,7 @@
       <p data-i18n="resize-for-mobile_p_15">360px 화면에 1920px 이미지를 로드하는 것은 불필요한 4.3MB의 데이터를 다운로드하는 것과 같습니다. 적절한 크기로 리사이즈하면 파일 크기를 70~90%까지 줄일 수 있습니다.</p>
 
       <h2 data-i18n="resize-for-mobile_h2_16">반응형 이미지의 기본 원칙</h2>
-      <p data-i18n="resize-for-mobile_p_17">반응형 이미지는 디바이스의 화면 크기와 해상도에 따라不同 크기의 이미지를 제공하는 기법입니다. 핵심은 <strong>"화면에 표시되는 크기와 가장接近한 이미지를 제공하는 것"</strong>입니다.</p>
+      <p data-i18n="resize-for-mobile_p_17">크기의 반응형 이미지는 다양한 크기의 크기와 그에 따라 다른 크기의 이미지를 제공하는 축제입니다. 핵심은</p>
 
       <h3 data-i18n="resize-for-mobile_h3_18">srcset 속성</h3>
       <p data-i18n="resize-for-mobile_p_19">HTML의 <code>srcset</code> 속성을 사용하면 브라우저가 디바이스에 맞는 이미지를 자동으로 선택합니다.</p>
@@ -56,7 +56,7 @@
          33vw"
   alt="설명"
 &gt;</code></pre>
-      <p data-i18n="resize-for-mobile_p_20">이 코드는 브라우저에게不同 크기의 이미지 후보를提供하고, 화면 크기에 따라最適な 것을 선택하도록 지시합니다.</p>
+      <p data-i18n="resize-for-mobile_p_20">이 코드는 브라우저에게 다른 크기의 이미지를 제공하고, 화면 크기에 따라 최적의 것을 선택하도록 합니다.</p>
 
       <h3 data-i18n="resize-for-mobile_h3_21">sizes 속성</h3>
       <p data-i18n="resize-for-mobile_p_22"><code>sizes</code> 속성은 이미지가 화면에서 차지하는 크기를 브라우저에게 알려줍니다. 이를 통해 브라우저는 필요한 이미지 크기를 정확히 계산할 수 있습니다.</p>
@@ -86,7 +86,7 @@
       </ul>
 
       <h3 data-i18n="resize-for-mobile_h3_30">2단계: 필요한 크기 결정</h3>
-      <p data-i18n="resize-for-mobile_p_31">디자인에서 이미지가 표시되는最大 크기를 확인하고, 2x 디스플레이를 고려하여 2배 크기의 이미지를準備합니다.</p>
+      <p data-i18n="resize-for-mobile_p_31">디자인에서 이미지가 표시되는 MAX 크기를 확인하고, 2x 디스플레이를 고려하여 2배 크기의 이미지를 준비하세요.</p>
       <ul>
         <li data-i18n="resize-for-mobile_li_32">표시 크기 400px → 800px 이미지 준비</li>
         <li data-i18n="resize-for-mobile_li_33">표시 크기 600px → 1200px 이미지 준비</li>
@@ -104,12 +104,12 @@
       </ol>
 
       <h3 data-i18n="resize-for-mobile_h3_42">4단계: HTML 적용</h3>
-      <p data-i18n="resize-for-mobile_p_43">생성된 이미지를 srcset과 sizes 속성으로 적용합니다. 위의 코드 예시를参考하세요.</p>
+      <p data-i18n="resize-for-mobile_p_43">생성된 이미지를 srcset과 크기 속성으로 적용합니다. 위의 코드 예시를 참고하세요.</p>
 
       <h2 data-i18n="resize-for-mobile_h2_44">고급 리사이즈 기법</h2>
 
       <h3 data-i18n="resize-for-mobile_h3_45">아트 디렉션 (Art Direction)</h3>
-      <p data-i18n="resize-for-mobile_p_46">화면 크기에 따라 이미지의 크롭 영역이나 구성을 변경하는 기법입니다. 예를 들어, 데스크톱에서는 넓은 풍경 사진을 사용하고, 모바일에서는中央部分만 크롭하여 사용합니다.</p>
+      <p data-i18n="resize-for-mobile_p_46">예를 들어, 휴식 공간에서는 넓은 주변 사진을 사용하고 모바일에서는 중앙 부분만 사용하여 사용할 수 있습니다.</p>
       <pre><code>&lt;picture&gt;
   &lt;source media="(max-width: 600px)" srcset="image-mobile.webp"&gt;
   &lt;source media="(max-width: 1200px)" srcset="image-tablet.webp"&gt;
@@ -117,7 +117,7 @@
 &lt;/picture&gt;</code></pre>
 
       <h3 data-i18n="resize-for-mobile_h3_47">픽셀 밀도 처리</h3>
-      <p data-i18n="resize-for-mobile_p_48">Retina 디스플레이와 같은 고해상도 디스플레이를 지원하려면 2x 또는 3x 크기의 이미지를提供해야 합니다.</p>
+      <p data-i18n="resize-for-mobile_p_48">Retina 디스플레이와 같은 고해상도 디스플레이를 지원하려면 2x 또는 3x 크기의 이미지를제공해야 합니다.</p>
       <pre><code>&lt;img 
   srcset="image-400.webp 1x,
           image-800.webp 2x"

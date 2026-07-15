@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="batch-image-processing_h1">배치 이미지 처리로 시간 절약하기 — ZXZX</title>
-  <meta name="description" content="대량의 이미지를一次에 처리하는 배치 이미지 처리 방법. ZXZX를 사용한高效적인 이미지 일괄 처리 가이드." data-i18n-content="batch-image-processing_meta_desc">
+  <meta name="description" content="다수의 이미지를 한 번 처리하는 배치 이미지 처리 방법. 처리 가이드." data-i18n-content="batch-image-processing_meta_desc">
   <link rel="canonical" href="https://zxzx.app/blog/batch-image-processing">
   <link rel="stylesheet" href="/src/styles/main.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -28,31 +28,31 @@
       <h1 data-i18n="batch-image-processing_h1">배치 이미지 처리로 시간 절약하기</h1>
       <p class="meta" data-i18n="batch-image-processing_meta">2026년 7월 15일 · 7분 읽기</p>
 
-      <p data-i18n="batch-image-processing_p_8">웹사이트를 운영하거나 이미지 작업을 하다 보면数十에서数百장의 이미지를一次에 처리해야 하는 경우가 많습니다. 한 장 한 장处理하다 보면时间이大量으로 소요되고, 실수도 발생하기 쉽습니다. 이 글에서는 배치 이미지 처리를 통해 효율적으로 대량의 이미지를 처리하는 방법을介绍합니다.</p>
+      <p data-i18n="batch-image-processing_p_8">웹사이트를 운영하거나 이미지 작업을 하다 보면 수십 장에서 수백 장의 이미지를 한 번 처리해야 하는 경우가 있습니다. 이 글에서는 배치 이미지를 처리하는 방법을 소개합니다.</p>
 
-      <h2 data-i18n="batch-image-processing_h2_9">什么是 배치 이미지 처리?</h2>
-      <p data-i18n="batch-image-processing_p_10">배치 이미지 처리는多个 이미지를一次에 같은操作을 적용하는 것입니다. 압축, 포맷 변환, 크기 조정, 워터마크 추가等의 작업을一次에 수행할 수 있습니다.</p>
-      <p data-i18n="batch-image-processing_p_11">예를 들어, 100장의 이미지를 WebP로 변환하고, 80% 품질로 압축하고, 最大幅를 1200px로 조정해야 한다면, 배치 처리를 사용하면这些 작업을一次에完成할 수 있습니다.</p>
+      <h2 data-i18n="batch-image-processing_h2_9">무엇이 배치 이미지 처리?</h2>
+      <p data-i18n="batch-image-processing_p_10">압축, 형식 변환, 크기 조정, 워터마크 추가 대기의 작업을 한 번만 수행할 수 있습니다.</p>
+      <p data-i18n="batch-image-processing_p_11">예를 들어, 100개의 이미지를 WebP로 변환하고, 80% 품질로 압축하고, 대부분의 경우 1200px로 조정해야 하며, 배치 처리를 사용하면 이러한 작업은 한 번에 완료됩니다.</p>
 
-      <h2 data-i18n="batch-image-processing_h2_12">为什么 배치 처리가 필요한가?</h2>
+      <h2 data-i18n="batch-image-processing_h2_12">배치 처리가 필요한 이유는 무엇입니까?</h2>
 
       <h3 data-i18n="batch-image-processing_h3_13">시간 절약</h3>
-      <p data-i18n="batch-image-processing_p_14">이미지 한 장당 30초가 걸리는 작업을 100장 처리한다면, 一括으로는 50분이 소요됩니다. 하지만 배치 처리를 사용하면 5분 이내에完成할 수 있습니다.</p>
+      <p data-i18n="batch-image-processing_p_14">이미지 한 장당 30초가 부분 작업을 100장 처리한다면, 1개의 장당 30초를 요구하는 경우 50개를 처리합니다. 하지만 배치 처리를 사용하면 5분 정도 완료할 수 있습니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_15">일관성</h3>
-      <p data-i18n="batch-image-processing_p_16">手动으로 처리할 때는每次 slightly 다른设置을 사용할 수 있습니다. 배치 처리는同一한 설정을所有 이미지에 적용하여 일관된 결과를 보장합니다.</p>
+      <p data-i18n="batch-image-processing_p_16">수동으로 처리할 수 있으며 매번 조금씩 다른 설정을 사용할 수 있습니다. 배치 처리는 동일한 설정을 모두 이미지에 적용하여 수행하는 것입니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_17">오류 감소</h3>
-      <p data-i18n="batch-image-processing_p_18">大量의 이미지를手动으로 처리하면疲劳로 인한 실수가 발생할 수 있습니다. 배치 처리는 자동화되어 있어人为적 오류를 방지합니다.</p>
+      <p data-i18n="batch-image-processing_p_18">많은 의 이미지를 매뉴얼로 처리하면 피로로 인한 연관이 발생할 수 있습니다. 처리하는 과정에서는 인적 오류를 방지합니다.</p>
 
       <h2 data-i18n="batch-image-processing_h2_19">ZXZX로 배치 처리하기</h2>
-      <p data-i18n="batch-image-processing_p_20">ZXZX의 이미지 도구들은모두 배치 처리를 지원합니다. 다음은各 도구별 배치 처리 방법입니다.</p>
+      <p data-i18n="batch-image-processing_p_20">ZXZX의 이미지 도구는 모두 배치 처리를 지원합니다. 방법입니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_21">배치 압축</h3>
       <ol>
         <li><a href="/compress" data-i18n="nav_compress">ZXZX 압축 도구</a>에 접속합니다</li>
-        <li data-i18n="batch-image-processing_li_23">여러 이미지를一次에 드래그 앤 드롭합니다</li>
-        <li data-i18n="batch-image-processing_li_24">압축 설정을 조정합니다 (품질, 포맷等)</li>
+        <li data-i18n="batch-image-processing_li_23">여러 이미지를 한 번에 드래그 앤 드롭합니다</li>
+        <li data-i18n="batch-image-processing_li_24">압축 설정을 조정합니다(품질,신고 등)</li>
         <li data-i18n="batch-image-processing_li_25">"모두 압축"을 클릭합니다</li>
         <li data-i18n="batch-image-processing_li_26">압축된 이미지를 개별 또는 ZIP으로 다운로드합니다</li>
       </ol>
@@ -75,10 +75,10 @@
         <li data-i18n="batch-image-processing_li_38">결과를 다운로드합니다</li>
       </ol>
 
-      <h2 data-i18n="batch-image-processing_h2_39">高效的 배치 처리工作流</h2>
+      <h2 data-i18n="batch-image-processing_h2_39">효율적인 배치 처리 워크플로우</h2>
 
       <h3 data-i18n="batch-image-processing_h3_40">1단계: 이미지 분류</h3>
-      <p data-i18n="batch-image-processing_p_41">처리할 이미지를用途에 따라 분류합니다.</p>
+      <p data-i18n="batch-image-processing_p_41">처리할 이미지를 이에 따라 분류합니다.</p>
       <ul>
         <li data-i18n="batch-image-processing_li_42">썸네일용 이미지</li>
         <li data-i18n="batch-image-processing_li_43">본문 이미지</li>
@@ -87,10 +87,10 @@
       </ul>
 
       <h3 data-i18n="batch-image-processing_h3_46">2단계: 설정 결정</h3>
-      <p data-i18n="batch-image-processing_p_47">각类别에 대한 처리 설정을 결정합니다.</p>
+      <p data-i18n="batch-image-processing_p_47">각Category에 대한 처리 설정을 결정합니다.</p>
       <table>
         <thead>
-          <tr><th>类别</th><th>포맷</th><th>품질</th><th>최대 크기</th></tr>
+          <tr><th>카테고리</th><th>포맷</th><th>품질</th><th>최대 크기</th></tr>
         </thead>
         <tbody>
           <tr><td>썸네일</td><td>WebP</td><td>75%</td><td>300px</td></tr>
@@ -101,13 +101,13 @@
       </table>
 
       <h3 data-i18n="batch-image-processing_h3_48">3단계: 배치 처리 실행</h3>
-      <p data-i18n="batch-image-processing_p_49">각类别별로 배치 처리를 실행합니다. ZXZX는多个 파일을一次에 처리할 수 있습니다.</p>
+      <p data-i18n="batch-image-processing_p_49">각Category는 매우 매력적인 처리를 실행합니다. ZXZX는 여러 파일을 한 번 처리할 수 있습니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_50">4단계: 결과 검증</h3>
-      <p data-i18n="batch-image-processing_p_51">처리된 이미지의 샘플을检查하여 품질이 기대에 맞는지 확인합니다.</p>
+      <p data-i18n="batch-image-processing_p_51">처리된 이미지의 샘플을 확인하여 품질이 기대에 부합하는지 확인합니다.</p>
 
       <h2 data-i18n="batch-image-processing_h2_52">커맨드 라인 배치 처리</h2>
-      <p data-i18n="batch-image-processing_p_53">고급 사용자를 위해 커맨드 라인에서 배치 처리하는 방법도介绍합니다.</p>
+      <p data-i18n="batch-image-processing_p_53">차별화된 사용자를 위해 배치하는 방법을 소개합니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_54">ImageMagick (설치 필요)</h3>
       <pre><code># 모든 JPG를 WebP로 변환
@@ -125,26 +125,26 @@ ffmpeg -i video.mp4 -vf "fps=1" thumbnail_%04d.jpg</code></pre>
       <h2 data-i18n="batch-image-processing_h2_56">배치 처리 시 고려사항</h2>
 
       <h3 data-i18n="batch-image-processing_h3_57">메모리 사용량</h3>
-      <p data-i18n="batch-image-processing_p_58">大量의 이미지를一次에 처리하면 메모리사용量이 급증할 수 있습니다.特别是高해상도 이미지를处理할 때는 메모리 부족이 발생할 수 있습니다.</p>
+      <p data-i18n="batch-image-processing_p_58">많은 양의 이미지를 한 번 처리하면 메모리 사용량이 증가할 수 있습니다. 특히 높은 메모리 문제 이미지에 대해서는 치료가 불가능하고 발생할 수 없습니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_59">처리 시간</h3>
-      <p data-i18n="batch-image-processing_p_60">数百장의 이미지를一次에 처리하면处理 시간이 길어질 수 있습니다. ZXZX는 웹 워커를사용하여处理를并行化하지만, 여전히一定 시간이 소요됩니다.</p>
+      <p data-i18n="batch-image-processing_p_60">한 번에 수백 개의 항목을 작업을 사용하여 병렬화를 처리하지만, 여전히 시간이 소요되어야 합니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_61">네트워크 부하</h3>
-      <p data-i18n="batch-image-processing_p_62">서버에 이미지를 업로드하는 방식의 서비스는大量의 파일을一次에 업로드하면 네트워크에 부하가 걸릴 수 있습니다. ZXZX는 100% 로컬 처리이므로这个问题를担心할 필요가 없습니다.</p>
+      <p data-i18n="batch-image-processing_p_62">서버에 이미지를 업로드하는 방식의 서비스는 한 번만 업로드하면 대용량 파일을 저장할 수 있습니다.</p>
 
-      <h2 data-i18n="batch-image-processing_h2_63">实际사용案例</h2>
+      <h2 data-i18n="batch-image-processing_h2_63">실제 사용 사례</h2>
 
-      <h3 data-i18n="batch-image-processing_h3_64">案例 1: 블로그 이미지 마이그레이션</h3>
-      <p data-i18n="batch-image-processing_p_65">한 블로그가 500장의 이미지를 JPG에서 WebP로 변환해야 했습니다.手动으로 처리했다면 4시간 이상 걸렸겠지만, ZXZX의 배치 처리를 사용하여 20분 만에完成할 수 있었습니다.</p>
+      <h3 data-i18n="batch-image-processing_h3_64">사례 1: 블로그 이미지 마이그레이션</h3>
+      <p data-i18n="batch-image-processing_p_65">한 블로그가 500개의 이미지를 JPG에서 WebP로 변환해야 했습니다.Manual로 처리했다면 4시간 이상 걸렸지만, ZXZX의 처리를 사용하여 20분 만에 완료할 수 있습니다.</p>
 
-      <h3 data-i18n="batch-image-processing_h3_66">案例 2: 제품 이미지 최적화</h3>
-      <p data-i18n="batch-image-processing_p_67">한 e-커머스 사이트가 200개의 제품 이미지를 최적화해야 했습니다.각 이미지를서로 다른 크기로 리사이즈하고, WebP로 변환하고, 압축해야 했습니다. ZXZX를 사용하여这些 작업을一次에处理하고, 전체 파일 크기를 70% 줄일 수 있었습니다.</p>
+      <h3 data-i18n="batch-image-processing_h3_66">사례 2: 제품 이미지 최적화</h3>
+      <p data-i18n="batch-image-processing_p_67">한 e-커머스 사이트는 200개의 제품 이미지를 최적화해야 했습니다. 각 이미지를 다른 크기로 크기를 조정하고, WebP로 변환하고, 압축해야 했습니다. 파일 크기를 70% 인증할 수 있습니다.</p>
 
-      <h3 data-i18n="batch-image-processing_h3_68">案例 3: 소셜 미디어 이미지 준비</h3>
-      <p data-i18n="batch-image-processing_p_69">한 마케팅 팀이 소셜 미디어 캠페인을 위해 100장의 이미지를准备해야 했습니다.各 플랫폼에 맞는 크기로 리사이즈하고,适当的 압축을 적용해야 했습니다. ZXZX의 배치 리사이즈 기능을 사용하여 시간을大幅으로 절약했습니다.</p>
+      <h3 data-i18n="batch-image-processing_h3_68">사례 3: 새로운 미디어 이미지 준비</h3>
+      <p data-i18n="batch-image-processing_p_69">마케팅 팀이 수많은 미디어 캠페인을 위해 100장의 이미지를 준비해야 했습니다. 각 플랫폼에 맞는 크기로 크기를 조정하고, 적절한 압축을 적용해야 했습니다. 사용하여 시간을 대폭으로 절약했습니다.</p>
 
-      <h2 data-i18n="batch-image-processing_h2_70">自动化 도구 비교</h2>
+      <h2 data-i18n="batch-image-processing_h2_70">자동화 도구 비교</h2>
       <table>
         <thead>
           <tr><th>도구</th><th>배치 처리</th><th>무료</th><th>설치 필요</th><th>프라이버시</th></tr>
@@ -158,7 +158,7 @@ ffmpeg -i video.mp4 -vf "fps=1" thumbnail_%04d.jpg</code></pre>
       </table>
 
       <h2 data-i18n="batch-image-processing_h2_71">결론</h2>
-      <p data-i18n="batch-image-processing_p_72">배치 이미지 처리는大量의 이미지를 효율적으로 처리하는 필수技能입니다. ZXZX는 무료로, 설치 없이, 프라이버시를 보호하면서 배치 처리를지원합니다. 지금 바로大量의 이미지를高效적으로 처리해보세요.</p>
+      <p data-i18n="batch-image-processing_p_72">배치 이미지 처리는의 이미지를 효율적으로 처리하는 필수입니다. ZXZX는 무료로, 설치 없이, 프라이버시를 보호하면서 배치 처리를지원합니다. 지금 바로의 이미지를적으로 처리해보세요.</p>
     </article>
   </main>
 
