@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZXZX Blog — 이미지 도구 팁, 가이드, 튜토리얼 | Image Tools Blog</title>
+  <title data-i18n="blog_title">ZXZX 블로그</title>
   <meta name="description" content="Expert tips, tutorials, and guides on image compression, format conversion, web optimization, and digital privacy. Learn how to optimize images for the web.">
   <meta name="keywords" content="image optimization blog, web performance, image compression guide, JPG vs PNG vs WebP, 이미지 최적화, 웹 성능, 이미지 블로그">
   <meta name="robots" content="index, follow">
@@ -28,10 +28,11 @@
     <nav class="container">
       <a href="/" class="logo">ZXZX</a>
       <ul>
-        <li><a href="/compress">Compress</a></li>
-        <li><a href="/convert">Convert</a></li>
-        <li><a href="/resize">Resize</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
     </nav>
   </header>
@@ -39,8 +40,8 @@
   <main class="tool-page container">
     <section class="hero">
       <div class="container">
-        <h1>ZXZX Blog</h1>
-        <p class="subtitle">Tips, tutorials, and in-depth guides on image optimization, web performance, and digital privacy.</p>
+        <h1 data-i18n="blog_title">ZXZX 블로그</h1>
+        <p class="subtitle" data-i18n="blog_desc">이미지 최적화, 웹 성능, 파일 포맷에 대한 가이드와 팁.</p>
       </div>
     </section>
 
@@ -121,21 +122,21 @@
         <p>Canvas API와 WebAssembly가 어떻게 브라우저 내 이미지 처리를 가능하게 하는지 설명합니다. 서버 기반 도구 대비 속도, 보안, 프라이버시 측면의 장점을 분석합니다.</p>
       </article>
     <section class="faq container">
-      <h2>Frequently Asked Questions About Our Blog</h2>
+      <h2 data-i18n="blog_faq_title">블로그에 대한 자주 묻는 질문</h2>
       <details>
-        <summary>How often do you publish new articles?</summary>
+        <summary data-i18n="blog_faq_freq_q">새 글은 얼마나 자주 발행하나요?</summary>
         <p>We publish new content every 1-2 weeks. Our articles cover a wide range of image optimization topics, from beginner-friendly tutorials to advanced technical deep dives. Subscribe to our social channels to be notified when new articles are published.</p>
       </details>
       <details>
-        <summary>Can I suggest a topic for a future article?</summary>
+        <summary data-i18n="blog_faq_suggest_q">추후 기사 주제를 제안할 수 있나요?</summary>
         <p>Absolutely! We love hearing from our readers about what topics they want us to cover. Visit our <a href="/contact">Contact page</a> and send us your suggestion. We prioritize topics based on reader demand and relevance to image optimization and web performance.</p>
       </details>
       <details>
-        <summary>Are your articles based on real testing?</summary>
+        <summary data-i18n="blog_faq_testing_q">기사가 실제 테스트를 기반으로 하나요?</summary>
         <p>Yes. Every technical claim in our articles is backed by hands-on testing and real-world benchmarks. We test compression ratios, file sizes, processing speeds, and browser compatibility using actual images and devices. We believe in providing accurate, verifiable information rather than generic advice.</p>
       </details>
       <details>
-        <summary>Can I use your articles on my website?</summary>
+        <summary data-i18n="blog_faq_reuse_q">기사를 제 웹사이트에서 사용할 수 있나요?</summary>
         <p>Our articles are copyrighted content. However, you are welcome to quote short excerpts with proper attribution and a link back to the original article on ZXZX. For full republication requests, please contact us through our <a href="/contact">Contact page</a>.</p>
       </details>
     </section>
@@ -144,14 +145,15 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

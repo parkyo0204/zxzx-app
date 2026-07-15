@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact ZXZX — 문의하기 | 연락처</title>
+  <title data-i18n="contact_title">Contact ZXZX — 문의하기</title>
   <meta name="description" content="Get in touch with the ZXZX team. Send us your questions, feedback, bug reports, or partnership inquiries. We respond within 1-2 business days.">
   <meta name="keywords" content="contact ZXZX, ZXZX 문의, support, feedback, 연락처, contact us">
   <meta name="robots" content="index, follow">
@@ -34,54 +34,55 @@
     <nav class="container">
       <a href="/" class="logo">ZXZX</a>
       <ul>
-        <li><a href="/compress">Compress</a></li>
-        <li><a href="/convert">Convert</a></li>
-        <li><a href="/resize">Resize</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="tool-page container">
-    <h1>Contact Us</h1>
-    <p class="lead">Have a question, feedback, or partnership inquiry? We'd love to hear from you. Our team reads every message and typically responds within 1-2 business days.</p>
+    <h1 data-i18n="contact_page_title">문의하기</h1>
+    <p class="lead" data-i18n="contact_lead">질문, 피드백, 또는 파트너십 문의가 있으신가요? 저희 팀은 모든 메시지를 읽으며 보통 1-2 영업일 이내에 답변드립니다.</p>
 
     <section class="content-section">
       <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p>The best way to reach us is through the contact form below. We welcome all types of inquiries including bug reports, feature requests, partnership proposals, and general questions about ZXZX.</p>
+        <h2 data-i18n="contact_getintouch">연락하기</h2>
+        <p data-i18n="contact_getintouch_desc">아래 문의 양식을 통해 연락해 주세요. 버그 리포트, 기능 요청, 파트너십 제안, ZXZX에 대한 일반적인 질문 등 모든 유형의 문의를 환영합니다.</p>
       </div>
 
       <form class="contact-form" id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <label for="name" data-i18n="contact_name">이름</label>
+        <input type="text" id="name" name="name" data-i18n-placeholder="contact_name_placeholder" placeholder="이름을 입력하세요" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        <label for="email" data-i18n="contact_email">이메일</label>
+        <input type="email" id="email" name="email" data-i18n-placeholder="contact_email_placeholder" placeholder="your@email.com" required>
 
-        <label for="subject">Subject</label>
+        <label for="subject" data-i18n="contact_subject">제목</label>
         <select id="subject" name="subject" required>
-          <option value="">Select a topic...</option>
-          <option value="general">General Question</option>
-          <option value="bug">Bug Report</option>
-          <option value="feature">Feature Request</option>
-          <option value="partnership">Partnership / Business Inquiry</option>
-          <option value="privacy">Privacy Concern</option>
-          <option value="other">Other</option>
+          <option value="" data-i18n="contact_topic_select">주제를 선택하세요...</option>
+          <option value="general" data-i18n="contact_topic_general">일반 문의</option>
+          <option value="bug" data-i18n="contact_topic_bug">버그 리포트</option>
+          <option value="feature" data-i18n="contact_topic_feature">기능 요청</option>
+          <option value="partnership" data-i18n="contact_topic_partnership">파트너십 / 비즈니스 문의</option>
+          <option value="privacy" data-i18n="contact_topic_privacy">프라이버시 관련</option>
+          <option value="other" data-i18n="contact_topic_other">기타</option>
         </select>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
+        <label for="message" data-i18n="contact_message">메시지</label>
+        <textarea id="message" name="message" data-i18n-placeholder="contact_message_placeholder" placeholder="도움이 필요한 내용을 알려주세요..." required></textarea>
 
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" data-i18n="contact_send">메시지 보내기</button>
       </form>
 
-      <h2>What to Expect When You Contact Us</h2>
+      <h2 data-i18n="contact_expect_title">문의 후 기대할 수 있는 것</h2>
       <p>We value every message we receive from our users. When you reach out to the ZXZX team, here is what you can expect from our communication process. We believe in transparency and timely responses, and we work hard to address every inquiry thoroughly.</p>
       <p>Upon submitting the contact form, you will receive an automatic confirmation email acknowledging that we have received your message. Our team reviews incoming messages daily during business days. General questions and feedback are typically answered within 24 hours. Technical issues and bug reports may require additional investigation time, but we will always acknowledge receipt and provide an estimated timeline for resolution.</p>
       <p>For partnership and business inquiries, our team evaluates each proposal carefully. We are open to collaborations that align with our mission of providing free, privacy-focused image tools. Please include as much detail as possible about your organization and the nature of the proposed partnership so we can route your inquiry to the right team member.</p>
 
-      <h2>Common Topics We Can Help With</h2>
+      <h2 data-i18n="contact_topics_title">도움을 드릴 수 있는 주요 주제</h2>
       <p>Our support team is equipped to handle a wide range of questions and issues. Here are some of the most common topics users contact us about, along with guidance on what information to include in your message.</p>
       <ul>
         <li><strong>Tool Not Working</strong> — If a ZXZX tool is not functioning as expected, please include your browser name and version, operating system, the specific tool you were using, and the file type and size of the image you were processing. This information helps us reproduce and fix the issue quickly.</li>
@@ -92,33 +93,33 @@
       </ul>
 
       <div class="contact-info" style="margin-top: 3rem;">
-        <h2>Other Ways to Reach Us</h2>
-        <h3>Email</h3>
+        <h2 data-i18n="contact_other_title">다른 연락 방법</h2>
+        <h3 data-i18n="contact_email_title">이메일</h3>
         <p>For direct correspondence, you can email us at: <a href="mailto:hello@zxzx.app">hello@zxzx.app</a></p>
         <p>We respond to all emails within 1-2 business days. Please include a clear subject line so we can route your message to the appropriate team member. For urgent matters, please mark your subject line with [URGENT] and we will prioritize your inquiry.</p>
 
-        <h3>Social Media</h3>
+        <h3 data-i18n="contact_social_title">소셜 미디어</h3>
         <p>Follow us for updates, tips, and news about ZXZX tools and features. We regularly share image optimization tips, web performance insights, and announcements about new tools on our social channels. Social media is also a great way to stay informed about platform updates and maintenance schedules.</p>
 
-        <h3>Community and Feedback</h3>
+        <h3 data-i18n="contact_community_title">커뮤니티 및 피드백</h3>
         <p>ZXZX is built for the community, and your feedback directly shapes our product roadmap. We have implemented dozens of user-requested features since our launch, including batch processing, ZIP download, and AVIF support. Every piece of feedback we receive is reviewed by our product team and considered for future development.</p>
       </div>
 
-      <h2>Frequently Asked Questions</h2>
+      <h2 data-i18n="faq_title">자주 묻는 질문</h2>
 
-      <h3>How quickly will I get a response?</h3>
+      <h3 data-i18n="contact_faq_response_q">답변은 얼마나 빨리 받을 수 있나요?</h3>
       <p>We aim to respond to all inquiries within 1-2 business days. Complex technical issues or partnership proposals may take a bit longer as we consult with the relevant team members.</p>
 
-      <h3>I found a bug. What should I include in my report?</h3>
+      <h3 data-i18n="contact_faq_bug_q">버그를 발견했습니다. 리포트에 무엇을 포함해야 하나요?</h3>
       <p>When reporting a bug, please include: (1) the browser and device you're using, (2) the specific tool and file type involved, (3) what you expected to happen, and (4) what actually happened. Screenshots are very helpful if applicable.</p>
 
-      <h3>Can I request a new feature?</h3>
+      <h3 data-i18n="contact_faq_feature_q">새 기능을 요청할 수 있나요?</h3>
       <p>Absolutely! We love hearing from our users about what features would be most useful. Use the contact form and select "Feature Request" as the subject. While we can't implement every suggestion, we prioritize features based on user demand and technical feasibility.</p>
 
-      <h3>Do you offer API access or enterprise solutions?</h3>
+      <h3 data-i18n="contact_faq_api_q">API 접근이나 엔터프라이즈 솔루션을 제공하나요?</h3>
       <p>Currently, ZXZX is a browser-based tool without a public API. If you're interested in API access or enterprise solutions, please reach out through the contact form with details about your use case.</p>
 
-      <h3>How do I report a privacy concern?</h3>
+      <h3 data-i18n="contact_faq_privacy_q">프라이버시 우려 사항은 어떻게 보고하나요?</h3>
       <p>Take privacy concerns seriously. Select "Privacy Concern" in the contact form subject dropdown, and our privacy team will investigate and respond promptly. You can also review our <a href="/privacy">Privacy Policy</a> for details on how ZXZX handles data.</p>
     </section>
   </main>
@@ -126,14 +127,15 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

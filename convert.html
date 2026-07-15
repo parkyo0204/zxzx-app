@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Online Image Converter — JPG, PNG, WebP, AVIF 변환 | ZXZX</title>
+  <title data-i18n="convert_title">무료 온라인 이미지 포맷 변환기 — JPG, PNG, WebP, AVIF</title>
   <meta name="description" content="Convert images between JPG, PNG, WebP, AVIF formats instantly in your browser. No upload, no registration. 100% free online image format converter.">
   <meta name="keywords" content="image converter, PNG to JPG, WebP converter, AVIF converter, online image converter, 이미지 변환, 포맷 변환, JPG PNG WebP 변환">
   <meta name="robots" content="index, follow">
@@ -31,44 +31,45 @@
     <nav class="container">
       <a href="/" class="logo">ZXZX</a>
       <ul>
-        <li><a href="/compress">Compress</a></li>
-        <li><a href="/convert">Convert</a></li>
-        <li><a href="/resize">Resize</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="tool-page container">
-    <h1>Free Online Image Format Converter</h1>
-    <p class="lead">Convert images between JPG, PNG, WebP, and AVIF formats instantly in your browser. No upload, no registration, no file size limits. Your files stay on your device.</p>
+    <h1 data-i18n="convert_title">이미지 포맷 변환기</h1>
+    <p class="lead" data-i18n="convert_desc">JPG, PNG, WebP, AVIF 간 변환. 배치 변환 지원.</p>
 
     <div class="dropzone" id="dropzone">
-      <h3>Drop images here</h3>
-      <p>or click to choose files • JPG, PNG, WebP, AVIF • up to 20MB each, 30 files max</p>
+      <h3 data-i18n="drop_images">이미지를 여기에 놓으세요</h3>
+      <p data-i18n="drop_sub_convert">또는 클릭하여 파일 선택 • JPG, PNG, WebP, AVIF • 파일당 최대 20MB, 최대 30개</p>
       <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp,image/avif" hidden>
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <label>Convert to: <select id="targetFormat">
+      <label><span data-i18n="convert_to">변환 대상</span>: <select id="targetFormat">
         <option value="jpeg">JPG</option>
         <option value="png">PNG</option>
         <option value="webp">WebP</option>
         <option value="avif">AVIF</option>
       </select></label>
-      <label>Quality: <select id="quality">
+      <label><span data-i18n="quality">품질</span>: <select id="quality">
         <option value="0.95">Best (95%)</option>
         <option value="0.85" selected>High (85%)</option>
         <option value="0.7">Medium (70%)</option>
       </select></label>
-      <button class="btn btn-primary" id="convertBtn">Convert All</button>
-      <button class="btn btn-secondary" id="downloadZip">Download ZIP</button>
+      <button class="btn btn-primary" id="convertBtn" data-i18n="convert_all">모두 변환</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
     </div>
 
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>How to Convert Image Formats Online</h2>
+      <h2 data-i18n="convert_how_title">온라인 이미지 포맷 변환 방법</h2>
       <p>Converting image formats with ZXZX takes just a few seconds. Follow these four simple steps to transform your images into any format you need.</p>
       <ol>
         <li><strong>Upload your images</strong> — Drag and drop your files onto the dropzone area, or click to browse your device. We support JPG, PNG, WebP, AVIF, BMP, GIF, and TIFF input formats. You can upload up to 30 files at once, each up to 20MB in size.</li>
@@ -77,7 +78,7 @@
         <li><strong>Convert and download</strong> — Click the "Convert All" button to process your images. The conversion happens entirely in your browser using the Canvas API. Once complete, download individual files or save all converted images as a ZIP archive.</li>
       </ol>
 
-      <h2>Image Format Comparison: Which Format Should You Choose?</h2>
+      <h2 data-i18n="convert_format_title">이미지 포맷 비교: 어떤 포맷을 선택할까요?</h2>
       <p>Each image format has distinct advantages and ideal use cases. Understanding these differences helps you choose the right format for your needs.</p>
 
       <h3>JPG (JPEG)</h3>
@@ -95,29 +96,29 @@
       <h3>When to Convert Between Formats</h3>
       <p>Converting from PNG to JPG is useful when you have screenshots or graphics saved as PNG but need smaller files for email or web use. Converting from JPG to WebP is recommended when optimizing a website for speed. Converting to AVIF is ideal for next-generation web projects where maximum compression is needed. Converting from WebP to JPG or PNG is useful when you need compatibility with older software that doesn't support WebP.</p>
 
-      <h2>Why Use ZXZX Image Converter?</h2>
+      <h2 data-i18n="convert_why_title">ZXZX 이미지 변환기를 사용하는 이유</h2>
       <p>ZXZX provides a fast, secure, and completely free image conversion experience. Unlike online converters that upload your files to remote servers, ZXZX processes everything locally in your browser. This means your images are never transmitted over the internet, eliminating any risk of data interception or unauthorized access.</p>
       <p>Our converter supports batch processing, allowing you to convert up to 30 images simultaneously. This is particularly useful for web developers optimizing image assets or photographers preparing images for different platforms. The ZIP download feature lets you save all converted files in a single archive for convenience.</p>
       <p>ZXZX maintains the original image dimensions during conversion. If you need to resize images as well, use our <a href="/resize">Image Resizer</a> tool after conversion. All ZXZX tools work together seamlessly, so you can compress, convert, resize, and optimize your images in any order.</p>
 
-      <h2>Frequently Asked Questions</h2>
+      <h2 data-i18n="faq_title">자주 묻는 질문</h2>
 
-      <h3>Is the image converter really free?</h3>
+      <h3 data-i18n="convert_faq_free_q">이미지 변환기가 정말 무료인가요?</h3>
       <p>Yes, ZXZX is completely free with no hidden costs, no watermarks, and no registration required. You can convert unlimited images without any restrictions. There are no premium tiers or paywalls — every feature is available to all users.</p>
 
-      <h3>Will converting formats change image quality?</h3>
+      <h3 data-i18n="convert_faq_quality_q">포맷 변환이 이미지 품질을 바꾸나요?</h3>
       <p>Converting between lossy formats (JPG, WebP) involves re-encoding, which may cause minor quality loss. Converting to lossless formats (PNG) preserves all quality. For most web uses, converting at 85-95% quality produces visually identical results. We recommend keeping your original files as backups.</p>
 
-      <h3>What is the best format for web images?</h3>
+      <h3 data-i18n="convert_faq_best_q">웹 이미지에 가장 좋은 포맷은 무엇인가요?</h3>
       <p>WebP is currently the best format for web images due to its excellent compression and universal browser support. For maximum compatibility, use JPG for photographs and PNG for graphics with transparency. If your audience uses modern browsers, AVIF offers the smallest file sizes.</p>
 
-      <h3>Can I convert images on my phone?</h3>
+      <h3 data-i18n="faq_mobile_q">모바일에서도 사용할 수 있나요?</h3>
       <p>Yes, ZXZX works perfectly on mobile browsers including Chrome and Safari on iOS and Android. The responsive interface adapts to smaller screens, and all conversion features are fully functional on mobile devices.</p>
 
-      <h3>Are my uploaded images stored on your servers?</h3>
+      <h3 data-i18n="convert_faq_stored_q">업로드한 이미지가 서버에 저장되나요?</h3>
       <p>No. All image processing happens directly in your browser using JavaScript and the Canvas API. Your files are never uploaded to any server. When you close the page, all data is automatically cleared. ZXZX is one of the most privacy-focused image tools available.</p>
 
-      <h2>Related Tools</h2>
+      <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
         <li><a href="/compress">Image Compressor</a> — Reduce file size by up to 80% without visible quality loss</li>
         <li><a href="/resize">Image Resizer</a> — Resize images by pixels or percentage</li>
@@ -129,14 +130,15 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

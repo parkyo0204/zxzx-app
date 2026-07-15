@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Online Image Resizer — 이미지 크기 조절 | ZXZX</title>
+  <title data-i18n="resize_title">이미지 리사이저</title>
   <meta name="description" content="Resize images online for free. Change dimensions by pixels or percentage. Maintain aspect ratio. Batch resize up to 30 images. No upload required.">
   <meta name="keywords" content="image resizer, resize image online, image resize, 사진 크기 조절, 이미지 리사이즈, batch image resizer, pixel resize, percentage resize">
   <meta name="robots" content="index, follow">
@@ -31,21 +31,22 @@
     <nav class="container">
       <a href="/" class="logo">ZXZX</a>
       <ul>
-        <li><a href="/compress">Compress</a></li>
-        <li><a href="/convert">Convert</a></li>
-        <li><a href="/resize">Resize</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="tool-page container">
-    <h1>Free Online Image Resizer</h1>
-    <p class="lead">Resize your images by pixels or percentage directly in your browser. Maintain aspect ratio, batch process up to 30 files, and download as ZIP. No upload, no registration, 100% free.</p>
+    <h1 data-i18n="resize_title">이미지 리사이저</h1>
+    <p class="lead" data-i18n="resize_desc">픽셀 또는 퍼센트로 이미지 크기 조정. 비율 유지.</p>
 
     <div class="dropzone" id="dropzone">
-      <h3>Drop images here</h3>
-      <p>or click to choose files • JPG, PNG, WebP • up to 20MB each, 30 files max</p>
+      <h3 data-i18n="drop_images">이미지를 여기에 놓으세요</h3>
+      <p data-i18n="drop_sub">또는 클릭하여 파일 선택 • JPG, PNG, WebP • 파일당 최대 20MB, 최대 30개</p>
       <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
     </div>
 
@@ -57,14 +58,14 @@
       <label>Width: <input type="number" id="width" placeholder="px" min="1" max="10000"></label>
       <label>Height: <input type="number" id="height" placeholder="px" min="1" max="10000"></label>
       <label><input type="checkbox" id="lockAspect" checked> Lock aspect ratio</label>
-      <button class="btn btn-primary" id="resizeBtn">Resize All</button>
-      <button class="btn btn-secondary" id="downloadZip">Download ZIP</button>
+      <button class="btn btn-primary" id="resizeBtn" data-i18n="resize_all">모두 리사이즈</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
     </div>
 
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>How to Resize Images Online</h2>
+      <h2 data-i18n="resize_how_title">온라인 이미지 리사이즈 방법</h2>
       <p>ZXZX Image Resizer makes it easy to resize your images to the exact dimensions you need. Here's how to get started in three simple steps.</p>
       <ol>
         <li><strong>Upload your images</strong> — Drag and drop your JPG, PNG, or WebP files onto the dropzone, or click to browse your device. You can upload up to 30 images at once for batch resizing. Each file can be up to 20MB.</li>
@@ -72,7 +73,7 @@
         <li><strong>Resize and download</strong> — Click "Resize All" to process your images. The resizing happens instantly in your browser using the Canvas API. Preview the results, then download individual files or save everything as a ZIP archive.</li>
       </ol>
 
-      <h2>Common Use Cases for Image Resizing</h2>
+      <h2 data-i18n="resize_usecases_title">이미지 리사이즈 활용 사례</h2>
       <p>Image resizing is one of the most common image editing operations. Here are the most popular reasons people resize their images online.</p>
 
       <h3>Social Media Profile Pictures and Covers</h3>
@@ -93,28 +94,28 @@
       <h3>Print Preparation</h3>
       <p>Preparing images for print requires specific dimensions at 300 DPI. A standard 4x6 inch print needs 1200x1800 pixels. Using ZXZX's pixel-based resizing, you can prepare images for any print format from standard photo sizes to large posters.</p>
 
-      <h2>How ZXZX Preserves Image Quality</h2>
+      <h2 data-i18n="resize_quality_title">ZXZX가 이미지 품질을 유지하는 방법</h2>
       <p>ZXZX uses high-quality resampling algorithms to ensure resized images look sharp and clear. When reducing image dimensions, our tool properly downsamples to avoid aliasing artifacts. When increasing dimensions, it uses bilinear interpolation to produce smooth results. For best quality, we recommend reducing images rather than enlarging them, as upscaling cannot add detail that wasn't in the original.</p>
       <p>All processing happens in your browser using the Canvas API. Your images are never uploaded to any server, ensuring complete privacy. The resized images maintain the same format as the originals unless you use our <a href="/convert">converter tool</a> to change formats.</p>
 
-      <h2>Frequently Asked Questions</h2>
+      <h2 data-i18n="faq_title">자주 묻는 질문</h2>
 
-      <h3>Is there a limit to how much I can resize?</h3>
+      <h3 data-i18n="resize_faq_limit_q">리사이즈에 제한이 있나요?</h3>
       <p>There's no strict limit, but we recommend keeping dimensions between 1 and 10,000 pixels on each side. Extremely large dimensions may cause your browser to run out of memory. For typical use cases like web images and social media, this range covers all needs.</p>
 
-      <h3>What does "lock aspect ratio" mean?</h3>
+      <h3 data-i18n="resize_faq_aspect_q">"비율 잠금"이란 무엇인가요?</h3>
       <p>When aspect ratio is locked, changing the width automatically adjusts the height proportionally, and vice versa. This prevents images from appearing stretched or distorted. We recommend keeping this option enabled unless you specifically need non-proportional resizing.</p>
 
-      <h3>Will resizing reduce image quality?</h3>
+      <h3 data-i18n="resize_faq_quality_q">리사이즈가 이미지 품질을 떨어뜨리나요?</h3>
       <p>Reducing image dimensions generally maintains excellent quality. Enlarging images (upscaling) may result in some softness or pixelation, as the tool cannot create detail that wasn't in the original image. For best results, resize images to smaller dimensions rather than larger ones.</p>
 
-      <h3>Can I resize images on my phone?</h3>
+      <h3 data-i18n="faq_mobile_q">모바일에서도 사용할 수 있나요?</h3>
       <p>Yes, ZXZX works on all modern mobile browsers including Chrome and Safari on iOS and Android. The interface is fully responsive and touch-friendly, making it easy to resize images from your phone or tablet.</p>
 
-      <h3>What's the difference between pixels and percentage mode?</h3>
+      <h3 data-i18n="resize_faq_pixels_q">픽셀 모드와 퍼센트 모드의 차이점은?</h3>
       <p>Pixel mode lets you enter exact width and height values in pixels. Percentage mode scales the image by a factor — for example, 50% halves both dimensions. Percentage mode is useful when you want to proportionally reduce all images in a batch regardless of their original sizes.</p>
 
-      <h2>Related Tools</h2>
+      <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
         <li><a href="/compress">Image Compressor</a> — Reduce file size by up to 80% without visible quality loss</li>
         <li><a href="/convert">Image Converter</a> — Convert between JPG, PNG, WebP, AVIF formats</li>
@@ -126,14 +127,15 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>

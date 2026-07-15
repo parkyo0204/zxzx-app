@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Online Image Compressor — Reduce JPG, PNG, WebP Size Without Upload</title>
-  <meta name="description" content="Compress JPG, PNG, WebP images by up to 80% without losing quality. 100% browser-based, no upload required. Free batch compression.">
+  <title data-i18n="compress_title">무료 온라인 이미지 압축기 — JPG, PNG, WebP 크기 줄이기</title>
+  <meta name="description" content="JPG, PNG, WebP 이미지를 품질 손실 없이 최대 80% 압축. 100% 브라우저 내 처리, 업로드 불필요.">
   <link rel="canonical" href="https://zxzx.app/compress">
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
@@ -13,21 +13,22 @@
     <nav class="container">
       <a href="/" class="logo">ZXZX</a>
       <ul>
-        <li><a href="/compress">Compress</a></li>
-        <li><a href="/convert">Convert</a></li>
-        <li><a href="/resize">Resize</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="tool-page container">
-    <h1>Free Online Image Compressor</h1>
-    <p class="lead">Reduce your JPG, PNG, and WebP file sizes by up to 80% without visible quality loss. All processing happens in your browser — your images never leave your device.</p>
+    <h1 data-i18n="compress_title">무료 온라인 이미지 압축기</h1>
+    <p class="lead" data-i18n="compress_desc">JPG, PNG, WebP 파일 크기를 최대 80% 줄이세요. 품질 손실 없이. 모든 처리가 브라우저에서 이루어집니다.</p>
 
     <div class="dropzone" id="dropzone">
-      <h3>Drop images here</h3>
-      <p>or click to choose files • JPG, PNG, WebP • up to 20MB each, 30 files max</p>
+      <h3 data-i18n="drop_images">이미지를 여기에 놓으세요</h3>
+      <p data-i18n="drop_sub">또는 클릭하여 파일 선택 • JPG, PNG, WebP • 파일당 최대 20MB, 최대 30개</p>
       <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
     </div>
 
@@ -103,16 +104,17 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="/blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
       </div>
-      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
 
   <script type="module" src="/src/utils/compress.ts"></script>
+  <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>
