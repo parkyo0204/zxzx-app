@@ -25,6 +25,7 @@
         <li><a href="/resize">리사이즈</a></li>
         <li><a href="/blog">블로그</a></li>
         <li><a href="/about">소개</a></li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </nav>
   </header>
@@ -46,6 +47,7 @@
         <li><strong>JPG 압축:</strong> Canvas 기본 인코더 대비 MozJPEG은 동일 화질에서 10-15% 더 작은 파일 생성</li>
         <li><strong>WebP 변환:</strong> libwebp는 Canvas의 WebP 인코더보다 5-10% 더 효율적</li>
         <li><strong>AVIF 변환:</strong> libavif는 현재 브라우저에 내장된 AVIF 인코더보다 훨씬 뛰어난 품질 제공</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>ZXZX가 사용하는 기술 스택</h2>
@@ -55,6 +57,7 @@
         <li><strong>@jsquash/avif</strong> — libavif 기반 AVIF 인코딩 (차세대 포맷)</li>
         <li><strong>Compressor.js</strong> — Canvas 기반 빠른 압축 (폴백)</li>
         <li><strong>pica</strong> — Lanczos3 필터 기반 고품질 리사이즈</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>타 서비스와의 비교</h2>
@@ -99,7 +102,7 @@
       <p>&copy; 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
-  <script type="module" src="/src/utils/i18n.ts"></script>
+  <script src="/src/utils/i18n.js"></script>
   <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

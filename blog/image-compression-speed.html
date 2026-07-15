@@ -25,6 +25,7 @@
         <li><a href="/resize">리사이즈</a></li>
         <li><a href="/blog">블로그</a></li>
         <li><a href="/about">소개</a></li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </nav>
   </header>
@@ -42,6 +43,7 @@
         <li><strong>전체 전송 데이터의 52%:</strong> HTML, CSS, JavaScript를 합친 것보다 많습니다</li>
         <li><strong>평균 이미지 요청 수:</strong> 페이지당 20~30개의 이미지 요청</li>
         <li><strong>평균 이미지 총 용량:</strong> 압축되지 않은 상태에서 2~5MB</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
       <p>이미지를 압축하면 네트워크 전송량이 줄어들고, 브라우저의 디코딩 시간이 단축되며, 메모리 사용량이 감소합니다. 이 모든 것이 모여 사용자가 체감하는 속도 향상으로 이어집니다.</p>
 
@@ -54,6 +56,7 @@
         <li>좋은 LCP: 2.5초 이하</li>
         <li>개선 필요: 2.5~4초</li>
         <li>나쁨: 4초 이상</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>CLS (Cumulative Layout Shift)</h3>
@@ -70,6 +73,7 @@
         <li><strong>Google PageSpeed Insights:</strong> 이미지 관련 권장 사항을 확인합니다</li>
         <li><strong>Chrome DevTools Network 탭:</strong> 이미지 파일 크기와 로딩 시간을 분석합니다</li>
         <li><strong>Lighthouse:</strong> "Serve images in next-gen formats", "Properly size images" 같은 제안을 확인합니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>2단계: 이미지 포맷 변환</h3>
@@ -91,6 +95,7 @@
         <li><strong>품질 90% 이상:</strong> 파일 크기가 급격히 커지지만 화질改善은 미미합니다</li>
         <li><strong>품질 75~85%:</strong> 대부분의 경우 최적의 균형점</li>
         <li><strong>품질 60% 이하:</strong> 눈에 보이는 화질 저하가 시작됩니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>4단계: 적절한 크기로 리사이즈</h3>
@@ -100,6 +105,7 @@
         <li>본문 이미지: 600~1200px</li>
         <li>히어로 이미지: 1200~1920px</li>
         <li>2x 디스플레이용: 표시 크기의 2배</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>5단계: 지연 로딩 (Lazy Loading)</h3>
@@ -114,6 +120,7 @@
         <li>포맷: JPG, PNG 혼합</li>
         <li>LCP: 4.8초</li>
         <li>PageSpeed 점수: 45점</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>After (WebP 변환 + 압축 + 리사이즈)</h3>
@@ -122,6 +129,7 @@
         <li>포맷: WebP 통일</li>
         <li>LCP: 1.9초 (60%改善)</li>
         <li>PageSpeed 점수: 89점</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>서버 사이드 vs 클라이언트 사이드 압축</h2>
@@ -131,6 +139,7 @@
       <ul>
         <li>장점: 자동화 가능, CDN 연동 용이</li>
         <li>단점: 서버 비용, 빌드 시간 증가</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>클라이언트 사이드 압축 (ZXZX 방식)</h3>
@@ -138,6 +147,7 @@
       <ul>
         <li>장점: 무료, 서버 비용 없음, 프라이버시 보호, 설치 불필요</li>
         <li>단점: 대량 처리 시 시간 소요</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>ZXZX로 이미지 압축하기</h2>
@@ -160,6 +170,7 @@
         <li>☐ width, height 속성이 지정됨 (CLS 방지)</li>
         <li>☐ 폴딩 아래 이미지에 loading="lazy" 적용됨</li>
         <li>☐ srcset으로 반응형 이미지 제공됨</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>결론</h2>
@@ -179,6 +190,6 @@
       <p>&copy; 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
-  <script type="module" src="/src/utils/i18n.ts"></script>
+  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

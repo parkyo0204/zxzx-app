@@ -25,6 +25,7 @@
         <li><a href="/resize">리사이즈</a></li>
         <li><a href="/blog">블로그</a></li>
         <li><a href="/about">소개</a></li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </nav>
   </header>
@@ -49,6 +50,7 @@
         <li><strong>색상 다운샘플링:</strong> 색상 정보를 줄여 데이터양을 감소시킵니다</li>
         <li><strong>변환 코딩:</strong> 주파수 영역 변환 후 고주파 성분을 제거합니다</li>
         <li><strong>양자화:</strong> 미세한 차이를 같은 값으로 통합합니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>代表적인 손실 압축 포맷</h3>
@@ -56,6 +58,7 @@
         <li><strong>JPG:</strong> 가장广泛使用되는 손실 압축 포맷</li>
         <li><strong>WebP (손실 모드):</strong> JPG보다 25~34% 더 효율적</li>
         <li><strong>AVIF (손실 모드):</strong> WebP보다 20~50% 더 효율적</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>장점</h3>
@@ -63,6 +66,7 @@
         <li><strong>높은 압축률:</strong> 파일 크기를大幅으로 줄일 수 있습니다</li>
         <li><strong>작은 파일 크기:</strong> 웹 로딩 속도에直接 영향을 미칩니다</li>
         <li><strong>灵活한 품질 조절:</strong> 품질 수준을 조정하여 크기와 화질의 균형을 맞출 수 있습니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>단점</h3>
@@ -70,6 +74,7 @@
         <li><strong>화질 저하:</strong> 압축률이 높을수록 화질이 저하됩니다</li>
         <li><strong>반복 압축 시 누적 손실:</strong>每次 저장时 화질이进一步 저하됩니다</li>
         <li><strong>아티팩트:</strong> 블록 노이즈(모스키팅), 링잉等의 인공적인 패턴이出现할 수 있습니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>무손실 압축 (Lossless Compression)</h2>
@@ -81,6 +86,7 @@
         <li><strong>RLE (Run-Length Encoding):</strong>连续된相同 값을 shorter 코드로 표현합니다</li>
         <li><strong>LZ77/LZ78:</strong>반복되는 패턴을 찾아 참조로 대체합니다</li>
         <li><strong>허프만 코딩:</strong>빈도가 높은 값에 shorter 코드를 할당합니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>代表적인 무손실 압축 포맷</h3>
@@ -90,6 +96,7 @@
         <li><strong>WebP (무손실 모드):</strong> PNG보다 26% 더 효율적</li>
         <li><strong>AVIF (무손실 모드):</strong> PNG보다 효율적</li>
         <li><strong>TIFF:</strong>专业 이미지 편집에서 사용됩니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>장점</h3>
@@ -97,6 +104,7 @@
         <li><strong>화질 보존:</strong> 원본 품질을 100% 유지합니다</li>
         <li><strong>반복 편집 가능:</strong>多次 편집해도 화질이 저하되지 않습니다</li>
         <li><strong>정확한 색상:</strong>每个 픽셀의 색상이 정확히 보존됩니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>단점</h3>
@@ -104,6 +112,7 @@
         <li><strong>낮은 압축률:</strong> 손실 압축보다 파일 크기가 큽니다</li>
         <li><strong>큰 파일 크기:</strong>特别是 사진에서 파일이非常 커집니다</li>
         <li><strong>제한된 압축潜力:</strong> 이미지의 복잡도에 따라 압축률이 크게 달라집니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>何时哪种을使用해야 할까?</h2>
@@ -114,6 +123,7 @@
         <li><strong>웹 이미지:</strong> 로딩 속도가 중요한 웹사이트에서는 작은 파일 크기가优势입니다</li>
         <li><strong>소셜 미디어:</strong>大部分의 소셜 플랫폼은 업로드 시 재압축하므로 원본 품질의意义가 적습니다</li>
         <li><strong>이메일 첨부:</strong> 파일 크기가 제한된 경우 손실 압축이 유리합니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>무손실 압축이 적합한 경우</h3>
@@ -123,6 +133,7 @@
         <li><strong>의료 이미지:</strong> 정확한 디테일이 중요한 경우</li>
         <li><strong>科学研究 이미지:</strong> 분석을 위해 정확한 데이터가 필요합니다</li>
         <li><strong>중간 편집 파일:</strong> 추가 편집을 위해 원본 품질을 유지해야 합니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>품질 vs 파일 크기 균형</h2>
@@ -148,6 +159,7 @@
         <li>손실 모드: JPG보다 25~34% 더 효율적</li>
         <li>무손실 모드: PNG보다 26% 더 효율적</li>
         <li>알파 채널: 손실과 무손실 모두에서支持</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>AVIF의优势</h3>
@@ -155,6 +167,7 @@
         <li>손실 모드: WebP보다 20~50% 더 효율적</li>
         <li>무손실 모드: PNG보다 효율적</li>
         <li>HDR 및 10비트+ 색상支持</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>ZXZX로 압축하기</h2>
@@ -184,6 +197,6 @@
       <p>&copy; 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
-  <script type="module" src="/src/utils/i18n.ts"></script>
+  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

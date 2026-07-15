@@ -25,6 +25,7 @@
         <li><a href="/resize">리사이즈</a></li>
         <li><a href="/blog">블로그</a></li>
         <li><a href="/about">소개</a></li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </nav>
   </header>
@@ -45,6 +46,7 @@
         <li>좋은 LCP: 2.5초 이하</li>
         <li>개선 필요: 2.5~4초</li>
         <li>나쁨: 4초 이상</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
       <p>이미지를 압축하고 적절한 크기로 제공하면 LCP 시간을显著히改善할 수 있습니다.</p>
 
@@ -96,6 +98,7 @@
         <li>CLS: 0.25</li>
         <li>PageSpeed 점수: 45점</li>
         <li>검색 순위: 평균 15위</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h3>After (WebP 변환 + 압축 + 리사이즈)</h3>
@@ -106,6 +109,7 @@
         <li>CLS: 0.05</li>
         <li>PageSpeed 점수: 89점</li>
         <li>검색 순위: 평균 8위 (47%改善)</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>Google PageSpeed Insights 분석</h2>
@@ -115,6 +119,7 @@
         <li><strong>"Properly size images":</strong> 이미지 크기를 화면에 맞게 조정하라는建议입니다</li>
         <li><strong>"Defer offscreen images":</strong> 폴딩 아래 이미지에 지연 로딩을 적용하라는建议입니다</li>
         <li><strong>"Efficiently encode images":</strong> 이미지 압축을 최적화하라는建议입니다</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>이미지 최적화 체크리스트</h2>
@@ -127,6 +132,7 @@
         <li>☐ srcset으로 반응형 이미지 제공됨</li>
         <li>☐ 모든 이미지에 설명적인 alt 텍스트가 포함됨</li>
         <li>☐ 이미지가 적절한 압축을 거침</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2>ZXZX로 이미지 SEO 최적화하기</h2>
@@ -154,6 +160,6 @@
       <p>&copy; 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
-  <script type="module" src="/src/utils/i18n.ts"></script>
+  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

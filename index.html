@@ -52,6 +52,7 @@
         <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
         <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
         <li><a href="/about" data-i18n="nav_about">소개</a></li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </nav>
   </header>
@@ -183,6 +184,6 @@
     </div>
   </footer>
 
-  <script type="module" src="/src/utils/i18n.ts"></script>
+  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>

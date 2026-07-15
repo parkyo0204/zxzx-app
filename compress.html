@@ -25,6 +25,7 @@
         <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
         <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
         <li><a href="/about" data-i18n="nav_about">소개</a></li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </nav>
   </header>
@@ -76,6 +77,7 @@
         <li data-i18n="compress_benefit3">기기 또는 클라우드 저장 공간 절약</li>
         <li data-i18n="compress_benefit4">호스팅 대역폭 비용 절감</li>
         <li data-i18n="compress_benefit5">모바일 기기에서의 사용자 경험 개선</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
 
       <h2 data-i18n="compress_works_title">ZXZX 압축 방식</h2>
@@ -104,6 +106,7 @@
         <li data-i18n="compress_related_li_convert"><a href="/convert">이미지 변환기</a> — JPG, PNG, WebP, AVIF 포맷 간 변환</li>
         <li data-i18n="compress_related_li_resize"><a href="/resize">이미지 리사이저</a> — 픽셀 또는 퍼센트로 이미지 크기 조정</li>
         <li data-i18n="compress_related_li_exif"><a href="/remove-exif">EXIF 제거기</a> — 프라이버시를 위해 사진에서 메타데이터 제거</li>
+              <li class="lang-switcher"><select id="lang-select" onchange="switchLang(this.value)" style="background:none;border:1px solid var(--color-border);padding:0.3rem 0.5rem;border-radius:6px;font-size:0.8rem;color:var(--color-muted);cursor:pointer;"><option value="ko">KO</option><option value="en">EN</option><option value="ja">JA</option><option value="zh">ZH</option></select></li>
       </ul>
     </section>
   </main>
@@ -122,6 +125,6 @@
   </footer>
 
   <script type="module" src="/src/utils/compress.ts"></script>
-  <script type="module" src="/src/utils/i18n.ts"></script>
+  <script src="/src/utils/i18n.js"></script>
 </body>
 </html>
