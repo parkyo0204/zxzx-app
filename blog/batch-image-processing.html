@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배치 이미지 처리로 시간 절약하기 — ZXZX</title>
+  <meta name="description" content="대량의 이미지를一次에 처리하는 배치 이미지 처리 방법. ZXZX를 사용한高效적인 이미지 일괄 처리 가이드.">
+  <link rel="canonical" href="https://zxzx.app/blog/batch-image-processing">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">ZXZX</a>
+      <ul>
+        <li><a href="/compress">압축</a></li>
+        <li><a href="/convert">변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/blog">블로그</a></li>
+        <li><a href="/about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <article>
+      <h1>배치 이미지 처리로 시간 절약하기</h1>
+      <p class="meta">2026년 7월 15일 · 7분 읽기</p>
+
+      <p>웹사이트를 운영하거나 이미지 작업을 하다 보면数十에서数百장의 이미지를一次에 처리해야 하는 경우가 많습니다. 한 장 한 장处理하다 보면时间이大量으로 소요되고, 실수도 발생하기 쉽습니다. 이 글에서는 배치 이미지 처리를 통해 효율적으로 대량의 이미지를 처리하는 방법을介绍합니다.</p>
+
+      <h2>什么是 배치 이미지 처리?</h2>
+      <p>배치 이미지 처리는多个 이미지를一次에 같은操作을 적용하는 것입니다. 압축, 포맷 변환, 크기 조정, 워터마크 추가等의 작업을一次에 수행할 수 있습니다.</p>
+      <p>예를 들어, 100장의 이미지를 WebP로 변환하고, 80% 품질로 압축하고, 最大幅를 1200px로 조정해야 한다면, 배치 처리를 사용하면这些 작업을一次에完成할 수 있습니다.</p>
+
+      <h2>为什么 배치 처리가 필요한가?</h2>
+
+      <h3>시간 절약</h3>
+      <p>이미지 한 장당 30초가 걸리는 작업을 100장 처리한다면, 一括으로는 50분이 소요됩니다. 하지만 배치 처리를 사용하면 5분 이내에完成할 수 있습니다.</p>
+
+      <h3>일관성</h3>
+      <p>手动으로 처리할 때는每次 slightly 다른设置을 사용할 수 있습니다. 배치 처리는同一한 설정을所有 이미지에 적용하여 일관된 결과를 보장합니다.</p>
+
+      <h3>오류 감소</h3>
+      <p>大量의 이미지를手动으로 처리하면疲劳로 인한 실수가 발생할 수 있습니다. 배치 처리는 자동화되어 있어人为적 오류를 방지합니다.</p>
+
+      <h2>ZXZX로 배치 처리하기</h2>
+      <p>ZXZX의 이미지 도구들은모두 배치 처리를 지원합니다. 다음은各 도구별 배치 처리 방법입니다.</p>
+
+      <h3>배치 압축</h3>
+      <ol>
+        <li><a href="/compress">ZXZX 압축 도구</a>에 접속합니다</li>
+        <li>여러 이미지를一次에 드래그 앤 드롭합니다</li>
+        <li>압축 설정을 조정합니다 (품질, 포맷等)</li>
+        <li>"모두 압축"을 클릭합니다</li>
+        <li>압축된 이미지를 개별 또는 ZIP으로 다운로드합니다</li>
+      </ol>
+
+      <h3>배치 변환</h3>
+      <ol>
+        <li><a href="/convert">ZXZX 변환 도구</a>에 접속합니다</li>
+        <li>여러 이미지를 업로드합니다</li>
+        <li>출력 포맷을 선택합니다 (WebP, AVIF 등)</li>
+        <li>"모두 변환"을 클릭합니다</li>
+        <li>결과를 다운로드합니다</li>
+      </ol>
+
+      <h3>배치 리사이즈</h3>
+      <ol>
+        <li><a href="/resize">ZXZX 리사이즈 도구</a>에 접속합니다</li>
+        <li>여러 이미지를 업로드합니다</li>
+        <li>목표 크기를 입력합니다</li>
+        <li>"모두 리사이즈"를 클릭합니다</li>
+        <li>결과를 다운로드합니다</li>
+      </ol>
+
+      <h2>高效的 배치 처리工作流</h2>
+
+      <h3>1단계: 이미지 분류</h3>
+      <p>처리할 이미지를用途에 따라 분류합니다.</p>
+      <ul>
+        <li>썸네일용 이미지</li>
+        <li>본문 이미지</li>
+        <li>히어로 이미지</li>
+        <li>제품 이미지</li>
+      </ul>
+
+      <h3>2단계: 설정 결정</h3>
+      <p>각类别에 대한 처리 설정을 결정합니다.</p>
+      <table>
+        <thead>
+          <tr><th>类别</th><th>포맷</th><th>품질</th><th>최대 크기</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>썸네일</td><td>WebP</td><td>75%</td><td>300px</td></tr>
+          <tr><td>본문 이미지</td><td>WebP</td><td>80%</td><td>800px</td></tr>
+          <tr><td>히어로 이미지</td><td>WebP</td><td>85%</td><td>1920px</td></tr>
+          <tr><td>제품 이미지</td><td>WebP</td><td>85%</td><td>1200px</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3단계: 배치 처리 실행</h3>
+      <p>각类别별로 배치 처리를 실행합니다. ZXZX는多个 파일을一次에 처리할 수 있습니다.</p>
+
+      <h3>4단계: 결과 검증</h3>
+      <p>처리된 이미지의 샘플을检查하여 품질이 기대에 맞는지 확인합니다.</p>
+
+      <h2>커맨드 라인 배치 처리</h2>
+      <p>고급 사용자를 위해 커맨드 라인에서 배치 처리하는 방법도介绍합니다.</p>
+
+      <h3>ImageMagick (설치 필요)</h3>
+      <pre><code># 모든 JPG를 WebP로 변환
+for f in *.jpg; do
+  convert "$f" -quality 80 "${f%.jpg}.webp"
+done
+
+# 이미지 리사이즈
+mogrify -resize 1200x1200\> *.jpg</code></pre>
+
+      <h3>FFmpeg (이미지 변환)</h3>
+      <pre><code># 비디오에서 썸네일 추출
+ffmpeg -i video.mp4 -vf "fps=1" thumbnail_%04d.jpg</code></pre>
+
+      <h2>배치 처리 시 고려사항</h2>
+
+      <h3>메모리 사용량</h3>
+      <p>大量의 이미지를一次에 처리하면 메모리使用量이 급증할 수 있습니다.特别是高해상도 이미지를处理할 때는 메모리 부족이 발생할 수 있습니다.</p>
+
+      <h3>처리 시간</h3>
+      <p>数百장의 이미지를一次에 처리하면处理 시간이 길어질 수 있습니다. ZXZX는 웹 워커를使用하여处理를并行化하지만, 여전히一定 시간이 소요됩니다.</p>
+
+      <h3>네트워크 부하</h3>
+      <p>서버에 이미지를 업로드하는 방식의 서비스는大量의 파일을一次에 업로드하면 네트워크에 부하가 걸릴 수 있습니다. ZXZX는 100% 로컬 처리이므로这个问题를担心할 필요가 없습니다.</p>
+
+      <h2>实际使用案例</h2>
+
+      <h3>案例 1: 블로그 이미지 마이그레이션</h3>
+      <p>한 블로그가 500장의 이미지를 JPG에서 WebP로 변환해야 했습니다.手动으로 처리했다면 4시간 이상 걸렸겠지만, ZXZX의 배치 처리를 사용하여 20분 만에完成할 수 있었습니다.</p>
+
+      <h3>案例 2: 제품 이미지 최적화</h3>
+      <p>한 e-커머스 사이트가 200개의 제품 이미지를 최적화해야 했습니다.각 이미지를不同的 크기로 리사이즈하고, WebP로 변환하고, 압축해야 했습니다. ZXZX를 사용하여这些 작업을一次에处理하고, 전체 파일 크기를 70% 줄일 수 있었습니다.</p>
+
+      <h3>案例 3: 소셜 미디어 이미지 준비</h3>
+      <p>한 마케팅 팀이 소셜 미디어 캠페인을 위해 100장의 이미지를准备해야 했습니다.各 플랫폼에 맞는 크기로 리사이즈하고,适当的 압축을 적용해야 했습니다. ZXZX의 배치 리사이즈 기능을 사용하여 시간을大幅으로 절약했습니다.</p>
+
+      <h2>自动化 도구 비교</h2>
+      <table>
+        <thead>
+          <tr><th>도구</th><th>배치 처리</th><th>무료</th><th>설치 필요</th><th>프라이버시</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ZXZX</td><td>O</td><td>O</td><td>X</td><td>O (로컬)</td></tr>
+          <tr><td>ImageOptim</td><td>O</td><td>O</td><td>O</td><td>O (로컬)</td></tr>
+          <tr><td>TinyPNG</td><td>O</td><td>제한적</td><td>X</td><td>X (서버)</td></tr>
+          <tr><td>Photoshop</td><td>O</td><td>X</td><td>O</td><td>O (로컬)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>결론</h2>
+      <p>배치 이미지 처리는大量의 이미지를 효율적으로 처리하는 필수技能입니다. ZXZX는 무료로, 설치 없이, 프라이버시를 보호하면서 배치 처리를支持합니다. 지금 바로大量의 이미지를高效적으로 처리해보세요.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">소개</a>
+        <a href="/contact">문의</a>
+        <a href="/privacy">개인정보 처리방침</a>
+        <a href="/terms">이용약관</a>
+        <a href="/blog">블로그</a>
+      </div>
+      <p>&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+  <script type="module" src="/src/utils/i18n.ts"></script>
+</body>
+</html>
