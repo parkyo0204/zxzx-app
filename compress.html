@@ -33,70 +33,70 @@
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <label>Quality: <select id="quality">
-        <option value="0.9">High (90%)</option>
-        <option value="0.8" selected>Medium (80%)</option>
-        <option value="0.6">Low (60%)</option>
-        <option value="0.4">Aggressive (40%)</option>
+      <label>품질: <select id="quality">
+        <option value="0.9">고품질 (90%)</option>
+        <option value="0.8" selected>중간 (80%)</option>
+        <option value="0.6">저품질 (60%)</option>
+        <option value="0.4">극한 압축 (40%)</option>
       </select></label>
-      <label>Output: <select id="format">
-        <option value="same">Same as input</option>
+      <label>출력: <select id="format">
+        <option value="same">입력과 동일</option>
         <option value="jpeg">JPG</option>
         <option value="png">PNG</option>
         <option value="webp">WebP</option>
       </select></label>
-      <button class="btn btn-primary" id="compressBtn">Compress All</button>
-      <button class="btn btn-secondary" id="downloadZip">Download ZIP</button>
+      <button class="btn btn-primary" id="compressBtn">모두 압축</button>
+      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
     </div>
 
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>How to Compress Images Online</h2>
+      <h2 data-i18n="compress_how_title">온라인에서 이미지를 압축하는 방법</h2>
       <ol>
-        <li><strong>Upload your images</strong> — Drag and drop or click to select JPG, PNG, or WebP files.</li>
-        <li><strong>Choose quality level</strong> — Select compression quality from 40% to 90%.</li>
-        <li><strong>Click Compress</strong> — Images are compressed instantly in your browser.</li>
-        <li><strong>Download</strong> — Save individual files or download all as a ZIP archive.</li>
+        <li><strong>이미지를 업로드하세요</strong> — 파일을 드래그 앤 드롭하거나 클릭하여 JPG, PNG, WebP 파일을 선택하세요.</li>
+        <li><strong>품질 수준을 선택하세요</strong> — 40%에서 90% 사이의 압축 품질을 선택하세요.</li>
+        <li><strong>압축을 클릭하세요</strong> — 이미지가 브라우저에서 즉시 압축됩니다.</li>
+        <li><strong>다운로드하세요</strong> — 개별 파일을 저장하거나 모든 파일을 ZIP 아카이브로 다운로드하세요.</li>
       </ol>
 
-      <h2>Why Compress Images?</h2>
-      <p>Large image files slow down your website, consume bandwidth, and hurt SEO rankings. Google uses page speed as a ranking factor, and images often account for 50-80% of a page's total weight.</p>
-      <p>By compressing your images, you can:</p>
+      <h2 data-i18n="compress_why_title">이미지를 압축해야 하는 이유</h2>
+      <p>큰 이미지 파일은 웹사이트 속도를 저하시키고, 대역폭을 소모하며, SEO 순위에 악영향을 미칩니다. Google은 페이지 속도를 랭킹 팩터로 사용하며, 이미지는 종종 페이지 전체 용량의 50-80%를 차지합니다.</p>
+      <p>이미지를 압축하면 다음과 같은 효과를 얻을 수 있습니다:</p>
       <ul>
-        <li>Reduce page load time by 2-5 seconds</li>
-        <li>Improve Google Core Web Vitals scores</li>
-        <li>Save storage space on your device or cloud</li>
-        <li>Reduce bandwidth costs for your hosting</li>
-        <li>Improve user experience on mobile devices</li>
+        <li>페이지 로딩 시간을 2-5초 단축</li>
+        <li>Google Core Web Vitals 점수 향상</li>
+        <li>기기 또는 클라우드 저장 공간 절약</li>
+        <li>호스팅 대역폭 비용 절감</li>
+        <li>모바일 기기에서의 사용자 경험 개선</li>
       </ul>
 
-      <h2>How ZXZX Compression Works</h2>
-      <p>ZXZX uses advanced compression algorithms that analyze each image and selectively reduce data in areas where the human eye won't notice the difference. Unlike simple resize or quality reduction, our approach preserves important details while removing redundant information.</p>
-      <p>The compression happens entirely in your browser using the Canvas API and WebAssembly. Your images are never uploaded to any server, making ZXZX one of the most private image compression tools available.</p>
+      <h2 data-i18n="compress_works_title">ZXZX 압축 방식</h2>
+      <p>ZXZX는 고급 압축 알고리즘을 사용하여 각 이미지를 분석하고, 사람이 눈으로 차이를 인지할 수 없는 영역의 데이터를 선택적으로 줄입니다. 단순한 리사이즈나 품질 저하와 달리, 중요 디테일은 보존하면서 중복 정보만 제거합니다.</p>
+      <p>압축은 Canvas API와 WebAssembly를 사용하여 브라우저에서 완전히 이루어집니다. 이미지는 어떤 서버에도 업로드되지 않아, ZXZX는 가장 프라이버시 친화적인 이미지 압축 도구 중 하나입니다.</p>
 
-      <h2>Frequently Asked Questions</h2>
+      <h2 data-i18n="faq_title">자주 묻는 질문</h2>
 
-      <h3>Is image compression really free?</h3>
-      <p>Yes, ZXZX is completely free with no hidden costs. There are no file size limits, no watermarks, and no registration required. You can compress unlimited images.</p>
+      <h3 data-i18n="compress_faq_free_q">이미지 압축이 정말 무료인가요?</h3>
+      <p>네, ZXZX는 숨겨진 비용 없이 완전히 무료입니다. 파일 크기 제한, 워터마크, 회원가입이 필요 없습니다. 이미지를 무제한으로 압축할 수 있습니다.</p>
 
-      <h3>Will compression reduce image quality?</h3>
-      <p>At medium settings (80%), compression is virtually invisible to the human eye. Even at aggressive settings (40%), most images retain acceptable quality for web use. You can compare before and after using our preview tool.</p>
+      <h3 data-i18n="compress_faq_quality_q">압축이 이미지 품질을 떨어뜨리나요?</h3>
+      <p>중간 설정(80%)에서는 압축 효과가 눈으로 거의 구분할 수 없습니다. 극한 설정(40%)에서도 대부분의 이미지는 웹 사용에 적합한 품질을 유지합니다. 미리보기 도구로 압축 전후를 비교할 수 있습니다.</p>
 
-      <h3>What's the difference between JPG, PNG, and WebP compression?</h3>
-      <p>JPG is best for photographs. PNG is best for graphics with transparency. WebP offers the best compression for both types. Converting to WebP typically saves 25-35% compared to JPG.</p>
+      <h3 data-i18n="compress_faq_diff_q">JPG, PNG, WebP 압축의 차이점은 무엇인가요?</h3>
+      <p>JPG는 사진에 가장 적합합니다. PNG는 투명도가 있는 그래픽에 적합합니다. WebP는 두 가지 모두에서 최고의 압축률을 제공합니다. WebP로 변환하면 JPG 대비 보통 25-35% 절약됩니다.</p>
 
-      <h3>Are my images uploaded to your server?</h3>
-      <p>No. All compression happens in your browser using JavaScript. Your files never leave your device. This is why ZXZX is one of the safest image tools available.</p>
+      <h3 data-i18n="compress_faq_upload_q">이미지가 서버에 업로드되나요?</h3>
+      <p>아니요. 모든 압축은 JavaScript를 사용하여 브라우저에서 이루어집니다. 파일이 기기를 벗어나지 않습니다. 이것이 ZXZX가 가장 안전한 이미지 도구 중 하나인 이유입니다.</p>
 
-      <h3>Can I compress images on my phone?</h3>
-      <p>Yes. ZXZX works on all modern mobile browsers including Chrome and Safari on iOS and Android. The interface is fully responsive.</p>
+      <h3 data-i18n="compress_faq_mobile_q">스마트폰에서도 이미지를 압축할 수 있나요?</h3>
+      <p>네. ZXZX는 iOS와 Android의 Chrome, Safari를 포함한 모든 최신 모바일 브라우저에서 작동합니다. 인터페이스가 완전 반응형으로 지원됩니다.</p>
 
-      <h2>Related Tools</h2>
+      <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
-        <li><a href="/convert">Image Converter</a> — Convert between JPG, PNG, WebP, AVIF formats</li>
-        <li><a href="/resize">Image Resizer</a> — Resize images by pixels or percentage</li>
-        <li><a href="/remove-exif">EXIF Remover</a> — Strip metadata from photos for privacy</li>
+        <li><a href="/convert">이미지 변환기</a> — JPG, PNG, WebP, AVIF 포맷 간 변환</li>
+        <li><a href="/resize">이미지 리사이저</a> — 픽셀 또는 퍼센트로 이미지 크기 조정</li>
+        <li><a href="/remove-exif">EXIF 제거기</a> — 프라이버시를 위해 사진에서 메타데이터 제거</li>
       </ul>
     </section>
   </main>

@@ -58,9 +58,9 @@
         <option value="avif">AVIF</option>
       </select></label>
       <label><span data-i18n="quality">품질</span>: <select id="quality">
-        <option value="0.95">Best (95%)</option>
-        <option value="0.85" selected>High (85%)</option>
-        <option value="0.7">Medium (70%)</option>
+        <option value="0.95">최고 (95%)</option>
+        <option value="0.85" selected>고품질 (85%)</option>
+        <option value="0.7">중간 (70%)</option>
       </select></label>
       <button class="btn btn-primary" id="convertBtn" data-i18n="convert_all">모두 변환</button>
       <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
@@ -70,59 +70,59 @@
 
     <section class="content-section">
       <h2 data-i18n="convert_how_title">온라인 이미지 포맷 변환 방법</h2>
-      <p>Converting image formats with ZXZX takes just a few seconds. Follow these four simple steps to transform your images into any format you need.</p>
+      <p>ZXZX로 이미지 포맷 변환은 몇 초면 완료됩니다. 아래 네 가지 간단한 단계로 원하는 포맷으로 이미지를 변환하세요.</p>
       <ol>
-        <li><strong>Upload your images</strong> — Drag and drop your files onto the dropzone area, or click to browse your device. We support JPG, PNG, WebP, AVIF, BMP, GIF, and TIFF input formats. You can upload up to 30 files at once, each up to 20MB in size.</li>
-        <li><strong>Select the target format</strong> — Choose your desired output format from the dropdown menu. JPG is ideal for photographs, PNG for graphics with transparency, WebP for the best web optimization, and AVIF for next-generation compression with superior quality.</li>
-        <li><strong>Adjust quality settings</strong> — For lossy formats like JPG and WebP, you can set the output quality from 70% to 95%. Higher quality produces larger files, while lower quality reduces file size significantly. PNG conversion is always lossless regardless of this setting.</li>
-        <li><strong>Convert and download</strong> — Click the "Convert All" button to process your images. The conversion happens entirely in your browser using the Canvas API. Once complete, download individual files or save all converted images as a ZIP archive.</li>
+        <li><strong>이미지를 업로드하세요</strong> — 파일을 드롭존 영역에 드래그 앤 드롭하거나 클릭하여 기기에서 파일을 찾아보세요. JPG, PNG, WebP, AVIF, BMP, GIF, TIFF 입력 포맷을 지원합니다. 한 번에 최대 30개 파일을 업로드할 수 있으며, 각 파일은 최대 20MB까지 가능합니다.</li>
+        <li><strong>대상 포맷을 선택하세요</strong> — 드롭다운 메뉴에서 원하는 출력 포맷을 선택하세요. JPG는 사진에 이상적이고, PNG는 투명도가 있는 그래픽에 적합하며, WebP는 최고의 웹 최적화를 제공하고, AVIF는 뛰어난 품질의 차세대 압축을 지원합니다.</li>
+        <li><strong>품질 설정을 조정하세요</strong> — JPG, WebP와 같은 손실 포맷의 경우 출력 품질을 70%에서 95% 사이로 설정할 수 있습니다. 품질이 높을수록 파일 크기가 커지고, 낮을수록 파일 크기가 크게 줄어듭니다. PNG 변환은 이 설정과 관계없이 항상 무손실입니다.</li>
+        <li><strong>변환하고 다운로드하세요</strong> — "모두 변환" 버튼을 클릭하여 이미지를 처리하세요. 변환은 Canvas API를 사용하여 브라우저에서 완전히 이루어집니다. 완료 후 개별 파일을 다운로드하거나 모든 변환 이미지를 ZIP 아카이브로 저장하세요.</li>
       </ol>
 
       <h2 data-i18n="convert_format_title">이미지 포맷 비교: 어떤 포맷을 선택할까요?</h2>
-      <p>Each image format has distinct advantages and ideal use cases. Understanding these differences helps you choose the right format for your needs.</p>
+      <p>각 이미지 포맷은 고유한 장점과 이상적인 사용 사례가 있습니다. 이러한 차이점을 이해하면 필요에 맞는 포맷을 선택하는 데 도움이 됩니다.</p>
 
       <h3>JPG (JPEG)</h3>
-      <p>JPG is the most widely supported image format on the web. It uses lossy compression to achieve small file sizes, making it perfect for photographs and complex images with many colors and gradients. JPG does not support transparency, so it's not suitable for logos or graphics that need to blend with different backgrounds. JPG files are universally compatible with every browser, device, and image editor.</p>
+      <p>JPG는 웹에서 가장 널리 지원되는 이미지 포맷입니다. 손실 압축을 사용하여 작은 파일 크기를 구현하며, 사진과 많은 색상과 그라디언트가 포함된 복잡한 이미지에 적합합니다. JPG는 투명도를 지원하지 않으므로 로고나 배경과 자연스럽게 어울려야 하는 그래픽에는 적합하지 않습니다. JPG 파일은 모든 브라우저, 기기, 이미지 편집기에서 보편적으로 호환됩니다.</p>
 
       <h3>PNG</h3>
-      <p>PNG uses lossless compression, meaning no image data is lost during compression. This format excels at storing graphics, logos, icons, and screenshots where sharp edges and text clarity matter. PNG supports alpha channel transparency, allowing for semi-transparent pixels. The trade-off is larger file sizes compared to JPG, especially for photographic content. PNG is ideal when image quality cannot be compromised.</p>
+      <p>PNG는 무손실 압축을 사용하여 압축 중 이미지 데이터가 손실되지 않습니다. 이 포맷은 날카로운 가장자리와 텍스트 선명도가 중요한 그래픽, 로고, 아이콘, 스크린샷 저장에 뛰어납니다. PNG는 알파 채널 투명도를 지원하여 반투명 픽셀을 허용합니다. 단점은 JPG에 비해 파일 크기가 크다는 점으로, 특히 사진 콘텐츠에서 그렇습니다. PNG는 이미지 품질을 타협할 수 없을 때 이상적입니다.</p>
 
       <h3>WebP</h3>
-      <p>WebP is a modern image format developed by Google that offers superior compression for web images. WebP lossy files are typically 25-35% smaller than equivalent JPG files at similar quality. WebP also supports lossless compression, transparency, and animation. All major browsers now support WebP, making it an excellent choice for web development. Converting to WebP is one of the easiest ways to speed up your website.</p>
+      <p>WebP는 Google이 개발한 최신 이미지 포맷으로 웹 이미지에 탁월한 압축을 제공합니다. WebP 손실 파일은 유사한 품질의 JPG 파일보다 보통 25-35% 작습니다. WebP는 무손실 압축, 투명도, 애니메이션도 지원합니다. 모든 주요 브라우저가 이제 WebP를 지원하므로 웹 개발에 탁월한 선택입니다. WebP로 변환하는 것은 웹사이트 속도를 높이는 가장 쉬운 방법 중 하나입니다.</p>
 
       <h3>AVIF</h3>
-      <p>AVIF is the newest image format, based on the AV1 video codec. It delivers the best compression efficiency of any current format, producing files 50% smaller than JPG and 20% smaller than WebP at comparable quality. AVIF supports HDR, wide color gamut, and 10-bit color depth. Browser support is growing rapidly, with Chrome, Firefox, and Safari all supporting AVIF. This format is ideal for high-quality web images where every byte counts.</p>
+      <p>AVIF는 AV1 비디오 코덱 기반의 최신 이미지 포맷입니다. 현재 어떤 포맷보다 최고의 압축 효율을 제공하며, 비슷한 품질에서 JPG보다 50% 작고 WebP보다 20% 작은 파일을 생성합니다. AVIF는 HDR, 넓은 색역, 10비트 컬러 깊이를 지원합니다. 브라우저 지원이 빠르게 확대되어 Chrome, Firefox, Safari가 모두 AVIF를 지원합니다. 이 포맷은 모든 바이트가 중요한 고품질 웹 이미지에 이상적입니다.</p>
 
-      <h3>When to Convert Between Formats</h3>
-      <p>Converting from PNG to JPG is useful when you have screenshots or graphics saved as PNG but need smaller files for email or web use. Converting from JPG to WebP is recommended when optimizing a website for speed. Converting to AVIF is ideal for next-generation web projects where maximum compression is needed. Converting from WebP to JPG or PNG is useful when you need compatibility with older software that doesn't support WebP.</p>
+      <h3>포맷 간 변환이 필요한 경우</h3>
+      <p>PNG를 JPG로 변환하는 것은 스크린샷이나 그래픽이 PNG로 저장되어 있지만 이메일이나 웹 사용을 위해 더 작은 파일이 필요할 때 유용합니다. JPG를 WebP로 변환하는 것은 웹사이트 속도를 최적화할 때 권장됩니다. AVIF로 변환하는 것은 최대 압축이 필요한 차세대 웹 프로젝트에 이상적입니다. WebP를 JPG나 PNG로 변환하는 것은 WebP를 지원하지 않는 이전 소프트웨어와의 호환이 필요할 때 유용합니다.</p>
 
       <h2 data-i18n="convert_why_title">ZXZX 이미지 변환기를 사용하는 이유</h2>
-      <p>ZXZX provides a fast, secure, and completely free image conversion experience. Unlike online converters that upload your files to remote servers, ZXZX processes everything locally in your browser. This means your images are never transmitted over the internet, eliminating any risk of data interception or unauthorized access.</p>
-      <p>Our converter supports batch processing, allowing you to convert up to 30 images simultaneously. This is particularly useful for web developers optimizing image assets or photographers preparing images for different platforms. The ZIP download feature lets you save all converted files in a single archive for convenience.</p>
-      <p>ZXZX maintains the original image dimensions during conversion. If you need to resize images as well, use our <a href="/resize">Image Resizer</a> tool after conversion. All ZXZX tools work together seamlessly, so you can compress, convert, resize, and optimize your images in any order.</p>
+      <p>ZXZX는 빠르고 안전하며 완전히 무료인 이미지 변환 경험을 제공합니다. 파일을 원격 서버에 업로드하는 온라인 변환기와 달리, ZXZX는 모든 것을 브라우저에서 로컬로 처리합니다. 즉, 이미지가 인터넷을 통해 전송되지 않아 데이터 도청이나 무단 접근의 위험이 없습니다.</p>
+      <p>저희 변환기는 배치 처리를 지원하여 한 번에 최대 30개의 이미지를 변환할 수 있습니다. 이는 이미지 에셋을 최적화하는 웹 개발자나 다양한 플랫폼을 위해 이미지를 준비하는 사진작가에게 특히 유용합니다. ZIP 다운로드 기능을 사용하면 모든 변환 파일을 하나의 아카이브로 편리하게 저장할 수 있습니다.</p>
+      <p>ZXZX는 변환 중 원본 이미지 크기를 유지합니다. 이미지 크기도 조정해야 한다면 변환 후 <a href="/resize">이미지 리사이저</a> 도구를 사용하세요. 모든 ZXZX 도구는 함께 원활하게 작동하므로 압축, 변환, 리사이즈, 최적화를 원하는 순서대로 수행할 수 있습니다.</p>
 
       <h2 data-i18n="faq_title">자주 묻는 질문</h2>
 
       <h3 data-i18n="convert_faq_free_q">이미지 변환기가 정말 무료인가요?</h3>
-      <p>Yes, ZXZX is completely free with no hidden costs, no watermarks, and no registration required. You can convert unlimited images without any restrictions. There are no premium tiers or paywalls — every feature is available to all users.</p>
+      <p>네, ZXZX는 숨겨진 비용, 워터마크, 회원가입 없이 완전히 무료입니다. 제한 없이 이미지를 무제한으로 변환할 수 있습니다. 프리미엄 요금제나 유료 벽은 없으며 모든 기능을 모든 사용자가 이용할 수 있습니다.</p>
 
       <h3 data-i18n="convert_faq_quality_q">포맷 변환이 이미지 품질을 바꾸나요?</h3>
-      <p>Converting between lossy formats (JPG, WebP) involves re-encoding, which may cause minor quality loss. Converting to lossless formats (PNG) preserves all quality. For most web uses, converting at 85-95% quality produces visually identical results. We recommend keeping your original files as backups.</p>
+      <p>손실 포맷(JPG, WebP) 간 변환은 재인코딩을 수반하므로 약간의 품질 저하가 발생할 수 있습니다. 무손실 포맷(PNG)으로 변환하면 모든 품질이 보존됩니다. 대부분의 웹 사용 사례에서는 85-95% 품질로 변환하면 시각적으로 동일한 결과를 얻을 수 있습니다. 원본 파일을 백업으로 보관하는 것을 권장합니다.</p>
 
       <h3 data-i18n="convert_faq_best_q">웹 이미지에 가장 좋은 포맷은 무엇인가요?</h3>
-      <p>WebP is currently the best format for web images due to its excellent compression and universal browser support. For maximum compatibility, use JPG for photographs and PNG for graphics with transparency. If your audience uses modern browsers, AVIF offers the smallest file sizes.</p>
+      <p>WebP는 탁월한 압축률과 보편적인 브라우저 지원 덕분에 현재 웹 이미지에 가장 좋은 포맷입니다. 최대 호환성을 위해 사진에는 JPG를, 투명도가 있는 그래픽에는 PNG를 사용하세요. 사용자가 최신 브라우저를 사용한다면 AVIF가 가장 작은 파일 크기를 제공합니다.</p>
 
       <h3 data-i18n="faq_mobile_q">모바일에서도 사용할 수 있나요?</h3>
-      <p>Yes, ZXZX works perfectly on mobile browsers including Chrome and Safari on iOS and Android. The responsive interface adapts to smaller screens, and all conversion features are fully functional on mobile devices.</p>
+      <p>네, ZXZX는 iOS와 Android의 Chrome, Safari를 포함한 모바일 브라우저에서 완벽하게 작동합니다. 반응형 인터페이스가 작은 화면에 맞게 조정되며, 모든 변환 기능이 모바일 기기에서 완전히 작동합니다.</p>
 
       <h3 data-i18n="convert_faq_stored_q">업로드한 이미지가 서버에 저장되나요?</h3>
-      <p>No. All image processing happens directly in your browser using JavaScript and the Canvas API. Your files are never uploaded to any server. When you close the page, all data is automatically cleared. ZXZX is one of the most privacy-focused image tools available.</p>
+      <p>아니요. 모든 이미지 처리는 JavaScript와 Canvas API를 사용하여 브라우저에서 직접 이루어집니다. 파일은 어떤 서버에도 업로드되지 않습니다. 페이지를 닫으면 모든 데이터가 자동으로 삭제됩니다. ZXZX는 가장 프라이버시 중심적인 이미지 도구 중 하나입니다.</p>
 
       <h2 data-i18n="related_title">관련 도구</h2>
       <ul>
-        <li><a href="/compress">Image Compressor</a> — Reduce file size by up to 80% without visible quality loss</li>
-        <li><a href="/resize">Image Resizer</a> — Resize images by pixels or percentage</li>
-        <li><a href="/remove-exif">EXIF Remover</a> — Strip metadata from photos for privacy protection</li>
+        <li><a href="/compress">이미지 압축기</a> — 눈에 보이는 품질 저하 없이 파일 크기를 최대 80% 절감</li>
+        <li><a href="/resize">이미지 리사이저</a> — 픽셀 또는 퍼센트로 이미지 크기 조정</li>
+        <li><a href="/remove-exif">EXIF 제거기</a> — 프라이버시 보호를 위해 사진에서 메타데이터 제거</li>
       </ul>
     </section>
   </main>
