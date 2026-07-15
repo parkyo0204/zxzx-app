@@ -55,9 +55,14 @@
         <option value="pixels">픽셀</option>
         <option value="percent">퍼센트</option>
       </select></label>
-      <label>너비: <input type="number" id="width" placeholder="px" min="1" max="10000"></label>
-      <label>높이: <input type="number" id="height" placeholder="px" min="1" max="10000"></label>
-      <label><input type="checkbox" id="lockAspect" checked> 비율 고정</label>
+      <div id="pixel-controls" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+        <label>너비: <input type="number" id="width" placeholder="px" min="1" max="10000"></label>
+        <label>높이: <input type="number" id="height" placeholder="px" min="1" max="10000"></label>
+        <label><input type="checkbox" id="lockAspect" checked> 비율 고정</label>
+      </div>
+      <div id="percent-controls" style="display:none;gap:1rem;align-items:center;">
+        <label>비율: <input type="number" id="percent" placeholder="%" min="1" max="500" value="50"> %</label>
+      </div>
       <button class="btn btn-primary" id="resizeBtn" data-i18n="resize_all">모두 리사이즈</button>
       <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
     </div>
@@ -136,6 +141,7 @@
       <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
     </div>
   </footer>
+  <script type="module" src="/src/utils/resize.ts"></script>
   <script type="module" src="/src/utils/i18n.ts"></script>
 </body>
 </html>
