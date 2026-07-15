@@ -1,6 +1,5 @@
-// Image resize — pica for high-quality Lanczos3 downsampling
+// Image resize utility — 100% browser-based
 import { FileDropzone, ProgressBar, formatSize } from './file-dropzone';
-import picaFactory from 'pica';
 
 const controls = document.getElementById('controls')!;
 const resizeBtn = document.getElementById('resizeBtn')!;
@@ -13,9 +12,11 @@ const percentInput = document.getElementById('percent') as HTMLInputElement;
 
 let aspectRatio = 1;
 
+// Shared dropzone with file management UX
 const dropzone = new FileDropzone('dropzone', 'fileInput', 'preview', {
   onFilesChanged: (files) => {
     controls.style.display = files.length > 0 ? 'flex' : 'none';
+    // Set aspect ratio from first image
     if (files.length > 0) {
       const img = new Image();
       img.onload = () => {
@@ -32,90 +33,93 @@ const progress = new ProgressBar('controls');
 
 widthInput.addEventListener('input', () => {
   if (lockAspect.checked) {
-    heightInput.value = String(Math.round(parseInt(widthInput.value) / aspectRatio));
+    heightInput.value = String(
+      Math.round(parseInt(widthInput.value) / aspectRatio),
+    );
   }
 });
 
 heightInput.addEventListener('input', () => {
   if (lockAspect.checked) {
-    widthInput.value = String(Math.round(parseInt(heightInput.value) * aspectRatio));
+    widthInput.value = String(
+      Math.round(parseInt(heightInput.value) * aspectRatio),
+    );
   }
 });
 
 modeSelect.addEventListener('change', () => {
   const isPercent = modeSelect.value === 'percent';
-  const pixelControls = document.getElementById('pixel-controls');
-  const percentControls = document.getElementById('percent-controls');
-  if (pixelControls) pixelControls.style.display = isPercent ? 'none' : 'flex';
-  if (percentControls) percentControls.style.display = isPercent ? 'flex' : 'none';
+  document.getElementById('pixel-controls')!.style.display = isPercent
+    ? 'none'
+    : 'flex';
+  document.getElementById('percent-controls')!.style.display = isPercent
+    ? 'flex'
+    : 'none';
 });
 
 resizeBtn.addEventListener('click', async () => {
   const files = dropzone.getFiles();
   if (files.length === 0) return;
 
-  const pica = picaFactory();
+  resizeBtn.textContent = '리사이즈 중...';
+  (resizeBtn as HTMLButtonElement).disabled = true;
+
   const isPercent = modeSelect.value === 'percent';
   const percent = parseInt(percentInput.value) / 100;
   const targetW = parseInt(widthInput.value);
   const targetH = parseInt(heightInput.value);
 
-  resizeBtn.textContent = '리사이즈 중...';
-  (resizeBtn as HTMLButtonElement).disabled = true;
   progress.show();
-
   const results: { blob: Blob; name: string }[] = [];
 
   for (let i = 0; i < files.length; i++) {
+    const result = await resizeImage(files[i], isPercent, percent, targetW, targetH);
+    results.push(result);
+    const el = document.getElementById(`result-${i}`);
+    if (el)
+      el.innerHTML = `<strong>${result.name}</strong> · ${formatSize(result.blob.size)}`;
+
     progress.set(((i + 1) / files.length) * 100);
-    try {
-      const result = await resizeWithPica(pica, files[i], isPercent, percent, targetW, targetH);
-      results.push(result);
-      const el = document.getElementById(`result-${i}`);
-      if (el) el.innerHTML = `<strong>${result.name}</strong> · ${formatSize(result.blob.size)}`;
-    } catch (e) {
-      console.error('Resize error:', e);
-    }
   }
 
-  (window as any).__resized = results;
   progress.hide();
+  (window as any).__resized = results;
   resizeBtn.textContent = '모두 리사이즈';
   (resizeBtn as HTMLButtonElement).disabled = false;
 });
 
-async function resizeWithPica(
-  pica: any,
+async function resizeImage(
   file: File,
   isPercent: boolean,
   percent: number,
   targetW: number,
   targetH: number,
 ): Promise<{ blob: Blob; name: string }> {
-  const img = await loadImage(file);
-  const w = isPercent ? Math.round(img.width * percent) : targetW;
-  const h = isPercent ? Math.round(img.height * percent) : targetH;
-
-  const src = document.createElement('canvas');
-  src.width = img.width;
-  src.height = img.height;
-  src.getContext('2d')!.drawImage(img, 0, 0);
-
-  const dst = document.createElement('canvas');
-  dst.width = w;
-  dst.height = h;
-
-  await pica.resize(src, dst, { filter: 'lanczos3' });
-  const blob = await pica.toBlob(dst, file.type, 0.92);
-
-  const ext = file.name.split('.').pop() || 'jpg';
-  return { blob, name: file.name.replace(/\.[^.]+$/, `_${w}x${h}.${ext}`) };
-}
-
-function loadImage(file: File): Promise<HTMLImageElement> {
   return new Promise((resolve) => {
     const img = new Image();
-    img.onload = () => resolve(img);
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const w = isPercent ? Math.round(img.width * percent) : targetW;
+      const h = isPercent ? Math.round(img.height * percent) : targetH;
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d')!;
+      ctx.drawImage(img, 0, 0, w, h);
+
+      const ext = file.name.split('.').pop() || 'jpg';
+      const mime =
+        ext === 'png'
+          ? 'image/png'
+          : ext === 'webp'
+            ? 'image/webp'
+            : 'image/jpeg';
+      canvas.toBlob((blob) => {
+        resolve({
+          blob: blob!,
+          name: file.name.replace(/\.[^.]+$/, `_${w}x${h}.${ext}`),
+        });
+      }, mime, 0.92);
+    };
     img.src = URL.createObjectURL(file);
   });
 }

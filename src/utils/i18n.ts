@@ -31,14 +31,21 @@ function applyTranslations() {
     const text = t(key);
     if (text) {
       if (el.tagName === 'INPUT' && el.type !== 'submit') {
-        el.placeholder = text;
+        (el as HTMLInputElement).placeholder = text;
       } else {
-        el.textContent = text;
+        el.innerHTML = text;
       }
     }
   });
   document.querySelectorAll('[data-i18n-title]').forEach(el => {
-    el.title = t(el.getAttribute('data-i18n-title'));
+    el.setAttribute('title', t(el.getAttribute('data-i18n-title') || ''));
+  });
+  document.querySelectorAll('[data-i18n-content]').forEach(el => {
+    const key = el.getAttribute('data-i18n-content');
+    const text = t(key || '');
+    if (text) {
+      el.setAttribute('content', text);
+    }
   });
   document.documentElement.lang = currentLang;
 }
@@ -50,6 +57,7 @@ function switchLang(lang) {
   applyTranslations();
   updateLangButton();
 }
+(window as any).switchLang = switchLang;
 
 function updateLangButton() {
   const btn = document.getElementById('lang-btn');

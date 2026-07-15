@@ -38,6 +38,16 @@ function applyTranslations() {
       }
     }
   });
+  document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
+    el.setAttribute('title', t(el.getAttribute('data-i18n-title')));
+  });
+  document.querySelectorAll('[data-i18n-content]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n-content');
+    var text = t(key);
+    if (text) {
+      el.setAttribute('content', text);
+    }
+  });
   document.documentElement.lang = currentLang;
   // Sync any existing select
   syncLangSelect();
@@ -55,6 +65,7 @@ function switchLang(lang) {
   applyTranslations();
   updateLangButton();
 }
+window.switchLang = switchLang;
 
 function updateLangButton() {
   var btn = document.getElementById('lang-btn');
