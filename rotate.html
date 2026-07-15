@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 회전·반전 — 온라인 무료</title>
+  <meta name="description" content="90도 회전과 좌우/상하 반전. 브라우저 로컬 처리.">
+  <link rel="canonical" href="https://zxzx.app/rotate">
+  <link rel="alternate" hreflang="ko" href="https://zxzx.app/rotate">
+  <link rel="alternate" hreflang="en" href="https://zxzx.app/rotate?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://zxzx.app/rotate?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://zxzx.app/rotate?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://zxzx.app/rotate">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ZXZX 회전 · 반전",
+    "url": "https://zxzx.app/rotate",
+    "description": "90도 회전과 좌우/상하 반전. 브라우저 로컬 처리.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "품질이 떨어지나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "재인코딩이 일어나지만 고품질 설정으로 저장합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "EXIF Orientation은?",
+        "acceptedAnswer": { "@type": "Answer", "text": "디코딩 시 브라우저/코덱이 방향을 반영합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "배치가 되나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "최대 30장까지 한 번에 처리할 수 있습니다." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/crop" data-i18n="nav_crop">크롭</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>회전 · 반전</h1>
+    <p class="lead">90° 회전과 플립. 서버 업로드 없음.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
+      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <input type="file" id="fileInput" multiple accept="image/*" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <label>동작: <select id="action">
+        <option value="90">시계 90°</option>
+        <option value="180">180°</option>
+        <option value="270">반시계 90°</option>
+        <option value="flip-h">좌우 반전</option>
+        <option value="flip-v">상하 반전</option>
+      </select></label>
+      <button class="btn btn-primary" id="applyBtn">적용</button>
+      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+    </div>
+
+    
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2>자주 묻는 질문</h2>
+      <h3>품질이 떨어지나요?</h3><p>재인코딩이 일어나지만 고품질 설정으로 저장합니다.</p><h3>EXIF Orientation은?</h3><p>디코딩 시 브라우저/코덱이 방향을 반영합니다.</p><h3>배치가 되나요?</h3><p>최대 30장까지 한 번에 처리할 수 있습니다.</p>
+      <h2>관련 도구</h2>
+      <ul>
+        <li><a href="/compress">이미지 압축</a></li>
+        <li><a href="/convert">포맷 변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/remove-exif">EXIF 제거</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
+      </div>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/utils/rotate.ts"></script>
+  <script type="module" src="/src/utils/i18n.js"></script>
+</body>
+</html>

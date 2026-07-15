@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="avif-format-explained_h1">AVIF 포맷 완벽 가이드 — ZXZX</title>
+  <meta name="description" content="AVIF 이미지 포맷의 모든 것. AVIF의 장단점, WebP와의 비교, 브라우저 지원 현황, 그리고 변환 방법을자세히 소개합니다." data-i18n-content="avif-format-explained_meta_desc">
+  <link rel="canonical" href="https://zxzx.app/blog/avif-format-explained">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="module" crossorigin src="/assets/i18n-CD4tat4r.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/i18n-DNywf6Pj.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <article>
+      <h1 data-i18n="avif-format-explained_h1">AVIF 포맷 완벽 가이드</h1>
+      <p class="meta" data-i18n="avif-format-explained_meta">2026년 7월 15일 · 9분 읽기</p>
+
+      <p data-i18n="avif-format-explained_p_8">AVIF는 AV1 Image File Format의 약자로, 2019년에된 차세대 이미지 포맷입니다. Netflix, Google, Mozilla등이 참여한 Alliance for Open Media(AOMedia)에서 개발했으며, WebP를 뛰어넘는 압축률과 화질을제공합니다. 이 글에서는 AVIF의 모든 것을자세히 소개합니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_9">AVIF의 탄생 배경</h2>
+      <p data-i18n="avif-format-explained_p_10">AVIF는 비디오 코덱 AV1의 프레임 내 압축 기술을 이미지에 적용하는 것입니다. AV1은 2018년에 표준화된 비디오 코덱으로, H.265/HEVC를 내보내는 것은 압축률을 제공하면서도 라이선스가 있는 자료가 없는 것이 Max 장점입니다.</p>
+      <p data-i18n="avif-format-explained_p_11">AOMedia는 AV1의 기술을 이미지에도 APP 하기 위해 AVIF를 개발하기 위해, 2019년 2월에 AVIF 1.0 설명이 출시되었습니다. 2024년에는 AVIF 2.0 사양이 출시되었습니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_12">AVIF의 기술적 특징</h2>
+
+      <h3 data-i18n="avif-format-explained_h3_13">압축 알고리즘</h3>
+      <p data-i18n="avif-format-explained_p_14">AVIF는 AV1 비디오 코덱의 인트라 프레임 압축을 사용합니다. 방식으로 비디오 압축 기술의 장점을 그대로 압축할 수 있습니다.</p>
+      <ul>
+        <li data-i18n="avif-format-explained_li_15"><strong>블록 기반 예측:</strong> 이미지를 블록으로 나누고, 각 블록의 패턴을 예측하여 차이만 저장합니다</li>
+        <li data-i18n="avif-format-explained_li_16"><strong>변환 코딩:</strong> 주파수 영역 변환 후 손실 압축을 적용합니다</li>
+        <li data-i18n="avif-format-explained_li_17"><strong>루프 필터:</strong> 압축 아티팩트를 줄이는 고급 필터링 기술을사용합니다</li>
+      </ul>
+
+      <h3 data-i18n="avif-format-explained_h3_18">색상 및 HDR 지원</h3>
+      <p data-i18n="avif-format-explained_p_19">AVIF는 현대적인 색상 공간을 완벽하게 지원합니다:</p>
+      <ul>
+        <li data-i18n="avif-format-explained_li_20">10비트/12비트 색상: 8비트(1670만색)를 처리하여 10비트(10억색)와 12비트(680억색)를 지원합니다.</li>
+        <li data-i18n="avif-format-explained_li_21">넓은 색역: Rec. 2020, DCI-P3 등을 지원합니다.</li>
+        <li data-i18n="avif-format-explained_li_22">HDR: HDR10, HDR10+, HLG, Dolby Vision 등 의 HDR 표준을 지원합니다.</li>
+        <li data-i18n="avif-format-explained_li_23">ICC 약력: 색상을 관리하려면 ICC 약력을 내장할 수 있습니다.</li>
+      </ul>
+
+      <h3 data-i18n="avif-format-explained_h3_24">알파 채널</h3>
+      <p data-i18n="avif-format-explained_p_25">AVIF는 손실 압축과 무손실 압축 모두에서 알파 채널을지원합니다. 특히 손실 알파 채널은WebP에서는 불가능한 기능으로, 투명도가 필요한 이미지에서 더 효율적인 압축이 가능합니다.</p>
+
+      <h3 data-i18n="avif-format-explained_h3_26">애니메이션</h3>
+      <p data-i18n="avif-format-explained_p_27">AVIF는 이미지 기능을 지원하여 애니메이션을 제공합니다. AV1 비디오 코덱을 직접 사용하기 때문에 GIF나 WebP 애니메이션보다 훨씬 더 편안합니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_28">AVIF vs WebP: 상세 비교</h2>
+      <table>
+        <thead>
+          <tr><th>비교 항목</th><th>AVIF</th><th>WebP</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>압축률</td><td>WebP 대비 20~50% 우수</td><td>JPG 대비 25~34% 우수</td></tr>
+          <tr><td>화질 (저비트레이트)</td><td>매우 우수</td><td>양호</td></tr>
+          <tr><td>인코딩 속도</td><td>느림</td><td>빠름</td></tr>
+          <tr><td>디코딩 속도</td><td>보통</td><td>빠름</td></tr>
+          <tr><td>HDR 지원</td><td>O</td><td>X</td></tr>
+          <tr><td>10비트+ 색상</td><td>O</td><td>X</td></tr>
+          <tr><td>무손실 압축</td><td>O</td><td>O</td></tr>
+          <tr><td>손실 알파 채널</td><td>O</td><td>X</td></tr>
+          <tr><td>브라우저 지원</td><td>95%+</td><td>99%+</td></tr>
+        </tbody>
+      </table>
+
+      <h2 data-i18n="avif-format-explained_h2_29">브라우저 지원 현황 (2026년)</h2>
+      <table>
+        <thead>
+          <tr><th>브라우저</th><th>지원 버전</th><th>현재 상태</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chrome</td><td>85+</td><td>완전 지원</td></tr>
+          <tr><td>Firefox</td><td>93+</td><td>완전 지원</td></tr>
+          <tr><td>Safari</td><td>16.4+</td><td>완전 지원</td></tr>
+          <tr><td>Edge</td><td>121+</td><td>완전 지원</td></tr>
+          <tr><td>Opera</td><td>71+</td><td>완전 지원</td></tr>
+        </tbody>
+      </table>
+      <p data-i18n="avif-format-explained_p_30">2026년 현재 모든 주요 브라우저가 AVIF를지원합니다. 실질적으로 호환성 문제는 해결되었습니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_31">AVIF가 특별반복 scene</h2>
+
+      <h3 data-i18n="avif-format-explained_h3_32">저비트레이트 압축</h3>
+      <p data-i18n="avif-format-explained_p_33">AVIF는 파일 크기를 매우 중요하게 생각합니다. 모바일 저이나속 네트워크 환경에서 특히 유용합니다.</p>
+
+      <h3 data-i18n="avif-format-explained_h3_34">HDR 이미지</h3>
+      <p data-i18n="avif-format-explained_p_35">현대적인 디스플레이의 HDR 기능을 활용하는 사례는 AVIF가 최선의 선택입니다. 10비트 색상 크기와 넓은 색상 영역을 지원하여 여러분의 색상을 공유합니다.</p>
+
+      <h3 data-i18n="avif-format-explained_h3_36">그래픽과 일러스트레이션</h3>
+      <p data-i18n="avif-format-explained_p_37">AVIF는 아파도 압축하고 PNG보다 낫습니다. 측면 경계와 넓은 면적의 장점이 많은 그래픽에서 특히 불리합니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_38">AVIF 변환 방법</h2>
+
+      <h3 data-i18n="avif-format-explained_h3_39">방법 1: ZXZX 온라인 변환기</h3>
+      <p data-i18n="avif-format-explained_p_40">ZXZX의 <a href="/convert">온라인 변환 도구</a>를 사용하면 간편하게 AVIF로 변환할 수 있습니다.</p>
+      <ol>
+        <li><a href="/convert" data-i18n="nav_convert">ZXZX 변환 도구</a>에 접속합니다</li>
+        <li data-i18n="avif-format-explained_li_42">변환할 이미지를 업로드합니다</li>
+        <li data-i18n="avif-format-explained_li_43">출력 포맷을 "AVIF"로 선택합니다</li>
+        <li data-i18n="avif-format-explained_li_44">품질 수준을 조정합니다</li>
+        <li data-i18n="avif-format-explained_li_45">"변환"을 클릭합니다</li>
+        <li data-i18n="avif-format-explained_li_46">변환된 파일을 다운로드합니다</li>
+      </ol>
+
+      <h3 data-i18n="avif-format-explained_h3_47">방법 2: Command Line (avifenc)</h3>
+      <p data-i18n="avif-format-explained_p_48">libavif의 공식 인코더를 사용합니다.</p>
+      <pre><code>avifenc --min 20 --max 30 --speed 6 input.png output.avif</code></pre>
+
+      <h3 data-i18n="avif-format-explained_h3_49">방법 3: JavaScript (WASM)</h3>
+      <p data-i18n="avif-format-explained_p_50">ZXZX는 @jsquash/avif 라이브러리를사용하여 브라우저에서 직접 AVIF로 변환합니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_51">AVIF사용 시 주의사항</h2>
+
+      <h3 data-i18n="avif-format-explained_h3_52">인코딩 속도</h3>
+      <p data-i18n="avif-format-explained_p_53">AVIF는 WebP보다 더 느립니다. 특히 품질이 높은 설정에서는 처리 시간이 처리질 수 있습니다.</p>
+
+      <h3 data-i18n="avif-format-explained_h3_54">레거시 브라우저</h3>
+      <p data-i18n="avif-format-explained_p_55">2026년 현재 대부분의 브라우저는 AVIF를 지원하지만, 이전 버전의 브라우저는 소수의 사용자를 위해 WebP 폴백을 제공하는 것이 아닙니다.</p>
+
+      <h3 data-i18n="avif-format-explained_h3_56">이메일 클라이언트</h3>
+      <p data-i18n="avif-format-explained_p_57">많은 이메일 클라이언트는 여전히 AVIF를 지원하지 않습니다. 이메일에는 JPG나 PNG가 있습니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_58">AVIF의 미래</h2>
+      <p data-i18n="avif-format-explained_p_59">AVIF는 이미지 압축의 미래입니다. 특히 다음과 같은 분야에서 성장이 기대됩니다.</p>
+      <ul>
+        <li data-i18n="avif-format-explained_li_60">스트리밍 서비스: Netflix 및 기타 은이미 AVIF를 통해 썸네일을 사용하여 제공하고 있습니다.</li>
+        <li data-i18n="avif-format-explained_li_61"><strong>모바일 앱:</strong> 앱 크기와 로딩 속도 개선에 기여합니다</li>
+        <li data-i18n="avif-format-explained_li_62">e-커머스:제품 이미지의 품질과 로딩 속도를 개선하는 동안</li>
+        <li data-i18n="avif-format-explained_li_63">웹 성능: 핵심 웹 바이탈 개선에 다이렉트 기여합니다</li>
+      </ul>
+
+      <h2 data-i18n="avif-format-explained_h2_64">실제 성능 비교 테스트</h2>
+      <p data-i18n="avif-format-explained_p_65">원본 이미지를 각각의 형식으로 변환한 결과와 동일합니다.</p>
+      <table>
+        <thead>
+          <tr><th>포맷</th><th>파일 크기</th><th>PSNR</th><th>인코딩 시간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>JPG (품질 80)</td><td>120KB</td><td>38.2dB</td><td>15ms</td></tr>
+          <tr><td>WebP (품질 80)</td><td>82KB</td><td>38.5dB</td><td>45ms</td></tr>
+          <tr><td>AVIF (품질 30)</td><td>58KB</td><td>38.8dB</td><td>320ms</td></tr>
+        </tbody>
+      </table>
+      <p data-i18n="avif-format-explained_p_66">AVIF는 동일 화질에서 WebP보다 30% 이상, JPG보다 50% 이상 작은 파일을생성합니다.</p>
+
+      <h2 data-i18n="avif-format-explained_h2_67">결론</h2>
+      <p data-i18n="avif-format-explained_p_68">AVIF는 압축률, 화질, 기능 모든 면에서 현존 최고의 이미지 포맷입니다. 특히 HDR, 10비트색상등의 현대적인 기능은 포맷과의 차별점입니다. 인코딩 속도가 느리다는 단점이 있지만, ZXZX의 WASM 코덱은를으로 해결합니다. 지금 바로 AVIF를해보세요.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
+      </div>
+      <p data-i18n="avif-format-explained_p_69">&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

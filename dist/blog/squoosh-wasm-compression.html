@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="squoosh-wasm-compression_h1">Squoosh WASM 코덱으로 타 서비스 대비 월등한 이미지 압축 — ZXZX</title>
+  <meta name="description" content="ZXZX는 Google Squoosh의 WASM 코덱과 Lanczos3 필터를 사용하여 타 이미지 압축 서비스 대비 월등한 성능을 제공합니다." data-i18n-content="squoosh-wasm-compression_meta_desc">
+  <link rel="canonical" href="https://zxzx.app/blog/squoosh-wasm-compression">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="module" crossorigin src="/assets/i18n-CD4tat4r.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/i18n-DNywf6Pj.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <article>
+      <h1 data-i18n="squoosh-wasm-compression_h1">Squoosh WASM 코덱으로 타 서비스 대비 월등한 이미지 압축</h1>
+      <p class="meta" data-i18n="squoosh-wasm-compression_meta">2026년 7월 15일 · 5분 읽기</p>
+
+      <p data-i18n="squoosh-wasm-compression_p_8">대부분의 온라인 이미지 압축 도구는 Canvas API의 기본 인코더를 사용합니다. 이 방식은 간단하지만 압축률과 화질 면에서 한계가 있습니다. ZXZX는 <strong>Google Squoosh의 WASM 코덱</strong>을 직접 사용하여 이 한계를 극복했습니다.</p>
+
+      <h2 data-i18n="squoosh-wasm-compression_h2_9">Squoosh란 무엇인가?</h2>
+      <p data-i18n="squoosh-wasm-compression_p_10">Squoosh는 Google Chrome Labs에서 만든 이미지 압축 도구입니다. GitHub에서 25,000개 이상의 스타를 받았으며, 업계 최고 수준의 이미지 인코더를 브라우저에서 실행할 수 있도록 합니다.</p>
+      <p data-i18n="squoosh-wasm-compression_p_11">Squoosh의 핵심은 <strong>MozJPEG</strong>, <strong>libwebp</strong>, <strong>libavif</strong> 같은 네이티브 인코더를 WebAssembly(WASM)로 컴파일하여 JavaScript 없이 브라우저에서 직접 실행한다는 것입니다.</p>
+
+      <h2 data-i18n="squoosh-wasm-compression_h2_12">왜 WASM이 중요한가?</h2>
+      <p data-i18n="squoosh-wasm-compression_p_13">일반적인 Canvas API 인코더와 WASM 코덱의 차이는 다음과 같습니다:</p>
+      <ul>
+        <li data-i18n="squoosh-wasm-compression_li_14"><strong>JPG 압축:</strong> Canvas 기본 인코더 대비 MozJPEG은 동일 화질에서 10-15% 더 작은 파일 생성</li>
+        <li data-i18n="squoosh-wasm-compression_li_15"><strong>WebP 변환:</strong> libwebp는 Canvas의 WebP 인코더보다 5-10% 더 효율적</li>
+        <li data-i18n="squoosh-wasm-compression_li_16"><strong>AVIF 변환:</strong> libavif는 현재 브라우저에 내장된 AVIF 인코더보다 훨씬 뛰어난 품질 제공</li>
+      </ul>
+
+      <h2 data-i18n="squoosh-wasm-compression_h2_17">ZXZX가 사용하는 기술 스택</h2>
+      <ul>
+        <li data-i18n="squoosh-wasm-compression_li_18"><strong>@jsquash/jpeg</strong> — MozJPEG 기반 JPG 인코딩 (압축률 15% 향상)</li>
+        <li data-i18n="squoosh-wasm-compression_li_19"><strong>@jsquash/webp</strong> — libwebp 기반 WebP 인코딩</li>
+        <li data-i18n="squoosh-wasm-compression_li_20"><strong>@jsquash/avif</strong> — libavif 기반 AVIF 인코딩 (차세대 포맷)</li>
+        <li data-i18n="squoosh-wasm-compression_li_21"><strong>Compressor.js</strong> — Canvas 기반 빠른 압축 (폴백)</li>
+        <li data-i18n="squoosh-wasm-compression_li_22"><strong>pica</strong> — Lanczos3 필터 기반 고품질 리사이즈</li>
+      </ul>
+
+      <h2 data-i18n="squoosh-wasm-compression_h2_23">타 서비스와의 비교</h2>
+      <table>
+        <thead>
+          <tr><th data-i18n="squoosh_table_header_1">항목</th><th data-i18n="squoosh_table_header_2">ZXZX</th><th data-i18n="squoosh_table_header_3">대부분의 타 서비스</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="squoosh_table_row1_col1">JPG 인코더</td><td data-i18n="squoosh_table_row1_col2">MozJPEG (WASM)</td><td data-i18n="squoosh_table_row1_col3">Canvas 기본</td></tr>
+          <tr><td data-i18n="squoosh_table_row2_col1">WebP 인코더</td><td data-i18n="squoosh_table_row2_col2">libwebp (WASM)</td><td data-i18n="squoosh_table_row2_col3">Canvas 기본</td></tr>
+          <tr><td data-i18n="squoosh_table_row3_col1">AVIF 지원</td><td data-i18n="squoosh_table_row3_col2">O (libavif)</td><td data-i18n="squoosh_table_row3_col3">X 또는 제한적</td></tr>
+          <tr><td data-i18n="squoosh_table_row4_col1">리사이즈 필터</td><td data-i18n="squoosh_table_row4_col2">Lanczos3</td><td data-i18n="squoosh_table_row4_col3">Bilinear</td></tr>
+          <tr><td data-i18n="squoosh_table_row5_col1">파일 업로드</td><td data-i18n="squoosh_table_row5_col2">불필요 (100% 로컬)</td><td data-i18n="squoosh_table_row5_col3">서버 업로드 필요</td></tr>
+          <tr><td data-i18n="squoosh_table_row6_col1">가격</td><td data-i18n="squoosh_table_row6_col2">무료</td><td data-i18n="squoosh_table_row6_col3">Freemium</td></tr>
+        </tbody>
+      </table>
+
+      <h2 data-i18n="squoosh-wasm-compression_h2_24">어떻게 사용하나?</h2>
+      <p data-i18n="squoosh-wasm-compression_p_25">ZXZX의 이미지 압축기는 특별한 설치 없이 브라우저에서 바로 사용할 수 있습니다. WASM 코덱은 첫 방문 시 자동으로 다운로드되며, 이후에는 캐시되어 즉시 사용 가능합니다.</p>
+      <ol>
+        <li><a href="/compress" data-i18n="nav_compress">압축 도구</a>에 이미지를 드래그 앤 드롭합니다</li>
+        <li data-i18n="squoosh-wasm-compression_li_27">품질 수준을 선택합니다 (기본: 80%)</li>
+        <li data-i18n="squoosh-wasm-compression_li_28">"모두 압축"을 클릭합니다</li>
+        <li data-i18n="squoosh-wasm-compression_li_29">압축된 이미지를 개별 또는 ZIP으로 다운로드합니다</li>
+      </ol>
+
+      <h2 data-i18n="squoosh-wasm-compression_h2_30">결론</h2>
+      <p data-i18n="squoosh-wasm-compression_p_31">ZXZX는 단순한 이미지 압축 도구가 아닙니다. Google Squoosh의 엔진을 직접 활용하여 타 서비스 대비 월등한 압축률과 화질을 제공하면서도, 100% 브라우저 내 처리로 프라이버시를 보장합니다.</p>
+      <p data-i18n="squoosh-wasm-compression_p_32">무료이고, 회원가입이 필요 없으며, 파일이 서버에 업로드되지 않습니다. 이것이 ZXZX가 다른 이미지 도구와 다른 점입니다.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
+      </div>
+      <p data-i18n="squoosh-wasm-compression_p_33">&copy; 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 배경 제거 — 브라우저 ONNX</title>
+  <meta name="description" content="업로드 없이 배경을 제거합니다. @imgly/background-removal ONNX 모델.">
+  <link rel="canonical" href="https://zxzx.app/remove-background">
+  <link rel="alternate" hreflang="ko" href="https://zxzx.app/remove-background">
+  <link rel="alternate" hreflang="en" href="https://zxzx.app/remove-background?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://zxzx.app/remove-background?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://zxzx.app/remove-background?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://zxzx.app/remove-background">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ZXZX 배경 제거",
+    "url": "https://zxzx.app/remove-background",
+    "description": "업로드 없이 배경을 제거합니다. @imgly/background-removal ONNX 모델.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "서버로 올라가나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "이미지 데이터는 서버로 가지 않습니다. 모델 파일만 CDN에서 받아 로컬 실행합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "출력은?",
+        "acceptedAnswer": { "@type": "Answer", "text": "투명 PNG입니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "제한은?",
+        "acceptedAnswer": { "@type": "Answer", "text": "메모리 때문에 파일당 12MB, 최대 5장으로 제한합니다." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/crop" data-i18n="nav_crop">크롭</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>배경 제거</h1>
+    <p class="lead">ONNX 모델이 기기에서 배경을 제거합니다. 첫 실행 시 모델 다운로드.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
+      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <button class="btn btn-primary" id="removeBtn">배경 제거</button>
+      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+      <p id="ai-status" class="lead" style="flex-basis:100%"></p>
+    </div>
+
+    
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2>자주 묻는 질문</h2>
+      <h3>서버로 올라가나요?</h3><p>이미지 데이터는 서버로 가지 않습니다. 모델 파일만 CDN에서 받아 로컬 실행합니다.</p><h3>출력은?</h3><p>투명 PNG입니다.</p><h3>제한은?</h3><p>메모리 때문에 파일당 12MB, 최대 5장으로 제한합니다.</p>
+      <h2>관련 도구</h2>
+      <ul>
+        <li><a href="/compress">이미지 압축</a></li>
+        <li><a href="/convert">포맷 변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/remove-exif">EXIF 제거</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
+      </div>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/utils/remove-background.ts"></script>
+  <script type="module" src="/src/utils/i18n.js"></script>
+</body>
+</html>

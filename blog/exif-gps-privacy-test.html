@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXIF GPS 실측 — 사진에 위치가 남는 이유 — ZXZX</title>
+  <meta name="description" content="스마트폰 사진의 GPS 태그를 확인하고 제거하는 워크플로.">
+  <link rel="canonical" href="https://zxzx.app/blog/exif-gps-privacy-test">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress">압축</a></li>
+        <li><a href="/convert">변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/crop">크롭</a></li>
+        <li><a href="/blog">블로그</a></li>
+        <li><a href="/about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="tool-page container">
+    <article class="content-section">
+      <p><a href="/blog">← 블로그</a></p>
+      <h1>EXIF GPS 실측 — 사진에 위치가 남는 이유</h1>
+      <p class="lead">스마트폰 사진의 GPS 태그를 확인하고 제거하는 워크플로.</p>
+      <h2>핵심 요약</h2>
+      <p>많은 스마트폰 JPEG에는 GPSLatitude/Longitude가 들어 있습니다. 공개 업로드 전에 EXIF를 확인하지 않으면 촬영 위치가 노출될 수 있습니다. ZXZX EXIF 도구는 exifr로 태그를 보여 준 뒤 재인코딩으로 컨테이너를 제거합니다.</p>
+      <h2>실전 팁</h2>
+      <p>제거 전후 파일 크기를 비교하면 메타데이터만이 아니라 코덱 재압축도 반영됩니다. 원본 보관이 필요하면 별도 폴더에 원본을 두고, 공유용만 strip 하세요.</p>
+      <h2>ZXZX에서 바로 쓰기</h2>
+      <p><a href="/remove-exif">EXIF 제거</a>에서 미리보기 표를 확인한 뒤 배치로 처리하세요.</p>
+      <ul>
+        <li><a href="/compress">압축</a></li>
+        <li><a href="/crop">크롭</a></li>
+        <li><a href="/remove-exif">EXIF 제거</a></li>
+        <li><a href="/remove-background">배경 제거</a></li>
+        <li><a href="/upscale">업스케일</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">소개</a>
+        <a href="/contact">문의</a>
+        <a href="/privacy">개인정보 처리방침</a>
+        <a href="/terms">이용약관</a>
+        <a href="/blog">블로그</a>
+      </div>
+      <p>© 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+  <script type="module" src="/src/utils/i18n.js"></script>
+</body>
+</html>

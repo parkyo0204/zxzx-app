@@ -274,7 +274,7 @@
     "resize_related_exif": "EXIF 제거기 — 프라이버시 보호를 위해 사진에서 메타데이터 제거",
     "about_story_p1": "ZXZX는 간단한 관찰에서 탄생했습니다: 대부분의 온라인 이미지 도구는 파일을 원격 서버에 업로드해야 합니다. 이는 불필요한 프라이버시 위험을 만들고, 워크플로우를 느리게 하며, 워터마크, 파일 제한, 필수 회원가입 같은 숨겨진 비용이 따르는 경우가 많습니다.",
     "about_story_p2": "더 나은 방법이 있다고 믿었습니다. 최신 웹 브라우저는 놀라울 정도로 강력합니다 — 이미지 처리, 복잡한 알고리즘 실행, 배치 작업을 기기에서 완전히 처리할 수 있습니다. 그래서 ZXZX를 만들었습니다: Canvas API, WebAssembly, 최신 JavaScript 같은 브라우저 네이티브 기술을 활용하여 파일을 건드리지 않고 전문가 수준의 이미지 처리를 제공하는 플랫폼입니다.",
-    "about_story_p3": "2024년 출시 이후, ZXZX는 수백만 사용자가 이미지를 압축, 변환, 리사이즈, 최적화하는 것을 도왔습니다. 웹 개발자, 사진작가, 디자이너, 콘텐츠 크리에이터, 프라이버시를 타협하지 않으면서 빠르고 안정적인 이미지 처리가 필요한 일반 사용자 모두에게 신뢰받는 도구가 되었습니다.",
+    "about_story_p3": "ZXZX는 브라우저에서 끝나는 이미지 도구를 만드는 진행 중인 프로젝트입니다. 웹 개발자, 사진작가, 디자이너, 콘텐츠 크리에이터, 그리고 프라이버시를 지키면서 빠르게 이미지를 처리하고 싶은 사용자를 위해 설계되었습니다.",
     "about_mission_p1": "ZXZX는 강력한 이미지 처리를 모든 사람이 어디서든 무료로 이용할 수 있도록 존재합니다. 압축, 포맷 변환, 리사이즈 같은 기본 이미지 작업은 비싼 소프트웨어, 기술적 전문성, 또는 제3자에게 데이터를 넘기는 것을 요구해서는 안 된다고 믿습니다.",
     "about_mission_p2": "핵심 원칙이 우리가 만드는 모든 것을 이끕니다:",
     "about_principle_privacy_title": "프라이버시 우선",
@@ -1378,7 +1378,8 @@
     "what-is-webp_li_18": "색공간 변환: YUV 4:2:0 색공간을 사용하여 색상 정보를 효율적으로 압축합니다",
     "what-is-webp_li_21": "색상 테이블 변환: 이미지의 색상을 분석하여 최적의 색상 테이블을 생성합니다",
     "what-is-webp_li_22": "공간 예측: 연장선의 관계를 활용하여 데이터를 압축합니다.",
-    "what-is-webp_li_23": "색상 캐싱: 유사한 색상을 캐싱하여 중복을 제거합니다"
+    "what-is-webp_li_23": "색상 캐싱: 유사한 색상을 캐싱하여 중복을 제거합니다",
+    "nav_crop": "크롭"
   },
   "en": {
     "site_name": "ZXZX Image Tool",
@@ -1655,7 +1656,7 @@
     "resize_related_exif": "EXIF Remover — Remove metadata from photos to protect privacy",
     "about_story_p1": "ZXZX was born from a simple observation: most online imaging tools require files to be uploaded to a remote server. This creates unnecessary privacy risks, slows down workflows, and often comes with hidden costs like watermarks, file limits, and required memberships.",
     "about_story_p2": "I believed there was a better way. Modern web browsers are incredibly powerful — image processing, running complex algorithms, and batch jobs can be done entirely on your device. That's why we created ZXZX: a platform that leverages browser-native technologies like the Canvas API, WebAssembly, and modern JavaScript to deliver professional-grade image processing without ever touching your files.",
-    "about_story_p3": "Since its launch in 2024, ZXZX has helped millions of users compress, convert, resize, and optimize their images. It has become a trusted tool for web developers, photographers, designers, content creators, and general users alike who need fast and reliable image processing without compromising privacy.",
+    "about_story_p3": "ZXZX is an ongoing project building browser-local image tools. It is designed for web developers, photographers, designers, content creators, and anyone who wants fast image processing without giving up privacy.",
     "about_mission_p1": "ZXZX exists to make powerful image processing freely available to everyone, everywhere. We believe that basic image operations such as compression, format conversion, and resizing should not require expensive software, technical expertise, or handing over data to a third party.",
     "about_mission_p2": "Core principles guide everything we create:",
     "about_principle_privacy_title": "Privacy first",
@@ -2759,7 +2760,8 @@
     "what-is-webp_li_18": "Color space conversion: Efficiently compresses color information using the YUV 4:2:0 color space",
     "what-is-webp_li_21": "Color table conversion: Analyzes the colors in an image to create an optimal color table",
     "what-is-webp_li_22": "Spatial prediction: Compresses data by leveraging extension relationships.",
-    "what-is-webp_li_23": "Color caching: Eliminate duplicates by caching similar colors"
+    "what-is-webp_li_23": "Color caching: Eliminate duplicates by caching similar colors",
+    "nav_crop": "Crop"
   },
   "ja": {
     "site_name": "ZXZXイメージツール",
@@ -3036,7 +3038,7 @@
     "resize_related_exif": "EXIF リムーバー — プライバシー保護のために写真からメタデータを削除する",
     "about_story_p1": "ZXZXは簡単な観察から生まれました：ほとんどのオンラインイメージツールはファイルをリモートサーバーにアップロードする必要があります。これは不要なプライバシーリスクを生み出し、ワークフローを遅くし、透かし、ファイル制限、必要な会員登録などの隠された費用がかかることがよくあります。",
     "about_story_p2": "より良い方法があると信じていました。最新のWebブラウザは驚くほど強力です - 画像処理、複雑なアルゴリズムの実行、バッチ操作をデバイスで完全に処理できます。そこでZXZXを作成しました：Canvas API、WebAssembly、最新のJavaScriptなどのブラウザネイティブ技術を活用して、ファイルに触れることなく専門家レベルの画像処理を提供するプラットフォームです。",
-    "about_story_p3": "2024年のリリース以来、ZXZXは何百万ものユーザーが画像を圧縮、変換、リサイズ、最適化するのに役立ちました。 Web開発者、写真家、デザイナー、コンテンツクリエイター、プライバシーを妥協することなく、迅速で信頼性の高い画像処理を必要とする一般ユーザーにとって信頼できるツールになりました。",
+    "about_story_p3": "ZXZXは、ブラウザ内で完結する画像ツールを構築中のプロジェクトです。Web開発者、写真家、デザイナー、コンテンツ制作者、プライバシーを守りながら高速な画像処理を求めるユーザー向けに設計されています。",
     "about_mission_p1": "ZXZXは、強力な画像処理をすべての人がどこでも無料で利用できるように存在します。圧縮、フォーマット変換、リサイズなどの基本的な画像作業は、高価なソフトウェア、技術的な専門知識、または第三者にデータを渡すことを要求してはならないと信じています。",
     "about_mission_p2": "主な原則は私たちが作るすべてを導きます：",
     "about_principle_privacy_title": "プライバシー優先",
@@ -4140,7 +4142,8 @@
     "what-is-webp_li_18": "色空間変換：YUV 4：2：0色空間を使用して色情報を効率的に圧縮",
     "what-is-webp_li_21": "カラーテーブル変換：画像の色を分析して最適なカラーテーブルを作成します。",
     "what-is-webp_li_22": "空間予測：延長線の関係を利用してデータを圧縮します。",
-    "what-is-webp_li_23": "カラーキャッシング：同様の色をキャッシングして重複を排除します"
+    "what-is-webp_li_23": "カラーキャッシング：同様の色をキャッシングして重複を排除します",
+    "nav_crop": "クロップ"
   },
   "zh": {
     "site_name": "ZXZX图像工具",
@@ -4417,7 +4420,7 @@
     "resize_related_exif": "EXIF Remover — 删除照片中的元数据以保护隐私",
     "about_story_p1": "ZXZX 的诞生源于一个简单的观察：大多数在线成像工具都需要将文件上传到远程服务器。这会产生不必要的隐私风险，减慢工作流程，并且通常会带来隐藏成本，例如水印、文件限制和所需的会员资格。",
     "about_story_p2": "我相信有更好的方法。现代网络浏览器非常强大 - 图像处理、运行复杂算法和批处理作业可以完全在您的设备上完成。这就是我们创建 ZXZX 的原因：这个平台利用 Canvas API、WebAssembly 和现代 JavaScript 等浏览器原生技术来提供专业级图像处理，而无需触及您的文件。",
-    "about_story_p3": "自 2024 年推出以来，ZXZX 已帮助数百万用户压缩、转换、调整大小和优化图像。它已成为网络开发人员、摄影师、设计师、内容创建者和需要快速可靠的图像处理而又不损害隐私的普通用户值得信赖的工具。",
+    "about_story_p3": "ZXZX 是一个正在推进的浏览器本地图像工具项目，面向网页开发者、摄影师、设计师、内容创作者，以及希望在不牺牲隐私的前提下快速处理图像的用户。",
     "about_mission_p1": "ZXZX 的存在是为了让世界各地的每个人都可以免费使用强大的图像处理功能。我们认为，压缩、格式转换和调整大小等基本图像操作不需要昂贵的软件、技术专业知识或将数据移交给第三方。",
     "about_mission_p2": "核心原则指导我们创造的一切：",
     "about_principle_privacy_title": "隐私第一",
@@ -5521,6 +5524,7 @@
     "what-is-webp_li_18": "色彩空间转换：使用YUV 4:2:0色彩空间高效压缩色彩信息",
     "what-is-webp_li_21": "颜色表转换：分析图像中的颜色以创建最佳颜色表",
     "what-is-webp_li_22": "空间预测：利用扩展关系来压缩数据。",
-    "what-is-webp_li_23": "颜色缓存：通过缓存相似的颜色来消除重复项"
+    "what-is-webp_li_23": "颜色缓存：通过缓存相似的颜色来消除重复项",
+    "nav_crop": "裁剪"
   }
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배치 처리 + ZIP 다운로드 워크플로 — ZXZX</title>
+  <meta name="description" content="최대 30장 압축·변환 후 ZIP으로 받는 실전 팁.">
+  <link rel="canonical" href="https://zxzx.app/blog/batch-zip-workflow">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress">압축</a></li>
+        <li><a href="/convert">변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/crop">크롭</a></li>
+        <li><a href="/blog">블로그</a></li>
+        <li><a href="/about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="tool-page container">
+    <article class="content-section">
+      <p><a href="/blog">← 블로그</a></p>
+      <h1>배치 처리 + ZIP 다운로드 워크플로</h1>
+      <p class="lead">최대 30장 압축·변환 후 ZIP으로 받는 실전 팁.</p>
+      <h2>핵심 요약</h2>
+      <p>배치 한도는 도구마다 다릅니다(일반 30, 배경 제거 5, 업스케일 3). 처리 후 ZIP 버튼은 JSZip으로 묶습니다. 예전처럼 파일마다 다운로드 창이 뜨지 않습니다.</p>
+      <h2>실전 팁</h2>
+      <p>대량 작업은 포맷을 먼저 통일(변환) → 리사이즈 → 압축 순서가 대역폭·용량에 유리합니다.</p>
+      <h2>ZXZX에서 바로 쓰기</h2>
+      <p>홈의 도구 카드에서 순서대로 이동하거나 <a href="/compress">압축</a>에서 ZIP을 받아 보세요.</p>
+      <ul>
+        <li><a href="/compress">압축</a></li>
+        <li><a href="/crop">크롭</a></li>
+        <li><a href="/remove-exif">EXIF 제거</a></li>
+        <li><a href="/remove-background">배경 제거</a></li>
+        <li><a href="/upscale">업스케일</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">소개</a>
+        <a href="/contact">문의</a>
+        <a href="/privacy">개인정보 처리방침</a>
+        <a href="/terms">이용약관</a>
+        <a href="/blog">블로그</a>
+      </div>
+      <p>© 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+  <script type="module" src="/src/utils/i18n.js"></script>
+</body>
+</html>

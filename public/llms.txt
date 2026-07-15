@@ -1,40 +1,38 @@
 # zxzx.app
 
-> Browser-local image tools. Compress, convert, and resize images without uploading files to a server. Processing runs in the browser via JavaScript and WebAssembly.
+> Browser-local image tools. Compress, convert, resize, crop, rotate, strip EXIF, remove backgrounds, and upscale without uploading files to a server. Processing runs in the browser via JavaScript, WebAssembly (jSquash/Squoosh codecs), and optional ONNX/ESRGAN models loaded locally.
 
 ## Site
 
 - Homepage: https://zxzx.app/
 - Languages: Korean (default), English, Japanese, Chinese (`?lang=en|ja|zh`)
-- Privacy: files never leave the device; no account required
+- Privacy: image pixels are processed on-device; no account required
 
 ## Tools (live)
 
-- Compress: https://zxzx.app/compress — JPG, PNG, WebP size reduction
-- Convert: https://zxzx.app/convert — JPG, PNG, WebP, AVIF format conversion
-- Resize: https://zxzx.app/resize — pixel or percent resize with Lanczos3 resampling
-
-## Planned tools (not live — do not cite as available)
-
-- Crop, remove-exif, remove-background, upscale, rotate
+- Compress: https://zxzx.app/compress — MozJPEG / WebP / PNG(oxipng) / AVIF via jSquash
+- Convert: https://zxzx.app/convert — JPG, PNG, WebP, AVIF
+- Resize: https://zxzx.app/resize — Lanczos3 (`@jsquash/resize`)
+- Crop: https://zxzx.app/crop — aspect presets (1:1, 16:9, 4:5, …)
+- Rotate: https://zxzx.app/rotate — 90/180/270 and flip
+- Remove EXIF: https://zxzx.app/remove-exif — view + strip metadata
+- Remove background: https://zxzx.app/remove-background — `@imgly/background-removal` (ONNX, local)
+- Upscale: https://zxzx.app/upscale — ESRGAN slim 2x/4x with hqx fallback
 
 ## Key facts for citation
 
-- All processing is client-side (Canvas API + Squoosh/jSquash WASM + pica)
-- Free, no watermark, batch up to 30 images, max 20MB per file
+- Stack: jSquash (Squoosh WASM), cropperjs, exifr, JSZip, imgly background-removal, UpscalerJS
+- Free, no watermark; batch limits vary by tool (AI tools use smaller batches)
 - Sitemap: https://zxzx.app/sitemap.xml
-- Blog: https://zxzx.app/blog
+- Blog: https://zxzx.app/blog (20 guides)
 
 ## FAQ (site-wide)
 
 Q: Are images uploaded to a server?
-A: No. Processing happens in the browser. Files never leave the device.
+A: No. Processing happens in the browser. Model weights for AI tools may download from a CDN, but image pixels stay on-device.
 
 Q: Which formats are supported?
-A: JPG, PNG, WebP, AVIF (convert), plus common raster inputs where noted.
-
-Q: Is there a file size limit?
-A: 20MB per file, up to 30 files per batch.
+A: JPG, PNG, WebP, AVIF for core codecs; tool-specific inputs may vary.
 
 Q: Does compression reduce quality?
 A: Default settings target visually near-identical results; quality is adjustable.
@@ -42,6 +40,6 @@ A: Default settings target visually near-identical results; quality is adjustabl
 ## Contact
 
 - About: https://zxzx.app/about
-- Contact: https://zxzx.app/contact
+- Contact: https://zxzx.app/contact (mailto:hello@zxzx.app)
 - Privacy: https://zxzx.app/privacy
 - Terms: https://zxzx.app/terms

@@ -2,14 +2,35 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
+  optimizeDeps: {
+    exclude: [
+      '@jsquash/jpeg',
+      '@jsquash/webp',
+      '@jsquash/png',
+      '@jsquash/avif',
+      '@jsquash/oxipng',
+      '@jsquash/resize',
+      '@imgly/background-removal',
+    ],
+  },
+  assetsInclude: ['**/*.wasm'],
+  worker: {
+    format: 'es',
+  },
   build: {
     outDir: 'dist',
+    target: 'esnext',
     rollupOptions: {
       input: {
         main: 'index.html',
         compress: 'compress.html',
         convert: 'convert.html',
         resize: 'resize.html',
+        crop: 'crop.html',
+        rotate: 'rotate.html',
+        'remove-exif': 'remove-exif.html',
+        'remove-background': 'remove-background.html',
+        upscale: 'upscale.html',
         about: 'about.html',
         contact: 'contact.html',
         privacy: 'privacy.html',
@@ -28,7 +49,14 @@ export default defineConfig({
         'blog/free-image-tools-2026': 'blog/free-image-tools-2026.html',
         'blog/website-speed-seo': 'blog/website-speed-seo.html',
         'blog/avif-format-explained': 'blog/avif-format-explained.html',
-      }
-    }
-  }
+        'blog/browser-local-image-tools': 'blog/browser-local-image-tools.html',
+        'blog/batch-zip-workflow': 'blog/batch-zip-workflow.html',
+        'blog/jsquash-vs-canvas-toblob': 'blog/jsquash-vs-canvas-toblob.html',
+        'blog/ai-upscale-limits': 'blog/ai-upscale-limits.html',
+        'blog/browser-bg-removal-vs-photoshop': 'blog/browser-bg-removal-vs-photoshop.html',
+        'blog/exif-gps-privacy-test': 'blog/exif-gps-privacy-test.html',
+        'blog/image-crop-aspect-ratios': 'blog/image-crop-aspect-ratios.html',
+      },
+    },
+  },
 });

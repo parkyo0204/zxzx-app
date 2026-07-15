@@ -38,6 +38,7 @@
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
         <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/crop" data-i18n="nav_crop">크롭</a></li>
         <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
         <li><a href="/about" data-i18n="nav_about">소개</a></li>
       </ul>
@@ -138,5 +139,30 @@
     </div>
   </footer>
   <script type="module" src="/src/utils/i18n.js"></script>
+  <script type="module">
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = (document.getElementById('name')).value.trim();
+        const email = (document.getElementById('email')).value.trim();
+        const subject = (document.getElementById('subject')).value;
+        const message = (document.getElementById('message')).value.trim();
+        if (!name || !email || !subject || !message) return;
+        const body = `Name: ${name}\nEmail: ${email}\nTopic: ${subject}\n\n${message}`;
+        const mailto = `mailto:hello@zxzx.app?subject=${encodeURIComponent('[ZXZX] ' + subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+        let note = document.getElementById('contact-success');
+        if (!note) {
+          note = document.createElement('p');
+          note.id = 'contact-success';
+          note.style.marginTop = '1rem';
+          note.style.color = 'var(--color-success, #0F766E)';
+          form.appendChild(note);
+        }
+        note.textContent = '메일 앱이 열립니다. 전송이 안 되면 hello@zxzx.app 으로 직접 보내 주세요.';
+      });
+    }
+  </script>
 </body>
 </html>

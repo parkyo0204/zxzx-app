@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXIF 메타데이터 제거 — GPS·카메라 정보 삭제</title>
+  <meta name="description" content="사진에서 EXIF/GPS를 제거하세요. 미리보기 후 배치 제거. 업로드 없음.">
+  <link rel="canonical" href="https://zxzx.app/remove-exif">
+  <link rel="alternate" hreflang="ko" href="https://zxzx.app/remove-exif">
+  <link rel="alternate" hreflang="en" href="https://zxzx.app/remove-exif?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://zxzx.app/remove-exif?lang=ja">
+  <link rel="alternate" hreflang="zh" href="https://zxzx.app/remove-exif?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://zxzx.app/remove-exif">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ZXZX EXIF 제거",
+    "url": "https://zxzx.app/remove-exif",
+    "description": "사진에서 EXIF/GPS를 제거하세요. 미리보기 후 배치 제거. 업로드 없음.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "무엇이 제거되나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "재인코딩으로 EXIF/IPTC/XMP 컨테이너가 제거됩니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "화질은?",
+        "acceptedAnswer": { "@type": "Answer", "text": "원본 포맷으로 고품질 재저장합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "프라이버시에 왜 필요한가요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "스마트폰 사진은 GPS 좌표를 포함할 수 있습니다." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
+      <ul>
+        <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
+        <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
+        <li><a href="/resize" data-i18n="nav_resize">리사이즈</a></li>
+        <li><a href="/crop" data-i18n="nav_crop">크롭</a></li>
+        <li><a href="/blog" data-i18n="nav_blog">블로그</a></li>
+        <li><a href="/about" data-i18n="nav_about">소개</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tool-page container">
+    <h1>EXIF 제거</h1>
+    <p class="lead">GPS·카메라 정보를 확인하고 제거합니다.</p>
+
+    <div class="dropzone" id="dropzone">
+      <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
+      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <input type="file" id="fileInput" multiple accept="image/*" hidden>
+    </div>
+
+    <div class="controls" id="controls" style="display:none">
+      <button class="btn btn-primary" id="stripBtn">EXIF 제거</button>
+      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+    </div>
+
+    <div id="exif-panel" class="content-section" style="margin-top:1rem"></div>
+
+    <div class="preview-grid" id="preview"></div>
+
+    <section class="content-section">
+      <h2>자주 묻는 질문</h2>
+      <h3>무엇이 제거되나요?</h3><p>재인코딩으로 EXIF/IPTC/XMP 컨테이너가 제거됩니다.</p><h3>화질은?</h3><p>원본 포맷으로 고품질 재저장합니다.</p><h3>프라이버시에 왜 필요한가요?</h3><p>스마트폰 사진은 GPS 좌표를 포함할 수 있습니다.</p>
+      <h2>관련 도구</h2>
+      <ul>
+        <li><a href="/compress">이미지 압축</a></li>
+        <li><a href="/convert">포맷 변환</a></li>
+        <li><a href="/resize">리사이즈</a></li>
+        <li><a href="/remove-exif">EXIF 제거</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about" data-i18n="footer_about">소개</a>
+        <a href="/contact" data-i18n="footer_contact">문의</a>
+        <a href="/privacy" data-i18n="footer_privacy">개인정보 처리방침</a>
+        <a href="/terms" data-i18n="footer_terms">이용약관</a>
+        <a href="/blog" data-i18n="footer_blog">블로그</a>
+      </div>
+      <p data-i18n="footer_copy">© 2026 ZXZX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/utils/remove-exif.ts"></script>
+  <script type="module" src="/src/utils/i18n.js"></script>
+</body>
+</html>
