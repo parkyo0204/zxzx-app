@@ -30,7 +30,7 @@
 <body>
   <header>
     <nav class="container">
-      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app" style="height:32px;display:block"></a>
+      <a href="/" class="logo"><img src="/logo.svg" alt="zxzx.app"></a>
       <ul>
         <li><a href="/compress" data-i18n="nav_compress">압축</a></li>
         <li><a href="/convert" data-i18n="nav_convert">변환</a></li>
@@ -42,12 +42,12 @@
   </header>
 
   <main class="tool-page container">
-    <h1 data-i18n="resize_title">이미지 리사이저</h1>
-    <p class="lead" data-i18n="resize_desc">픽셀 또는 퍼센트로 이미지 크기 조정. 비율 유지.</p>
+    <h1 data-i18n="resize_title">이미지 리사이즈</h1>
+    <p class="lead" data-i18n="resize_desc">픽셀 또는 %. Lanczos3로 리샘플. 서버 업로드 없음.</p>
 
     <div class="dropzone" id="dropzone">
-      <h3 data-i18n="drop_images">이미지를 여기에 놓으세요</h3>
-      <p data-i18n="drop_sub">또는 클릭하여 파일 선택 • JPG, PNG, WebP • 파일당 최대 20MB, 최대 30개</p>
+      <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
+      <p data-i18n="drop_sub">JPG · PNG · WebP · 파일당 20MB · 최대 30개</p>
       <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
     </div>
 
