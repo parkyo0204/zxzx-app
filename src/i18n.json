@@ -1112,7 +1112,9 @@
     "avif-format-explained_p_65": "同一 원본 이미지를各 포맷으로 변환한 결과입니다:",
     "avif-format-explained_p_66": "AVIF는 동일 화질에서 WebP보다 30% 이상, JPG보다 50% 이상 작은 파일을生成합니다.",
     "avif-format-explained_p_68": "AVIF는 압축률, 화질, 기능 모든 면에서 현존 최고의 이미지 포맷입니다. 특히 HDR, 10비트色상等의 현대적인 기능은其他 포맷과의 차별점입니다. 인코딩 속도가 느리다는 단점이 있지만, ZXZX의 WASM 코덱은这个问题를很大程度으로 해결합니다. 지금 바로 AVIF를试用해보세요.",
-    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved."
+    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved.",
+    "blog_intro_p1": "ZXZX 블로그에 오신 것을 환영합니다. 이미지 최적화, 웹 성능, 디지털 프라이버시에 관한 모든 것의 핵심 리소스입니다.",
+    "blog_intro_p2": "이미지 포맷 비교, 압축 기술, 모바일 최적화 전략, 프라이버시 모범 사례, 도구 튜토리얼 등 다양한 주제를 다루는 새 기사를 정기적으로 게시합니다."
   },
   "en": {
     "site_name": "ZXZX Image Tools",
@@ -2227,7 +2229,9 @@
     "avif-format-explained_p_65": "同一 원본 이미지를各 포맷으로 변환한 결과입니다:",
     "avif-format-explained_p_66": "AVIF는 동일 화질에서 WebP보다 30% 이상, JPG보다 50% 이상 작은 파일을生成합니다.",
     "avif-format-explained_p_68": "AVIF는 압축률, 화질, 기능 모든 면에서 현존 최고의 이미지 포맷입니다. 특히 HDR, 10비트色상等의 현대적인 기능은其他 포맷과의 차별점입니다. 인코딩 속도가 느리다는 단점이 있지만, ZXZX의 WASM 코덱은这个问题를很大程度으로 해결합니다. 지금 바로 AVIF를试用해보세요.",
-    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved."
+    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved.",
+    "blog_intro_p1": "Welcome to the ZXZX Blog. Your essential resource for everything image optimization, web performance, and digital privacy.",
+    "blog_intro_p2": "We regularly publish new articles covering image format comparisons, compression techniques, mobile optimization strategies, privacy best practices, and tool tutorials."
   },
   "ja": {
     "site_name": "ZXZX 画像ツール",
@@ -3342,7 +3346,9 @@
     "avif-format-explained_p_65": "同一 원본 이미지를各 포맷으로 변환한 결과입니다:",
     "avif-format-explained_p_66": "AVIF는 동일 화질에서 WebP보다 30% 이상, JPG보다 50% 이상 작은 파일을生成합니다.",
     "avif-format-explained_p_68": "AVIF는 압축률, 화질, 기능 모든 면에서 현존 최고의 이미지 포맷입니다. 특히 HDR, 10비트色상等의 현대적인 기능은其他 포맷과의 차별점입니다. 인코딩 속도가 느리다는 단점이 있지만, ZXZX의 WASM 코덱은这个问题를很大程度으로 해결합니다. 지금 바로 AVIF를试用해보세요.",
-    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved."
+    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved.",
+    "blog_intro_p1": "ZXZXブログへようこそ。画像最適化、ウェブパフォーマンス、デジタルプライバシーに関するすべての中心リソースです。",
+    "blog_intro_p2": "画像フォーマット比較、圧縮技術、モバイル最適化戦略、プライバシーのベストプラクティス、ツールチュートリアルなど、様々なトピックの新記事を定期的に公開しています。"
   },
   "zh": {
     "site_name": "ZXZX 图片工具",
@@ -4457,6 +4463,8 @@
     "avif-format-explained_p_65": "同一 원본 이미지를各 포맷으로 변환한 결과입니다:",
     "avif-format-explained_p_66": "AVIF는 동일 화질에서 WebP보다 30% 이상, JPG보다 50% 이상 작은 파일을生成합니다.",
     "avif-format-explained_p_68": "AVIF는 압축률, 화질, 기능 모든 면에서 현존 최고의 이미지 포맷입니다. 특히 HDR, 10비트色상等의 현대적인 기능은其他 포맷과의 차별점입니다. 인코딩 속도가 느리다는 단점이 있지만, ZXZX의 WASM 코덱은这个问题를很大程度으로 해결합니다. 지금 바로 AVIF를试用해보세요.",
-    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved."
+    "avif-format-explained_p_69": "&copy; 2026 ZXZX. All rights reserved.",
+    "blog_intro_p1": "欢迎来到ZXZX博客。这里是关于图片优化、网站性能和数字隐私的核心资源。",
+    "blog_intro_p2": "我们定期发布涵盖图片格式比较、压缩技术、移动优化策略、隐私最佳实践和工具教程的新文章。"
   }
 }
