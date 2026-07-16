@@ -9,6 +9,15 @@ import {
   rotateImageData,
 } from './image-pipeline';
 
+type TranslationWindow = Window & {
+  translateText?: (key: string, fallback: string) => string;
+};
+
+function uiText(key: string, fallback: string): string {
+  const translateText = (window as TranslationWindow).translateText;
+  return translateText ? translateText(key, fallback) : fallback;
+}
+
 const controls = document.getElementById('controls')!;
 const applyBtn = document.getElementById('applyBtn')!;
 const downloadZipBtn = document.getElementById('downloadZip')!;
@@ -26,7 +35,7 @@ applyBtn.addEventListener('click', async () => {
   const files = dropzone.getFiles();
   if (!files.length) return;
   const action = actionSelect.value;
-  applyBtn.textContent = '처리 중...';
+  applyBtn.textContent = uiText('rotate_processing', '처리 중...');
   (applyBtn as HTMLButtonElement).disabled = true;
   progress.show();
 
@@ -51,14 +60,14 @@ applyBtn.addEventListener('click', async () => {
     } catch (err) {
       console.error(err);
       const el = document.getElementById(`result-${i}`);
-      if (el) el.textContent = '실패';
+      if (el) el.textContent = uiText('rotate_failed', '실패');
     }
     progress.set(((i + 1) / files.length) * 100);
   }
 
   progress.hide();
   (window as unknown as { __rotated: typeof results }).__rotated = results;
-  applyBtn.textContent = '적용';
+  applyBtn.textContent = uiText('rotate_apply', '적용');
   (applyBtn as HTMLButtonElement).disabled = false;
 });
 

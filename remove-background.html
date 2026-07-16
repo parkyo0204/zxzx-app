@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI 배경 제거 — 브라우저 ONNX</title>
-  <meta name="description" content="업로드 없이 배경을 제거합니다. @imgly/background-removal ONNX 모델.">
+  <title data-i18n="remove_background_title">AI 배경 제거 — 브라우저 ONNX</title>
+  <meta name="description" data-i18n-content="remove_background_meta" content="업로드 없이 배경을 제거합니다. @imgly/background-removal ONNX 모델.">
   <link rel="canonical" href="https://zxzx.app/remove-background">
   <link rel="alternate" hreflang="ko" href="https://zxzx.app/remove-background">
   <link rel="alternate" hreflang="en" href="https://zxzx.app/remove-background?lang=en">
@@ -65,18 +65,18 @@
   </header>
 
   <main class="tool-page container">
-    <h1>배경 제거</h1>
-    <p class="lead">ONNX 모델이 기기에서 배경을 제거합니다. 첫 실행 시 모델 다운로드(수 MB~)가 있어 시간이 걸릴 수 있습니다. 파일당 12MB · 최대 5장.</p>
+    <h1 data-i18n="remove_background_h1">배경 제거</h1>
+    <p class="lead" data-i18n="remove_background_lead">ONNX 모델이 기기에서 배경을 제거합니다. 첫 실행 시 모델 다운로드(수 MB~)가 있어 시간이 걸릴 수 있습니다. 파일당 12MB · 최대 5장.</p>
 
     <div class="dropzone" id="dropzone">
       <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
-      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <p data-i18n="local_processing">브라우저에서 로컬 처리 · 서버 업로드 없음</p>
       <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <button class="btn btn-primary" id="removeBtn">배경 제거</button>
-      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+      <button class="btn btn-primary" id="removeBtn" data-i18n="remove_background_remove">배경 제거</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
       <p id="ai-status" class="lead" style="flex-basis:100%"></p>
     </div>
 
@@ -85,35 +85,35 @@
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>배경 제거 사용 방법</h2>
+      <h2 data-i18n="remove_background_how">배경 제거 사용 방법</h2>
       <ol>
-        <li><strong>도구 열기</strong> — 첫 실행 시 ONNX 모델 다운로드(수 MB~)가 있을 수 있습니다.</li>
-        <li><strong>이미지 선택</strong> — 파일당 12MB · 최대 5장. 피사체가 분명한 사진이 유리합니다.</li>
-        <li><strong>배경 제거</strong> — 기기에서 추론 후 투명 PNG를 만듭니다.</li>
-        <li><strong>다운로드</strong> — 가장자리 확인 후 ZIP/개별 저장. 웹용이면 <a href="/compress">압축</a>을 이어 하세요.</li>
+        <li data-i18n="remove_background_step_open"><strong>도구 열기</strong> — 첫 실행 시 ONNX 모델 다운로드(수 MB~)가 있을 수 있습니다.</li>
+        <li data-i18n="remove_background_step_select"><strong>이미지 선택</strong> — 파일당 12MB · 최대 5장. 피사체가 분명한 사진이 유리합니다.</li>
+        <li data-i18n="remove_background_step_remove"><strong>배경 제거</strong> — 기기에서 추론 후 투명 PNG를 만듭니다.</li>
+        <li data-i18n="remove_background_step_download"><strong>다운로드</strong> — 가장자리 확인 후 ZIP/개별 저장. 웹용이면 <a href="/compress">압축</a>을 이어 하세요.</li>
       </ol>
       <p><img src="/samples/bg-remove-demo.webp" alt="Illustrative local background removal demo" width="640" height="280" style="max-width:100%;height:auto;border:1px solid var(--color-border);margin:0.75rem 0;" loading="lazy"></p>
-      <p style="font-size:0.85rem;color:var(--color-text-secondary);">로컬 배경 제거 개념 도식(데모). 실제 마스크 품질은 원본에 따라 다릅니다.</p>
-      <h2>자주 묻는 질문</h2>
-      <h3>서버로 올라가나요?</h3>
-      <p>이미지 데이터는 서버로 가지 않습니다. 모델 파일만 CDN에서 받아 로컬 실행합니다.</p>
-      <h3>출력은?</h3>
-      <p>투명 PNG입니다. 흰 배경 합성이 필요하면 디자인 툴에서 이어가세요.</p>
-      <h3>제한은?</h3>
-      <p>메모리 때문에 파일당 12MB, 최대 5장으로 제한합니다. 큰 이미지는 먼저 <a href="/resize">리사이즈</a>하세요.</p>
-      <h3>포토샵보다 좋은가요?</h3>
-      <p>단순 컷·속도·프라이버시에는 유리하고, 정밀 마스크는 데스크톱이 우위입니다. 비교 글을 참고하세요.</p>
-      <h2>관련 도구</h2>
+      <p data-i18n="remove_background_demo" style="font-size:0.85rem;color:var(--color-text-secondary);">로컬 배경 제거 개념 도식(데모). 실제 마스크 품질은 원본에 따라 다릅니다.</p>
+      <h2 data-i18n="remove_background_faq">자주 묻는 질문</h2>
+      <h3 data-i18n="remove_background_q_server">서버로 올라가나요?</h3>
+      <p data-i18n="remove_background_a_server">이미지 데이터는 서버로 가지 않습니다. 모델 파일만 CDN에서 받아 로컬 실행합니다.</p>
+      <h3 data-i18n="remove_background_q_output">출력은?</h3>
+      <p data-i18n="remove_background_a_output">투명 PNG입니다. 흰 배경 합성이 필요하면 디자인 툴에서 이어가세요.</p>
+      <h3 data-i18n="remove_background_q_limit">제한은?</h3>
+      <p data-i18n="remove_background_a_limit">메모리 때문에 파일당 12MB, 최대 5장으로 제한합니다. 큰 이미지는 먼저 <a href="/resize">리사이즈</a>하세요.</p>
+      <h3 data-i18n="remove_background_q_photoshop">포토샵보다 좋은가요?</h3>
+      <p data-i18n="remove_background_a_photoshop">단순 컷·속도·프라이버시에는 유리하고, 정밀 마스크는 데스크톱이 우위입니다. 비교 글을 참고하세요.</p>
+      <h2 data-i18n="remove_background_related_tools">관련 도구</h2>
       <ul>
-        <li><a href="/upscale">업스케일</a></li>
-        <li><a href="/compress">압축</a></li>
-        <li><a href="/crop">크롭</a></li>
-        <li><a href="/convert">변환</a></li>
+        <li data-i18n="remove_background_tool_upscale"><a href="/upscale">업스케일</a></li>
+        <li data-i18n="remove_background_tool_compress"><a href="/compress">압축</a></li>
+        <li data-i18n="remove_background_tool_crop"><a href="/crop">크롭</a></li>
+        <li data-i18n="remove_background_tool_convert"><a href="/convert">변환</a></li>
       </ul>
-      <h2>관련 가이드</h2>
+      <h2 data-i18n="remove_background_related_guides">관련 가이드</h2>
       <ul>
-        <li><a href="/blog/browser-bg-removal-vs-photoshop">브라우저 배경 제거 vs 포토샵</a></li>
-        <li><a href="/blog/ai-upscale-limits">AI 업스케일 한계</a></li>
+        <li data-i18n="remove_background_guide_compare"><a href="/blog/browser-bg-removal-vs-photoshop">브라우저 배경 제거 vs 포토샵</a></li>
+        <li data-i18n="remove_background_guide_upscale"><a href="/blog/ai-upscale-limits">AI 업스케일 한계</a></li>
       </ul>
     </section>
   </main>

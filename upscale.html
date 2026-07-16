@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI 이미지 업스케일 — ESRGAN 2x/4x</title>
-  <meta name="description" content="브라우저에서 ESRGAN slim으로 해상도를 올립니다. 실패 시 hqx 폴백.">
+  <title data-i18n="upscale_title">AI 이미지 업스케일 — ESRGAN 2x/4x</title>
+  <meta name="description" data-i18n-content="upscale_meta" content="브라우저에서 ESRGAN slim으로 해상도를 올립니다. 실패 시 hqx 폴백.">
   <link rel="canonical" href="https://zxzx.app/upscale">
   <link rel="alternate" hreflang="ko" href="https://zxzx.app/upscale">
   <link rel="alternate" hreflang="en" href="https://zxzx.app/upscale?lang=en">
@@ -65,19 +65,19 @@
   </header>
 
   <main class="tool-page container">
-    <h1>업스케일</h1>
-    <p class="lead">ESRGAN slim 2×/4×. 첫 실행 시 모델 로드가 필요합니다. 파일당 8MB · 최대 3장 · 약 4MP 권장. 실패 시 hqx 폴백.</p>
+    <h1 data-i18n="upscale_h1">업스케일</h1>
+    <p class="lead" data-i18n="upscale_lead">ESRGAN slim 2×/4×. 첫 실행 시 모델 로드가 필요합니다. 파일당 8MB · 최대 3장 · 약 4MP 권장. 실패 시 hqx 폴백.</p>
 
     <div class="dropzone" id="dropzone">
       <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
-      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <p data-i18n="local_processing">브라우저에서 로컬 처리 · 서버 업로드 없음</p>
       <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp" hidden>
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <label>배율: <select id="scale"><option value="2">2x</option><option value="4">4x</option></select></label>
-      <button class="btn btn-primary" id="upscaleBtn">업스케일</button>
-      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+      <label><span data-i18n="upscale_scale">배율</span>: <select id="scale"><option value="2">2x</option><option value="4">4x</option></select></label>
+      <button class="btn btn-primary" id="upscaleBtn" data-i18n="upscale_button">업스케일</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
       <p id="ai-status" class="lead" style="flex-basis:100%"></p>
     </div>
 
@@ -86,33 +86,33 @@
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>업스케일 사용 방법</h2>
+      <h2 data-i18n="upscale_how">업스케일 사용 방법</h2>
       <ol>
-        <li><strong>도구 열기</strong> — 첫 실행 시 ESRGAN 모델 로드가 필요합니다.</li>
-        <li><strong>이미지 선택</strong> — 파일당 8MB · 최대 3장 · 약 4MP 권장.</li>
-        <li><strong>배율 선택</strong> — 먼저 2×를 권장합니다. 부족할 때만 4×.</li>
-        <li><strong>업스케일 후 다운로드</strong> — 실패 시 hqx 폴백. 웹용이면 <a href="/compress">압축</a>으로 용량을 맞추세요.</li>
+        <li data-i18n="upscale_step_open"><strong>도구 열기</strong> — 첫 실행 시 ESRGAN 모델 로드가 필요합니다.</li>
+        <li data-i18n="upscale_step_select"><strong>이미지 선택</strong> — 파일당 8MB · 최대 3장 · 약 4MP 권장.</li>
+        <li data-i18n="upscale_step_scale"><strong>배율 선택</strong> — 먼저 2×를 권장합니다. 부족할 때만 4×.</li>
+        <li data-i18n="upscale_step_download"><strong>업스케일 후 다운로드</strong> — 실패 시 hqx 폴백. 웹용이면 <a href="/compress">압축</a>으로 용량을 맞추세요.</li>
       </ol>
-      <h2>자주 묻는 질문</h2>
-      <h3>항상 AI가 쓰이나요?</h3>
-      <p>가능하면 ESRGAN을 쓰고, 실패하면 jSquash hqx로 폴백합니다.</p>
-      <h3>제한은?</h3>
-      <p>파일당 8MB, 최대 3장, 약 4MP 권장. 메모리가 부족하면 리사이즈 후 재시도하세요.</p>
-      <h3>업로드되나요?</h3>
-      <p>이미지는 로컬에서만 처리됩니다. 모델은 CDN에서 내려받습니다.</p>
-      <h3>왜 2×가 안전한가요?</h3>
-      <p>4×는 픽셀·메모리·아티팩트가 급증합니다. 자세한 내용은 블로그를 보세요.</p>
-      <h2>관련 도구</h2>
+      <h2 data-i18n="upscale_faq">자주 묻는 질문</h2>
+      <h3 data-i18n="upscale_q_ai">항상 AI가 쓰이나요?</h3>
+      <p data-i18n="upscale_a_ai">가능하면 ESRGAN을 쓰고, 실패하면 jSquash hqx로 폴백합니다.</p>
+      <h3 data-i18n="upscale_q_limit">제한은?</h3>
+      <p data-i18n="upscale_a_limit">파일당 8MB, 최대 3장, 약 4MP 권장. 메모리가 부족하면 리사이즈 후 재시도하세요.</p>
+      <h3 data-i18n="upscale_q_upload">업로드되나요?</h3>
+      <p data-i18n="upscale_a_upload">이미지는 로컬에서만 처리됩니다. 모델은 CDN에서 내려받습니다.</p>
+      <h3 data-i18n="upscale_q_safe">왜 2×가 안전한가요?</h3>
+      <p data-i18n="upscale_a_safe">4×는 픽셀·메모리·아티팩트가 급증합니다. 자세한 내용은 블로그를 보세요.</p>
+      <h2 data-i18n="upscale_related_tools">관련 도구</h2>
       <ul>
-        <li><a href="/resize">리사이즈</a></li>
-        <li><a href="/compress">압축</a></li>
-        <li><a href="/remove-background">배경 제거</a></li>
-        <li><a href="/convert">변환</a></li>
+        <li data-i18n="upscale_tool_resize"><a href="/resize">리사이즈</a></li>
+        <li data-i18n="upscale_tool_compress"><a href="/compress">압축</a></li>
+        <li data-i18n="upscale_tool_background"><a href="/remove-background">배경 제거</a></li>
+        <li data-i18n="upscale_tool_convert"><a href="/convert">변환</a></li>
       </ul>
-      <h2>관련 가이드</h2>
+      <h2 data-i18n="upscale_related_guides">관련 가이드</h2>
       <ul>
-        <li><a href="/blog/ai-upscale-limits">AI 업스케일의 한계</a></li>
-        <li><a href="/blog/browser-bg-removal-vs-photoshop">배경 제거 비교</a></li>
+        <li data-i18n="upscale_guide_limits"><a href="/blog/ai-upscale-limits">AI 업스케일의 한계</a></li>
+        <li data-i18n="upscale_guide_background"><a href="/blog/browser-bg-removal-vs-photoshop">배경 제거 비교</a></li>
       </ul>
     </section>
   </main>

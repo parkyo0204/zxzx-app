@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXIF 메타데이터 제거 — GPS·카메라 정보 삭제</title>
-  <meta name="description" content="사진에서 EXIF/GPS를 제거하세요. 미리보기 후 배치 제거. 업로드 없음.">
+  <title data-i18n="remove_exif_title">EXIF 메타데이터 제거 — GPS·카메라 정보 삭제</title>
+  <meta name="description" data-i18n-content="remove_exif_meta" content="사진에서 EXIF/GPS를 제거하세요. 미리보기 후 배치 제거. 업로드 없음.">
   <link rel="canonical" href="https://zxzx.app/remove-exif">
   <link rel="alternate" hreflang="ko" href="https://zxzx.app/remove-exif">
   <link rel="alternate" hreflang="en" href="https://zxzx.app/remove-exif?lang=en">
@@ -65,18 +65,18 @@
   </header>
 
   <main class="tool-page container">
-    <h1>EXIF 제거</h1>
-    <p class="lead">GPS·카메라 정보를 확인하고 제거합니다.</p>
+    <h1 data-i18n="remove_exif_h1">EXIF 제거</h1>
+    <p class="lead" data-i18n="remove_exif_lead">GPS·카메라 정보를 확인하고 제거합니다.</p>
 
     <div class="dropzone" id="dropzone">
       <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
-      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <p data-i18n="local_processing">브라우저에서 로컬 처리 · 서버 업로드 없음</p>
       <input type="file" id="fileInput" multiple accept="image/*" hidden>
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <button class="btn btn-primary" id="stripBtn">EXIF 제거</button>
-      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+      <button class="btn btn-primary" id="stripBtn" data-i18n="remove_exif_strip">EXIF 제거</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
     </div>
 
     <div id="exif-panel" class="content-section" style="margin-top:1rem"></div>
@@ -84,33 +84,33 @@
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>EXIF 제거 사용 방법</h2>
+      <h2 data-i18n="remove_exif_how">EXIF 제거 사용 방법</h2>
       <ol>
-        <li><strong>사진 선택</strong> — JPG/PNG/WebP 등 지원 포맷을 넣습니다.</li>
-        <li><strong>메타데이터 확인</strong> — 패널에 GPS·카메라 정보가 보이면 제거 대상입니다.</li>
-        <li><strong>EXIF 제거</strong> — 로컬에서 재인코딩하며 메타데이터 컨테이너를 벗깁니다.</li>
-        <li><strong>다운로드</strong> — ZIP/개별 저장 후 업로드하세요. 필요하면 먼저 <a href="/crop">크롭</a>·<a href="/compress">압축</a>.</li>
+        <li data-i18n="remove_exif_step_select"><strong>사진 선택</strong> — JPG/PNG/WebP 등 지원 포맷을 넣습니다.</li>
+        <li data-i18n="remove_exif_step_metadata"><strong>메타데이터 확인</strong> — 패널에 GPS·카메라 정보가 보이면 제거 대상입니다.</li>
+        <li data-i18n="remove_exif_step_remove"><strong>EXIF 제거</strong> — 로컬에서 재인코딩하며 메타데이터 컨테이너를 벗깁니다.</li>
+        <li data-i18n="remove_exif_step_download"><strong>다운로드</strong> — ZIP/개별 저장 후 업로드하세요. 필요하면 먼저 <a href="/crop">크롭</a>·<a href="/compress">압축</a>.</li>
       </ol>
-      <h2>자주 묻는 질문</h2>
-      <h3>무엇이 제거되나요?</h3>
-      <p>재인코딩으로 EXIF/IPTC/XMP 컨테이너가 제거됩니다. 픽셀 내용(간판·배경)은 그대로입니다.</p>
-      <h3>화질은?</h3>
-      <p>원본 포맷으로 고품질 재저장합니다. 이미 강하게 압축된 파일은 이득이 작을 수 있습니다.</p>
-      <h3>프라이버시에 왜 필요한가요?</h3>
-      <p>스마트폰 사진은 GPS 좌표를 포함할 수 있습니다. 공개 업로드 전에 제거하세요.</p>
-      <h3>파일이 서버로 가나요?</h3>
-      <p>아니요. 검사는 브라우저에서만 이뤄집니다.</p>
-      <h2>관련 도구</h2>
+      <h2 data-i18n="remove_exif_faq">자주 묻는 질문</h2>
+      <h3 data-i18n="remove_exif_q_what">무엇이 제거되나요?</h3>
+      <p data-i18n="remove_exif_a_what">재인코딩으로 EXIF/IPTC/XMP 컨테이너가 제거됩니다. 픽셀 내용(간판·배경)은 그대로입니다.</p>
+      <h3 data-i18n="remove_exif_q_quality">화질은?</h3>
+      <p data-i18n="remove_exif_a_quality">원본 포맷으로 고품질 재저장합니다. 이미 강하게 압축된 파일은 이득이 작을 수 있습니다.</p>
+      <h3 data-i18n="remove_exif_q_privacy">프라이버시에 왜 필요한가요?</h3>
+      <p data-i18n="remove_exif_a_privacy">스마트폰 사진은 GPS 좌표를 포함할 수 있습니다. 공개 업로드 전에 제거하세요.</p>
+      <h3 data-i18n="remove_exif_q_server">파일이 서버로 가나요?</h3>
+      <p data-i18n="remove_exif_a_server">아니요. 검사는 브라우저에서만 이뤄집니다.</p>
+      <h2 data-i18n="remove_exif_related_tools">관련 도구</h2>
       <ul>
-        <li><a href="/compress">압축</a></li>
-        <li><a href="/crop">크롭</a></li>
-        <li><a href="/convert">변환</a></li>
-        <li><a href="/resize">리사이즈</a></li>
+        <li data-i18n="remove_exif_tool_compress"><a href="/compress">압축</a></li>
+        <li data-i18n="remove_exif_tool_crop"><a href="/crop">크롭</a></li>
+        <li data-i18n="remove_exif_tool_convert"><a href="/convert">변환</a></li>
+        <li data-i18n="remove_exif_tool_resize"><a href="/resize">리사이즈</a></li>
       </ul>
-      <h2>관련 가이드</h2>
+      <h2 data-i18n="remove_exif_related_guides">관련 가이드</h2>
       <ul>
-        <li><a href="/blog/exif-gps-privacy-test">EXIF GPS 실측</a></li>
-        <li><a href="/blog/exif-metadata-guide">EXIF 메타데이터 가이드</a></li>
+        <li data-i18n="remove_exif_guide_gps"><a href="/blog/exif-gps-privacy-test">EXIF GPS 실측</a></li>
+        <li data-i18n="remove_exif_guide_metadata"><a href="/blog/exif-metadata-guide">EXIF 메타데이터 가이드</a></li>
       </ul>
     </section>
   </main>

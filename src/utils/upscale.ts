@@ -10,6 +10,15 @@ import {
   resizeImageData,
 } from './image-pipeline';
 
+type TranslationWindow = Window & {
+  translateText?: (key: string, fallback: string) => string;
+};
+
+function uiText(key: string, fallback: string): string {
+  const translateText = (window as TranslationWindow).translateText;
+  return translateText ? translateText(key, fallback) : fallback;
+}
+
 const controls = document.getElementById('controls')!;
 const upscaleBtn = document.getElementById('upscaleBtn')!;
 const downloadZipBtn = document.getElementById('downloadZip')!;
@@ -31,10 +40,13 @@ upscaleBtn.addEventListener('click', async () => {
   if (!files.length) return;
 
   const scale = parseInt(scaleSelect.value, 10) as 2 | 4;
-  upscaleBtn.textContent = '모델 로딩...';
+  upscaleBtn.textContent = uiText('upscale_loading', '모델 로딩...');
   (upscaleBtn as HTMLButtonElement).disabled = true;
   statusEl.textContent =
-    'ESRGAN slim 모델을 불러옵니다. 큰 이미지는 메모리 부족이 날 수 있습니다.';
+    uiText(
+      'upscale_status_loading',
+      'ESRGAN slim 모델을 불러옵니다. 큰 이미지는 메모리 부족이 날 수 있습니다.',
+    );
   progress.show();
 
   const results: { blob: Blob; name: string }[] = [];
@@ -48,7 +60,9 @@ upscaleBtn.addEventListener('click', async () => {
     const upscaler = new Upscaler({ model });
 
     for (let i = 0; i < files.length; i++) {
-      upscaleBtn.textContent = `업스케일 ${i + 1}/${files.length}`;
+      upscaleBtn.textContent = uiText('upscale_processing', '업스케일 {current}/{total}')
+        .replace('{current}', String(i + 1))
+        .replace('{total}', String(files.length));
       try {
         const imageData = await decodeFile(files[i]);
         if (imageData.width * imageData.height > 4_000_000) {
@@ -92,22 +106,25 @@ upscaleBtn.addEventListener('click', async () => {
         } catch (e2) {
           console.error(e2);
           const el = document.getElementById(`result-${i}`);
-          if (el) el.textContent = '실패';
+          if (el) el.textContent = uiText('upscale_failed', '실패');
         }
       }
       progress.set(((i + 1) / files.length) * 100);
     }
 
     await upscaler.dispose();
-    statusEl.textContent = '완료.';
+    statusEl.textContent = uiText('upscale_status_done', '완료.');
   } catch (err) {
     console.error(err);
-    statusEl.textContent = '업스케일 모델을 불러오지 못했습니다. hqx 폴백만 시도합니다.';
+    statusEl.textContent = uiText(
+      'upscale_status_error',
+      '업스케일 모델을 불러오지 못했습니다. hqx 폴백만 시도합니다.',
+    );
   }
 
   (window as unknown as { __upscaled: typeof results }).__upscaled = results;
   progress.hide();
-  upscaleBtn.textContent = '업스케일';
+  upscaleBtn.textContent = uiText('upscale_button', '업스케일');
   (upscaleBtn as HTMLButtonElement).disabled = false;
 });
 

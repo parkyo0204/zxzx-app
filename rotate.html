@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이미지 회전·반전 — 온라인 무료</title>
-  <meta name="description" content="90도 회전과 좌우/상하 반전. 브라우저 로컬 처리.">
+  <title data-i18n="rotate_title">이미지 회전·반전 — 온라인 무료</title>
+  <meta name="description" data-i18n-content="rotate_meta" content="90도 회전과 좌우/상하 반전. 브라우저 로컬 처리.">
   <link rel="canonical" href="https://zxzx.app/rotate">
   <link rel="alternate" hreflang="ko" href="https://zxzx.app/rotate">
   <link rel="alternate" hreflang="en" href="https://zxzx.app/rotate?lang=en">
@@ -65,25 +65,25 @@
   </header>
 
   <main class="tool-page container">
-    <h1>회전 · 반전</h1>
-    <p class="lead">90° 회전과 플립. 서버 업로드 없음.</p>
+    <h1 data-i18n="rotate_h1">회전 · 반전</h1>
+    <p class="lead" data-i18n="rotate_lead">90° 회전과 플립. 서버 업로드 없음.</p>
 
     <div class="dropzone" id="dropzone">
       <h3 data-i18n="drop_images">이미지를 놓거나 클릭해서 선택</h3>
-      <p>브라우저 로컬 처리 · 서버 업로드 없음</p>
+      <p data-i18n="local_processing">브라우저에서 로컬 처리 · 서버 업로드 없음</p>
       <input type="file" id="fileInput" multiple accept="image/*" hidden>
     </div>
 
     <div class="controls" id="controls" style="display:none">
-      <label>동작: <select id="action">
-        <option value="90">시계 90°</option>
-        <option value="180">180°</option>
-        <option value="270">반시계 90°</option>
-        <option value="flip-h">좌우 반전</option>
-        <option value="flip-v">상하 반전</option>
+      <label><span data-i18n="rotate_action">동작</span>: <select id="action">
+        <option value="90" data-i18n="rotate_90">시계 90°</option>
+        <option value="180" data-i18n="rotate_180">180°</option>
+        <option value="270" data-i18n="rotate_270">반시계 90°</option>
+        <option value="flip-h" data-i18n="rotate_flip_h">좌우 반전</option>
+        <option value="flip-v" data-i18n="rotate_flip_v">상하 반전</option>
       </select></label>
-      <button class="btn btn-primary" id="applyBtn">적용</button>
-      <button class="btn btn-secondary" id="downloadZip">ZIP 다운로드</button>
+      <button class="btn btn-primary" id="applyBtn" data-i18n="rotate_apply">적용</button>
+      <button class="btn btn-secondary" id="downloadZip" data-i18n="download_zip">ZIP 다운로드</button>
     </div>
 
     
@@ -91,33 +91,33 @@
     <div class="preview-grid" id="preview"></div>
 
     <section class="content-section">
-      <h2>회전·반전 사용 방법</h2>
+      <h2 data-i18n="rotate_how">회전·반전 사용 방법</h2>
       <ol>
-        <li><strong>이미지 선택</strong> — 여러 장을 한 번에 넣을 수 있습니다 (최대 약 30장).</li>
-        <li><strong>동작 선택</strong> — 시계 90°, 180°, 반시계 90°, 좌우/상하 반전.</li>
-        <li><strong>적용</strong> — 브라우저에서 즉시 변환됩니다.</li>
-        <li><strong>다운로드</strong> — ZIP으로 묶어 받거나 개별 저장 후 <a href="/compress">압축</a>하세요.</li>
+        <li data-i18n="rotate_step_select"><strong>이미지 선택</strong> — 여러 장을 한 번에 넣을 수 있습니다 (최대 약 30장).</li>
+        <li data-i18n="rotate_step_action"><strong>동작 선택</strong> — 시계 90°, 180°, 반시계 90°, 좌우/상하 반전.</li>
+        <li data-i18n="rotate_step_apply"><strong>적용</strong> — 브라우저에서 즉시 변환됩니다.</li>
+        <li data-i18n="rotate_step_download"><strong>다운로드</strong> — ZIP으로 묶어 받거나 개별 저장 후 <a href="/compress">압축</a>하세요.</li>
       </ol>
-      <h2>자주 묻는 질문</h2>
-      <h3>품질이 떨어지나요?</h3>
-      <p>재인코딩이 일어날 수 있지만 고품질 설정으로 저장합니다. 웹 게시 전이면 압축 단계에서 품질을 한 번 더 맞추세요.</p>
-      <h3>EXIF Orientation은?</h3>
-      <p>디코딩 시 브라우저/코덱이 방향을 반영합니다. 공개 전에는 <a href="/remove-exif">EXIF 제거</a>로 메타데이터를 정리하는 것이 안전합니다.</p>
-      <h3>배치가 되나요?</h3>
-      <p>최대 30장까지 한 번에 처리할 수 있습니다. 메모리가 부족하면 나눠 처리하세요.</p>
-      <h3>서버로 올라가나요?</h3>
-      <p>아니요. 회전·반전은 기기 안에서만 수행됩니다.</p>
-      <h2>관련 도구</h2>
+      <h2 data-i18n="rotate_faq">자주 묻는 질문</h2>
+      <h3 data-i18n="rotate_q_quality">품질이 떨어지나요?</h3>
+      <p data-i18n="rotate_a_quality">재인코딩이 일어날 수 있지만 고품질 설정으로 저장합니다. 웹 게시 전이면 압축 단계에서 품질을 한 번 더 맞추세요.</p>
+      <h3 data-i18n="rotate_q_orientation">EXIF Orientation은?</h3>
+      <p data-i18n="rotate_a_orientation">디코딩 시 브라우저/코덱이 방향을 반영합니다. 공개 전에는 <a href="/remove-exif">EXIF 제거</a>로 메타데이터를 정리하는 것이 안전합니다.</p>
+      <h3 data-i18n="rotate_q_batch">배치가 되나요?</h3>
+      <p data-i18n="rotate_a_batch">최대 30장까지 한 번에 처리할 수 있습니다. 메모리가 부족하면 나눠 처리하세요.</p>
+      <h3 data-i18n="rotate_q_server">서버로 올라가나요?</h3>
+      <p data-i18n="rotate_a_server">아니요. 회전·반전은 기기 안에서만 수행됩니다.</p>
+      <h2 data-i18n="rotate_related_tools">관련 도구</h2>
       <ul>
-        <li><a href="/crop">크롭</a></li>
-        <li><a href="/compress">압축</a></li>
-        <li><a href="/resize">리사이즈</a></li>
-        <li><a href="/remove-exif">EXIF 제거</a></li>
+        <li data-i18n="rotate_tool_crop"><a href="/crop">크롭</a></li>
+        <li data-i18n="rotate_tool_compress"><a href="/compress">압축</a></li>
+        <li data-i18n="rotate_tool_resize"><a href="/resize">리사이즈</a></li>
+        <li data-i18n="rotate_tool_exif"><a href="/remove-exif">EXIF 제거</a></li>
       </ul>
-      <h2>관련 가이드</h2>
+      <h2 data-i18n="rotate_related_guides">관련 가이드</h2>
       <ul>
-        <li><a href="/blog/batch-zip-workflow">배치 처리 + ZIP 워크플로</a></li>
-        <li><a href="/blog/image-crop-aspect-ratios">크롭 비율 가이드</a></li>
+        <li data-i18n="rotate_guide_zip"><a href="/blog/batch-zip-workflow">배치 처리 + ZIP 워크플로</a></li>
+        <li data-i18n="rotate_guide_crop"><a href="/blog/image-crop-aspect-ratios">크롭 비율 가이드</a></li>
       </ul>
     </section>
   </main>

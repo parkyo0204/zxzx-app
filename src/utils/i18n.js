@@ -54,6 +54,7 @@ function syncLangToUrl(lang) {
 var currentLang = getLang();
 var translations = {};
 var tableTranslations = {};
+var pageTranslations = {};
 
 async function loadTranslations() {
   try {
@@ -73,15 +74,33 @@ async function loadTranslations() {
     console.error('Failed to load table translations:', e);
     tableTranslations = {};
   }
+
+  try {
+    var pageRes = await fetch('/tool-i18n.json');
+    if (!pageRes.ok) throw new Error('HTTP ' + pageRes.status);
+    pageTranslations = await pageRes.json();
+  } catch (e) {
+    console.error('Failed to load tool translations:', e);
+    pageTranslations = {};
+  }
 }
 
 function t(key) {
-  var v = translations[currentLang] && translations[currentLang][key];
+  var v = pageTranslations[currentLang] && pageTranslations[currentLang][key];
+  if (v != null && v !== '') return v;
+  v = pageTranslations[DEFAULT] && pageTranslations[DEFAULT][key];
+  if (v != null && v !== '') return v;
+  v = translations[currentLang] && translations[currentLang][key];
   if (v != null && v !== '') return v;
   v = translations[DEFAULT] && translations[DEFAULT][key];
   if (v != null && v !== '') return v;
   return null;
 }
+
+window.translateText = function (key, fallback) {
+  var text = t(key);
+  return text == null ? fallback : text;
+};
 
 function applyTranslations() {
   document.querySelectorAll('[data-i18n]').forEach(function (el) {

@@ -8,6 +8,15 @@ import {
   replaceExt,
 } from './image-pipeline';
 
+type TranslationWindow = Window & {
+  translateText?: (key: string, fallback: string) => string;
+};
+
+function uiText(key: string, fallback: string): string {
+  const translateText = (window as TranslationWindow).translateText;
+  return translateText ? translateText(key, fallback) : fallback;
+}
+
 const controls = document.getElementById('controls')!;
 const stripBtn = document.getElementById('stripBtn')!;
 const downloadZipBtn = document.getElementById('downloadZip')!;
@@ -26,7 +35,7 @@ async function showExif(file: File) {
   try {
     const data = await exifr.parse(file, { reviveValues: true });
     if (!data) {
-      metaPanel.innerHTML = '<p>EXIF 메타데이터가 없거나 읽을 수 없습니다.</p>';
+      metaPanel.innerHTML = `<p>${uiText('remove_exif_no_metadata', 'EXIF 메타데이터가 없거나 읽을 수 없습니다.')}</p>`;
       return;
     }
     const rows = Object.entries(data)
@@ -38,7 +47,7 @@ async function showExif(file: File) {
       .join('');
     metaPanel.innerHTML = `<table class="exif-table"><tbody>${rows}</tbody></table>`;
   } catch {
-    metaPanel.innerHTML = '<p>EXIF 파싱 실패</p>';
+    metaPanel.innerHTML = `<p>${uiText('remove_exif_parse_failed', 'EXIF 파싱 실패')}</p>`;
   }
 }
 
@@ -56,7 +65,7 @@ function escapeHtml(s: string): string {
 stripBtn.addEventListener('click', async () => {
   const files = dropzone.getFiles();
   if (!files.length) return;
-  stripBtn.textContent = '제거 중...';
+  stripBtn.textContent = uiText('remove_exif_processing', '제거 중...');
   (stripBtn as HTMLButtonElement).disabled = true;
   progress.show();
 
@@ -76,14 +85,14 @@ stripBtn.addEventListener('click', async () => {
     } catch (err) {
       console.error(err);
       const el = document.getElementById(`result-${i}`);
-      if (el) el.textContent = '실패';
+      if (el) el.textContent = uiText('remove_exif_failed', '실패');
     }
     progress.set(((i + 1) / files.length) * 100);
   }
 
   progress.hide();
   (window as unknown as { __stripped: typeof results }).__stripped = results;
-  stripBtn.textContent = 'EXIF 제거';
+  stripBtn.textContent = uiText('remove_exif_strip', 'EXIF 제거');
   (stripBtn as HTMLButtonElement).disabled = false;
 });
 
