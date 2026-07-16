@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">Original image detail compared with heavy compression</title>
+  <desc id="diagram-desc">Two matching landscape panels. The original keeps smooth gradients and fine detail, while the compressed version shows banding, block edges, and color bleed.</desc>
+  <defs>
+    <linearGradient id="left-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff7ff"/>
+      <stop offset="1" stop-color="#8fd3e8"/>
+    </linearGradient>
+    <linearGradient id="left-ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e7490"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="right-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8e0e2"/>
+      <stop offset="0.38" stop-color="#b5cbd0"/>
+      <stop offset="0.72" stop-color="#a7bdc3"/>
+      <stop offset="1" stop-color="#9db2ba"/>
+    </linearGradient>
+    <clipPath id="left-clip"><rect x="24" y="56" width="352" height="248" rx="4"/></clipPath>
+    <clipPath id="right-clip"><rect x="424" y="56" width="352" height="248" rx="4"/></clipPath>
+  </defs>
+
+  <rect width="800" height="360" rx="8" fill="#f5f7fa"/>
+  <text x="24" y="34" fill="#0b1220" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1">ORIGINAL DETAIL</text>
+  <text x="424" y="34" fill="#0b1220" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1">HEAVY COMPRESSION</text>
+
+  <g clip-path="url(#left-clip)">
+    <rect x="24" y="56" width="352" height="248" fill="url(#left-sky)"/>
+    <circle cx="302" cy="112" r="28" fill="#fbbf24" opacity="0.9"/>
+    <path d="M24 190 C85 160 120 173 174 151 C224 131 268 164 376 130 V224 H24 Z" fill="#155e75"/>
+    <path d="M24 215 C74 186 111 198 158 177 C201 158 244 197 291 173 C324 157 347 170 376 158 V244 H24 Z" fill="#0e7490"/>
+    <path d="M24 244 C82 225 130 236 179 218 C229 199 276 233 319 211 C342 199 359 203 376 198 V304 H24 Z" fill="url(#left-ground)"/>
+    <path d="M38 278 C75 256 107 267 142 250 M185 269 C215 246 239 256 270 238 M290 273 C320 251 344 256 368 242" fill="none" stroke="#6ee7b7" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
+    <path d="M49 128 C73 111 94 113 114 127 M63 116 C76 103 89 104 101 113" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.74"/>
+    <path d="M216 220 l12 -24 12 24 M220 210 l8 -12 8 12" fill="none" stroke="#0b1220" stroke-width="3" opacity="0.7"/>
+    <path d="M82 290 l0 -35 M74 270 l8 -8 M90 273 l-8 -8 M332 294 l0 -42 M322 267 l10 -10 M342 270 l-10 -10" stroke="#bbf7d0" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <rect x="24" y="56" width="352" height="248" rx="4" fill="none" stroke="#d5dbe5"/>
+
+  <g clip-path="url(#right-clip)">
+    <rect x="424" y="56" width="352" height="248" fill="url(#right-sky)"/>
+    <path d="M424 96 H776 M424 136 H776 M424 176 H776" stroke="#91a8ae" stroke-width="16" opacity="0.28"/>
+    <rect x="696" y="96" width="48" height="48" fill="#d7a95b" opacity="0.9"/>
+    <path d="M424 192 H488 V176 H552 V160 H616 V176 H680 V160 H744 V176 H776 V240 H424 Z" fill="#2b7583"/>
+    <path d="M424 232 H480 V216 H544 V200 H608 V216 H672 V200 H736 V216 H776 V260 H424 Z" fill="#167982"/>
+    <path d="M424 264 H472 V248 H520 V264 H568 V248 H616 V264 H664 V248 H712 V264 H760 V248 H776 V304 H424 Z" fill="#1f8178"/>
+    <path d="M424 56 H456 V88 H488 V120 H520 V152 H552 V184 H584 V216 H616 V248 H648 V280 H680 V304 H424 Z" fill="#d8e7e6" opacity="0.18"/>
+    <path d="M456 56 V304 M488 56 V304 M520 56 V304 M552 56 V304 M584 56 V304 M616 56 V304 M648 56 V304 M680 56 V304 M712 56 V304 M744 56 V304" stroke="#263c44" stroke-width="2" opacity="0.34"/>
+    <path d="M424 88 H776 M424 120 H776 M424 152 H776 M424 184 H776 M424 216 H776 M424 248 H776 M424 280 H776" stroke="#263c44" stroke-width="2" opacity="0.2"/>
+    <rect x="424" y="56" width="352" height="248" fill="#8a6d7a" opacity="0.08"/>
+  </g>
+  <rect x="424" y="56" width="352" height="248" rx="4" fill="none" stroke="#d5dbe5"/>
+
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="600">
+    <rect x="40" y="70" width="150" height="28" rx="4" fill="#0b1220" opacity="0.92"/>
+    <text x="54" y="89" fill="#ffffff">smooth gradients + detail</text>
+    <rect x="440" y="70" width="174" height="28" rx="4" fill="#0b1220" opacity="0.92"/>
+    <text x="454" y="89" fill="#ffffff">banding + block artifacts</text>
+  </g>
+
+  <line x1="24" y1="326" x2="776" y2="326" stroke="#d5dbe5"/>
+  <text x="24" y="348" fill="#475569" font-family="Arial, sans-serif" font-size="12">Illustrative comparison — real results vary by image and quality setting</text>
+</svg>
