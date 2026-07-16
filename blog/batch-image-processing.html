@@ -51,7 +51,7 @@
 
       <h3 data-i18n="batch-image-processing_h3_21">배치 압축</h3>
       <ol>
-        <li><a href="/compress" data-i18n="nav_compress">ZXZX 압축 도구</a>에 접속합니다</li>
+        <li data-i18n="blog_action_batch_compress"><a href="/compress">ZXZX 압축 도구</a>에 접속합니다</li>
         <li data-i18n="batch-image-processing_li_23">여러 이미지를 한 번에 드래그 앤 드롭합니다</li>
         <li data-i18n="batch-image-processing_li_24">압축 설정을 조정합니다(품질,신고 등)</li>
         <li data-i18n="batch-image-processing_li_25">"모두 압축"을 클릭합니다</li>
@@ -60,7 +60,7 @@
 
       <h3 data-i18n="batch-image-processing_h3_27">배치 변환</h3>
       <ol>
-        <li><a href="/convert" data-i18n="nav_convert">ZXZX 변환 도구</a>에 접속합니다</li>
+        <li data-i18n="blog_action_batch_convert"><a href="/convert">ZXZX 변환 도구</a>에 접속합니다</li>
         <li data-i18n="batch-image-processing_li_29">여러 이미지를 업로드합니다</li>
         <li data-i18n="batch-image-processing_li_30">출력 포맷을 선택합니다 (WebP, AVIF 등)</li>
         <li data-i18n="batch-image-processing_li_31">"모두 변환"을 클릭합니다</li>
@@ -69,7 +69,7 @@
 
       <h3 data-i18n="batch-image-processing_h3_33">배치 리사이즈</h3>
       <ol>
-        <li><a href="/resize" data-i18n="nav_resize">ZXZX 리사이즈 도구</a>에 접속합니다</li>
+        <li data-i18n="blog_action_batch_resize"><a href="/resize">ZXZX 리사이즈 도구</a>에 접속합니다</li>
         <li data-i18n="batch-image-processing_li_35">여러 이미지를 업로드합니다</li>
         <li data-i18n="batch-image-processing_li_36">목표 크기를 입력합니다</li>
         <li data-i18n="batch-image-processing_li_37">"모두 리사이즈"를 클릭합니다</li>
@@ -89,7 +89,7 @@
 
       <h3 data-i18n="batch-image-processing_h3_46">2단계: 설정 결정</h3>
       <p data-i18n="batch-image-processing_p_47">각Category에 대한 처리 설정을 결정합니다.</p>
-      <table>
+      <table data-i18n-table>
         <thead>
           <tr><th>카테고리</th><th>포맷</th><th>품질</th><th>최대 크기</th></tr>
         </thead>
@@ -111,16 +111,16 @@
       <p data-i18n="batch-image-processing_p_53">차별화된 사용자를 위해 배치하는 방법을 소개합니다.</p>
 
       <h3 data-i18n="batch-image-processing_h3_54">ImageMagick (설치 필요)</h3>
-      <pre><code># 모든 JPG를 WebP로 변환
+      <pre><code># Convert all JPG files to WebP
 for f in *.jpg; do
   convert "$f" -quality 80 "${f%.jpg}.webp"
 done
 
-# 이미지 리사이즈
+# Resize images
 mogrify -resize 1200x1200\> *.jpg</code></pre>
 
       <h3 data-i18n="batch-image-processing_h3_55">FFmpeg (이미지 변환)</h3>
-      <pre><code># 비디오에서 썸네일 추출
+      <pre><code># Extract thumbnails from a video
 ffmpeg -i video.mp4 -vf "fps=1" thumbnail_%04d.jpg</code></pre>
 
       <h2 data-i18n="batch-image-processing_h2_56">배치 처리 시 고려사항</h2>
@@ -146,7 +146,7 @@ ffmpeg -i video.mp4 -vf "fps=1" thumbnail_%04d.jpg</code></pre>
       <p data-i18n="batch-image-processing_p_69">마케팅 팀이 수많은 미디어 캠페인을 위해 100장의 이미지를 준비해야 했습니다. 각 플랫폼에 맞는 크기로 크기를 조정하고, 적절한 압축을 적용해야 했습니다. 사용하여 시간을 대폭으로 절약했습니다.</p>
 
       <h2 data-i18n="batch-image-processing_h2_70">자동화 도구 비교</h2>
-      <table>
+      <table data-i18n-table>
         <thead>
           <tr><th>도구</th><th>배치 처리</th><th>무료</th><th>설치 필요</th><th>프라이버시</th></tr>
         </thead>

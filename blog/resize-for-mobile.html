@@ -55,7 +55,7 @@
   sizes="(max-width: 600px) 100vw,
          (max-width: 1200px) 50vw,
          33vw"
-  alt="설명"
+  alt="Description"
 &gt;</code></pre>
       <p data-i18n="resize-for-mobile_p_20">이 코드는 브라우저에게 다른 크기의 이미지를 제공하고, 화면 크기에 따라 최적의 것을 선택하도록 합니다.</p>
 
@@ -63,7 +63,7 @@
       <p data-i18n="resize-for-mobile_p_22"><code>sizes</code> 속성은 이미지가 화면에서 차지하는 크기를 브라우저에게 알려줍니다. 이를 통해 브라우저는 필요한 이미지 크기를 정확히 계산할 수 있습니다.</p>
 
       <h2 data-i18n="resize-for-mobile_h2_23">모바일 이미지 크기 가이드</h2>
-      <table>
+      <table data-i18n-table>
         <thead>
           <tr><th>용도</th><th>권장 크기 (px)</th><th>파일 크기 목표</th></tr>
         </thead>
@@ -97,7 +97,7 @@
       <h3 data-i18n="resize-for-mobile_h3_35">3단계: 리사이즈 수행</h3>
       <p data-i18n="resize-for-mobile_p_36">ZXZX의 <a href="/resize">리사이즈 도구</a>를 사용하면 여러 크기의 이미지를 한 번에 생성할 수 있습니다.</p>
       <ol>
-        <li><a href="/resize" data-i18n="nav_resize">ZXZX 리사이즈 도구</a>에 이미지를 업로드합니다</li>
+        <li data-i18n="blog_action_resize_upload"><a href="/resize">ZXZX 리사이즈 도구</a>에 이미지를 업로드합니다</li>
         <li data-i18n="resize-for-mobile_li_38">목표 너비를 입력합니다 (예: 400, 800, 1200)</li>
         <li data-i18n="resize-for-mobile_li_39">비율 유지 옵션을 활성화합니다</li>
         <li data-i18n="resize-for-mobile_li_40">"리사이즈"를 클릭합니다</li>
@@ -114,7 +114,7 @@
       <pre><code>&lt;picture&gt;
   &lt;source media="(max-width: 600px)" srcset="image-mobile.webp"&gt;
   &lt;source media="(max-width: 1200px)" srcset="image-tablet.webp"&gt;
-  &lt;img src="image-desktop.webp" alt="설명"&gt;
+  &lt;img src="image-desktop.webp" alt="Description"&gt;
 &lt;/picture&gt;</code></pre>
 
       <h3 data-i18n="resize-for-mobile_h3_47">픽셀 밀도 처리</h3>
@@ -123,7 +123,7 @@
   srcset="image-400.webp 1x,
           image-800.webp 2x"
   src="image-400.webp"
-  alt="설명"
+  alt="Description"
 &gt;</code></pre>
 
       <h2 data-i18n="resize-for-mobile_h2_49">모바일 이미지 최적화 체크리스트</h2>
@@ -145,7 +145,7 @@
 
       <h2 data-i18n="resize-for-mobile_h2_60">실제 사례: 모바일 이미지 최적화</h2>
       <p data-i18n="resize-for-mobile_p_61">한 블로그 사이트에서 모바일 이미지를 최적화한 결과입니다.</p>
-      <table>
+      <table data-i18n-table>
         <thead>
           <tr><th>항목</th><th>최적화 전</th><th>최적화 후</th><th>개선</th></tr>
         </thead>

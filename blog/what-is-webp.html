@@ -69,7 +69,7 @@
       <p data-i18n="what-is-webp_p_32">색상 관리를 위한 ICC 프로파일을 지원하여 정확한 색상 재현이 가능합니다.</p>
 
       <h2 data-i18n="what-is-webp_h2_33">브라우저 지원 현황 (2026년)</h2>
-      <table>
+      <table data-i18n-table>
         <thead>
           <tr><th>브라우저</th><th>지원 버전</th><th>현재 상태</th></tr>
         </thead>
@@ -86,7 +86,7 @@
 
       <h2 data-i18n="what-is-webp_h2_35">WebP vs JPG: 상세 비교</h2>
       <p data-i18n="what-is-webp_p_36">동일한 원본 이미지를서로 다른 품질 수준에서 비교한 결과입니다.</p>
-      <table>
+      <table data-i18n-table>
         <thead>
           <tr><th>비교 항목</th><th>JPG</th><th>WebP (손실)</th><th>차이</th></tr>
         </thead>
@@ -105,7 +105,7 @@
       <h3 data-i18n="what-is-webp_h3_39">방법 1: ZXZX 온라인 변환기</h3>
       <p data-i18n="what-is-webp_p_40">가장 간단한 방법은 ZXZX의 <a href="/convert">온라인 변환 도구</a>를 사용하는 것입니다.</p>
       <ol>
-        <li><a href="/convert" data-i18n="nav_convert">ZXZX 변환 도구</a>에 접속합니다</li>
+        <li data-i18n="blog_action_webp_convert"><a href="/convert">ZXZX 변환 도구</a>에 접속합니다</li>
         <li data-i18n="what-is-webp_li_42">변환할 이미지를 드래그 앤 드롭합니다</li>
         <li data-i18n="what-is-webp_li_43">출력 포맷을 "WebP"로 선택합니다</li>
         <li data-i18n="what-is-webp_li_44">품질 수준을 조정합니다 (기본 80% 권장)</li>
@@ -129,7 +129,7 @@ img.onload = function() {
   canvas.height = img.height;
   ctx.drawImage(img, 0, 0);
   canvas.toBlob(function(blob) {
-    // blob을 WebP 파일로 저장
+    // Save the blob as a WebP file
   }, 'image/webp', 0.8);
 };
 img.src = 'input.jpg';</code></pre>

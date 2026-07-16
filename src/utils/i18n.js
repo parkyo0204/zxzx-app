@@ -11,14 +11,28 @@ function getLang() {
     var params = new URLSearchParams(window.location.search);
     var q = params.get('lang');
     if (q && SUPPORTED.indexOf(q) !== -1) {
-      localStorage.setItem('zxzx_lang', q);
+      saveLang(q);
       return q;
     }
   } catch (e) {}
-  var saved = localStorage.getItem('zxzx_lang');
+  var saved = loadSavedLang();
   if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
   var browser = (navigator.language || DEFAULT).slice(0, 2);
   return SUPPORTED.indexOf(browser) !== -1 ? browser : DEFAULT;
+}
+
+function loadSavedLang() {
+  try {
+    return localStorage.getItem('zxzx_lang');
+  } catch (e) {
+    return null;
+  }
+}
+
+function saveLang(lang) {
+  try {
+    localStorage.setItem('zxzx_lang', lang);
+  } catch (e) {}
 }
 
 function syncLangToUrl(lang) {
@@ -39,6 +53,7 @@ function syncLangToUrl(lang) {
 
 var currentLang = getLang();
 var translations = {};
+var tableTranslations = {};
 
 async function loadTranslations() {
   try {
@@ -48,6 +63,15 @@ async function loadTranslations() {
   } catch (e) {
     console.error('Failed to load translations:', e);
     translations = {};
+  }
+
+  try {
+    var tableRes = await fetch('/table-i18n.json');
+    if (!tableRes.ok) throw new Error('HTTP ' + tableRes.status);
+    tableTranslations = await tableRes.json();
+  } catch (e) {
+    console.error('Failed to load table translations:', e);
+    tableTranslations = {};
   }
 }
 
@@ -90,8 +114,22 @@ function applyTranslations() {
     var text = t(el.getAttribute('data-i18n-alt'));
     if (text != null) el.setAttribute('alt', text);
   });
+  applyTableTranslations();
   document.documentElement.lang = currentLang;
   syncLangSelect();
+}
+
+function applyTableTranslations() {
+  var cells = tableTranslations[currentLang] || {};
+  document.querySelectorAll('[data-i18n-table] th, [data-i18n-table] td').forEach(function (cell) {
+    var source = cell.getAttribute('data-i18n-table-source');
+    if (source == null) {
+      source = cell.textContent.trim();
+      cell.setAttribute('data-i18n-table-source', source);
+    }
+    var text = currentLang === DEFAULT ? source : cells[source];
+    if (text != null) cell.textContent = text;
+  });
 }
 
 function syncLangSelect() {
@@ -102,7 +140,7 @@ function syncLangSelect() {
 function switchLang(lang) {
   if (SUPPORTED.indexOf(lang) === -1) return;
   currentLang = lang;
-  localStorage.setItem('zxzx_lang', lang);
+  saveLang(lang);
   syncLangToUrl(lang);
   applyTranslations();
   updateLangButton();
