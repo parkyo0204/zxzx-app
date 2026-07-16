@@ -86,6 +86,10 @@ function applyTranslations() {
     var text = t(el.getAttribute('data-i18n-content'));
     if (text != null) el.setAttribute('content', text);
   });
+  document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+    var text = t(el.getAttribute('data-i18n-alt'));
+    if (text != null) el.setAttribute('alt', text);
+  });
   document.documentElement.lang = currentLang;
   syncLangSelect();
 }

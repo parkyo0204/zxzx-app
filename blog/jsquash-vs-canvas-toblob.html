@@ -28,6 +28,7 @@
       <p><a href="/blog" data-i18n="blog_back">← 블로그</a></p>
       <h1 data-i18n="blog_card_title_n5">jSquash WASM vs Canvas toBlob</h1>
       <p class="lead" data-i18n="blog_card_desc_n5">Squoosh 계열 코덱이 브라우저 기본 인코딩보다 나은 지점.</p>
+      <div data-i18n="blog_n5_article_html">
 <h2>핵심 요약</h2>
       <p><code>canvas.toBlob('image/jpeg', quality)</code>는 구현이 쉽지만, 브라우저마다 JPEG/WebP 인코더 구현이 달라 같은 quality 값이도 용량·화질이 들쭉날쭉합니다. AVIF는 지원 자체도 제각각입니다. jSquash(Squoosh WASM)는 MozJPEG·libwebp·libavif를 기기에 올려 <strong>예측 가능한</strong> 압축을 목표로 합니다.</p>
       <p>ZXZX 압축·변환 파이프라인은 decode → process → encode 경로에서 jSquash를 사용하고, PNG는 oxipng로 추가 최적화합니다. 자세한 스택은 <a href="/blog/squoosh-wasm-compression">jSquash 압축 노트</a>를 보세요.</p>
@@ -83,6 +84,7 @@
         <li><a href="/convert">변환</a></li>
         <li><a href="/resize">리사이즈</a></li>
       </ul>
+      </div>
     </article>
   </main>
   <footer>

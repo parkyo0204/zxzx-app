@@ -28,6 +28,7 @@
       <p><a href="/blog" data-i18n="blog_back">← 블로그</a></p>
       <h1 data-i18n="blog_card_title_n4">AI 업스케일의 한계 — 2x가 안전한 이유</h1>
       <p class="lead" data-i18n="blog_card_desc_n4">ESRGAN 업스케일 메모리·아티팩트 한계와 hqx 폴백.</p>
+      <div data-i18n="blog_n4_article_html">
 <h2>핵심 요약</h2>
       <p>AI 업스케일은 없는 디테일을 “복원”한다기보다, 학습된 패턴으로 <strong>그럴듯한 고해상도</strong>를 합성합니다. 2×는 대체로 안정적이고, 4×는 메모리·시간·아티팩트 위험이 커집니다. ZXZX <a href="/upscale">업스케일</a>은 ESRGAN slim을 우선 쓰고, 실패 시 jSquash hqx로 폴백합니다.</p>
       <p>제한은 파일당 8MB·최대 3장·약 4MP 권장입니다. 첫 실행에는 모델 로드가 필요합니다. 이미지는 로컬에서만 처리됩니다.</p>
@@ -74,6 +75,7 @@
         <li><a href="/resize">리사이즈</a></li>
         <li><a href="/compress">압축</a></li>
       </ul>
+      </div>
     </article>
   </main>
   <footer>
